@@ -14,25 +14,18 @@ public class MinimiseTheMaxDiffBetHeight {
     }
     public static int maxHeightDifference(int[] arr , int n , int k) {
 
+
         Arrays.sort(arr);
-        for (int i : arr) {
-            System.out.print(i+" ");
-        }
-        System.out.println();
-        for(int i = 0 ; i< n ; i++){
-            if(arr[i]-k <= 0 ){
-                arr[i] +=k;
-            }
-            else{
-                arr[i] -=k;
+        int minEle , maxEle ;
+        int result = arr[n-1] - arr[0];
+        for (int i = 1; i <arr.length; i++) {
+            if(arr[i]<=k){
+                maxEle = Math.max(arr[i-1]+k, arr[n-1]-k);
+                minEle = Math.min(arr[0]+k, arr[i]-k);
+                result = Math.min(result,maxEle-minEle);
             }
         }
-        // Arrays.sort(arr);
-        for (int i : arr) {
-            System.out.print(i+" ");
-        }
-        int answer = 0;
-        answer = arr[n-1] - arr[0];
-        return answer;
+        return result;
+
     }
 }
