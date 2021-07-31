@@ -13,7 +13,6 @@ public class MovingNegativeNumbersOneSide {
     public static void movingNegative(int[] arr ) {
         int l = 0;
         int temp;
-        int r = arr.length-1;
         for (int i = 0; i < arr.length; i++) {
             if(arr[i]<0){
                 temp = arr[l];
