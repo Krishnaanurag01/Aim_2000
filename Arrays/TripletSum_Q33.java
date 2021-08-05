@@ -8,23 +8,38 @@ import java.util.Arrays;
 public class TripletSum_Q33 {
     public static void main(String[] args) {
         int[] arr = {1, 4, 45 ,6 ,10 ,8};
+        System.out.println(existTriplets(arr, arr.length , 52));
     }
 
-    public static boolean existTriplets(int[] arr, int n) {
+    public static boolean existTriplets(int[] arr, int n, int x) {
 
-        int i = 0;
-        int j = n-1;
-        int answer = 0;
         Arrays.sort(arr);
-        while (i < j) {
-            if(arr[i]+arr[j] == n) return true;
-            if(arr[i]+arr[j]< n){
-                answer =arr[i]+arr[j];
-                i++;
-            }else{
-                j--;
+        for (int i = 0; i < n-2; i++) {
+            if(twoSumAlgo(arr, x-arr[i] , i+1)){
+                return true;
             }
         }
+        return false;
+
+        
+    }
+
+    public static boolean twoSumAlgo(int[] arr , int sum , int i) {
+        int j = arr.length-1;
+        while (i<j) {
+
+            if(arr[i]+arr[j] < sum){
+                i++;
+            }
+            else if(arr[i]+arr[j]> sum){
+            j--;
+            }
+            else{
+                return true;
+            }
+            
+        }
+        return false;
         
     }
 }
