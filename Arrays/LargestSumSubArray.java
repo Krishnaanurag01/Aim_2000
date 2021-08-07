@@ -1,6 +1,6 @@
 package Arrays;
 
-
+// Also Known as Kadanes Algorithm.
 
 public class LargestSumSubArray {
     public static void main(String args[]){
