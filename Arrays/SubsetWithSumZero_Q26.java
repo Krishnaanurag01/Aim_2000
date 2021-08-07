@@ -8,7 +8,7 @@ public class SubsetWithSumZero_Q26 {
     int[] arr= {4,2,-3,1,6};    
     System.out.print(containSumZero(arr, arr.length));
 
-    // don't use this as it's not efficiet.
+    // don't use this as it's not efficient.
     System.out.println(containsZero(arr, arr.length));
     }
 
