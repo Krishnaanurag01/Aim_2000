@@ -29,14 +29,6 @@ public class TrappingRainWater_Q34 {
            trappedWater += Math.min(leftMax[i],rightMax[i]) - arr[i];
            
        }
-
-       for (int i : leftMax) {
-           System.out.print(i+" ");
-        }
-        System.out.println();
-       for (int i : rightMax) {
-           System.out.print(i+" ");
-       }
        return trappedWater;
 
     }
