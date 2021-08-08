@@ -42,7 +42,7 @@ public class ElementsAppearedNdividedByK_Times_Q30 {
     }
 
 
-    // // brute force approach : o(n2)
+    // // brute force approach : o(n2).
 
     // public static void getElements(int[] arr , int n , int k) {
     //     // int[] temp = new int[]
