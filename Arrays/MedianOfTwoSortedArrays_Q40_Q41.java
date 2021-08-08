@@ -1,6 +1,5 @@
 package Arrays;
 
-import java.lang.reflect.Array;
 
 public class MedianOfTwoSortedArrays_Q40_Q41 {
     public static void main(String[] args) {
