@@ -15,8 +15,8 @@ public class Q3_DuplicateCharacterInString {
         
     }
 
-    // time comp : o(n)
-    // space comp : o(256)
+    // time comp : o(n).
+    // space comp : o(256).
 
     public static void findDuplicateChar(String str) {
         
