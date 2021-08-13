@@ -2,11 +2,11 @@ package Strings;
 
 public class Q7_Longest_Palindrome_in_a_String {
     public static void main(String[] args) {
-        
+        System.out.println(longestPalindrome("rfkqyuqfjkxy"));
     }
-    int resultStart;
-    int resultLength;
-    public String longestPalindrome(String s) {
+    static int resultStart = 0;
+    static int resultLength = 0 ;
+    public static String longestPalindrome(String s) {
         if(s.length() < 2){
             return s;
         }
@@ -18,15 +18,15 @@ public class Q7_Longest_Palindrome_in_a_String {
         return s.substring(resultStart, resultStart+resultLength);
     }
     
-    public void checkPalindrome(String s , int start , int end){
+    public static void checkPalindrome(String s , int start , int end){
         while(start >= 0 && end< s.length() && s.charAt(start)== s.charAt(end)){
             start--;
             end++;
         }
         
-        if(resultStart < end- start - 1){
-            resultStart  = start+1;
-            resultLength = end- start -1;
+        if(resultLength < end- start - 1){
+            resultStart  = start +1;
+            resultLength = end - start -1;
         }
     }
 }
