@@ -1,7 +1,5 @@
 package Strings;
 
-import java.util.HashMap;
-
 public class Q8_Longest_Repeating_Subsequence {
     public static void main(String[] args) {
         System.out.println(longestRepeatingSubsequence("axxxy"));
