@@ -11,14 +11,14 @@ public class Q7_Longest_Palindrome_in_a_String {
             return s;
         }
         for(int i = 0 ; i < s.length()-1 ; i++){
-            checkPalindrome(s,i,i);
-            checkPalindrome(s,i,i+1);
+            expandAndCheck(s,i,i);
+            expandAndCheck(s,i,i+1);
         }
         
         return s.substring(resultStart, resultStart+resultLength);
     }
     
-    public static void checkPalindrome(String s , int start , int end){
+    public static void expandAndCheck(String s , int start , int end){
         while(start >= 0 && end< s.length() && s.charAt(start)== s.charAt(end)){
             start--;
             end++;
