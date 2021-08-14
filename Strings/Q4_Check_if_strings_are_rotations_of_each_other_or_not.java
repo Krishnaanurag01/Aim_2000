@@ -46,12 +46,6 @@ public class Q4_Check_if_strings_are_rotations_of_each_other_or_not {
     }
     charArray[str2.length()-1] = temp;
 
-    // coverting array to string as i ain't able to covert directly to string so using string buffer.
-    StringBuffer sb = new StringBuffer();
-      for(int i = 0; i < charArray.length; i++) {
-         sb.append(charArray[i]);
-      }
-
-    return sb.toString();
+    return String.valueOf(charArray);
  }
 }
