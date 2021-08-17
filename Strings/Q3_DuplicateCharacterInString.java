@@ -9,7 +9,7 @@ public class Q3_DuplicateCharacterInString {
 
     public static void main(String[] args) {
 
-        findDuplicateChar("LuffyTheBeast");
+        // findDuplicateChar("LuffyTheBeast");
         findDuplicateCharUsingHash("LuffyTheBeast");
 
         
@@ -51,12 +51,12 @@ public class Q3_DuplicateCharacterInString {
         }
 
         // now checking the entry with value more than 1 and then printing it.
-        for (Map.Entry e : map.entrySet()) {
+        for (Map.Entry<Character,Integer> e : map.entrySet()) {
             char key = (char) e.getKey();
             int value = (int) e.getValue();
 
             if(value > 1){
-                System.out.print(key + " : " +value);
+                System.out.println(key + " : " +value);
             }
         }
     }
