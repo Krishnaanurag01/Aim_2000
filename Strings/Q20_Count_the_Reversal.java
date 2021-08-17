@@ -33,11 +33,19 @@ public class Q20_Count_the_Reversal {
             }
         }
 
-        if(stack.size()%2 == 0){
-            return stack.size()/2 ;
-        }else{
+        int stackLength = stack.size();
 
-            return stack.size()/2+1;
+        int n = 0 ;
+
+        while (!stack.isEmpty() && stack.peek()=='{') {
+            n++;
+            stack.pop();
         }
+
+
+        return (stackLength/2 + n%2);
+
+
+
     }
 }
