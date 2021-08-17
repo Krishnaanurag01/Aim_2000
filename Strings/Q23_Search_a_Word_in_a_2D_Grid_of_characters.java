@@ -5,40 +5,68 @@ public class Q23_Search_a_Word_in_a_2D_Grid_of_characters {
         char[][] grid = { { 'G', 'E', 'E', 'K', 'S', 'F', 'O', 'R', 'G', 'E', 'E', 'K', 'S' },
                           { 'G', 'E', 'E', 'K', 'S', 'Q', 'U', 'I', 'Z', 'G', 'E', 'E', 'K' },
                           { 'I', 'D', 'E', 'Q', 'A', 'P', 'R', 'A', 'C', 'T', 'I', 'C', 'E' } };
-       searchIn2D_Grid("GEEKS", grid);
+       searchPattern("GEEKS", grid);
     }
-    public static void searchIn2D_Grid(String s , char[][] chArr) {
-        
-        int sSize = s.length();
-        for (int i = 0; i < chArr.length; i++) {
-            for (int j = 0; j < chArr[0].length; j++) {
-                justDoIt(i,j,s,chArr,sSize,0);
+
+       // R,C = denotes ROW and COLUMN
+    private static int R ,C;
+
+    // x and y is direction array of row and column for example : when row is added with x[0] and column with y[0] then it will go to the previous row and previous col.
+    private static int[] x = {-1,-1,-1, 0, 0, 1 , 1, 1 };
+    private static int[] y = {-1, 0, 1,-1  ,1, -1 , 0 ,1};
+
+
+    public static void searchPattern(String s , char[][] charArr) {
+        R = charArr.length;
+        C = charArr[0].length;
+
+        // checking each character if the first character is same as string then we'll move forward o/w it'll start searching for next character.
+
+        for (int i = 0; i < R ; i++) {
+            for (int j = 0; j < C ; j++) {
+                if(searchCharacters(charArr , i , j , s)){
+                    System.out.println("present at " +i +" "+ j);
+                }
             }
         }
     }
-    private static void justDoIt(int i, int j, String s, char[][] chArr, int sSize, int k) {
 
-        if(i >= 0 && i < chArr.length && j >= 0 && j < chArr.length && s.charAt(k) == chArr[i][j]){
-            char temp = chArr[i][j];
-            chArr[i][j] = '0';
-            k++;
 
-            if(k == sSize){
-                System.out.println("Found it at "+ i +" , "+j);
-                return;
+    private static boolean searchCharacters(char[][] charArr, int i, int j, String s) {
+
+        // if first character is not same then it return false.
+        if(charArr[i][j] != s.charAt(0))
+        return false;
+
+        int len =  s.length();
+
+        // here giving all 8 direction (left , right , up , down and diagonally) to the new row and column.
+
+        for (int direction = 0; direction < 8 ; direction++) {
+            
+            // intializing l outside so that we can compare length of l and len.
+            // rd is temporary row and temporay col.
+            int l , rd = i + x[direction] , cd = j + y[direction];
+            // starting with 1 index because oth index is already mathched.
+            for ( l = 1; l < len; l++) {
+                
+                // if out of bound then break .
+                if(rd < 0 || rd >= R || cd < 0 || cd >= C){
+                    break;
+                }
+
+                if(charArr[rd][cd] != s.charAt(l)){
+                    break;
+                }
+
+                // this means adding same direction further till the bound.
+
+                rd += x[direction];
+                cd += y[direction];
             }
-            else{
-                justDoIt(i+1,j,s,chArr,sSize,0);
-                justDoIt(i-1,j,s,chArr,sSize,0);
-                justDoIt(i,j+1,s,chArr,sSize,0);
-                justDoIt(i,j-1,s,chArr,sSize,0);
-                justDoIt(i-1,j-1,s,chArr,sSize,0);
-                justDoIt(i-1,j+1,s,chArr,sSize,0);
-                justDoIt(i+1,j-1,s,chArr,sSize,0);
-                justDoIt(i+1,j+1,s,chArr,sSize,0);
-
-            }
-            chArr[i][j] = temp;
+            // return true when size of string is equals to l.
+            if(l == len) return true;
         }
+        return false;
     }
 }
