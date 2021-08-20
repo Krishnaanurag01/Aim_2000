@@ -1,8 +1,6 @@
 package Strings;
 
-import java.util.HashSet;
 
-import javax.lang.model.util.ElementScanner6;
 
 public class Q38_Function_to_find_Number_of_customers_who_could_not_get_a_computer {
     public static void main(String[] args) {
