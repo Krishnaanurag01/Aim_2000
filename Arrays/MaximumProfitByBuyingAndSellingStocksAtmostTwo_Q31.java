@@ -28,7 +28,7 @@ public static int getMaxProfitAtmostTwoPurchase(int[] arr , int n) {
 // check pep coding youtube channel for its explanation.
     
 // first finding max profit if sold today for all elements.
-    int mpist = 0;
+    int mpist = 0; 
     int leastSoFar = arr[0];
     int[] dpLeft = new int[n];
     for (int i = 1; i < n; i++) {
