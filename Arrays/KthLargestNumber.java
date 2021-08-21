@@ -9,7 +9,7 @@ public class KthLargestNumber {
     }
 
     public static int kthLargest(int[] arr , int k) {
-        PriorityQueue <Integer> pq = new PriorityQueue<>();
+        PriorityQueue <Integer> pq = new PriorityQueue<>();  ///using min heap by default.
         
         for (int i = 0; i < k ; i++) {
             pq.add(arr[i]);            
