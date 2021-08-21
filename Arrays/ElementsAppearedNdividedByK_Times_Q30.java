@@ -32,7 +32,7 @@ public class ElementsAppearedNdividedByK_Times_Q30 {
             }
         }
 
-        for (Map.Entry e : map.entrySet()) {
+        for (Map.Entry<Integer,Integer> e : map.entrySet()) {
             // here converting to Integer because it gives object bby default.
             int temp = (Integer)e.getValue();
             if(temp > x){
