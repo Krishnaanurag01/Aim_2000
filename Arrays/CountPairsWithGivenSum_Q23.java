@@ -56,10 +56,11 @@ public class CountPairsWithGivenSum_Q23 {
             if(map.containsKey(element)){
                 count += map.get(element);
             }
-            if( map.get(arr[i]) == null){
-                map.put(arr[i] , 0);
-            }
-            map.put(arr[i], map.get(arr[i])+1);
+            // if( map.get(arr[i]) == null){
+            //     map.put(arr[i] , 0);
+            // }
+            // map.put(arr[i], map.get(arr[i])+1);
+            map.put(arr[i], map.getOrDefault(arr[i],0)+1);
         }
 
         
