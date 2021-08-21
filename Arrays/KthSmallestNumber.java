@@ -9,7 +9,7 @@ public class KthSmallestNumber {
         System.out.println(kthSmallest(arr, 1));
     }
     public static int kthSmallest(int[] arr, int k) {
-        PriorityQueue<Integer> pq = new PriorityQueue<>(Collections.reverseOrder());
+        PriorityQueue<Integer> pq = new PriorityQueue<>(Collections.reverseOrder()); // using max heap.
         for (int i = 0; i < k; i++) {
             pq.add(arr[i]);            
         }
