@@ -18,6 +18,7 @@ public class MergeIntervals_Q19 {
 
 
     public static int[][] mergingIntervals(int[][] intervals) {
+        
         Arrays.sort(intervals , (a,b)-> Integer.compare(a[0], b[0]));
         Stack<int[]> stack = new Stack<>();
         stack.add(intervals[0]);
