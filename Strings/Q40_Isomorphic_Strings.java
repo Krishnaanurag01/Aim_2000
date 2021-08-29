@@ -60,7 +60,7 @@ public class Q40_Isomorphic_Strings {
                 if(value != ch2) return false;
             }
             else{
-                if(map2.containsKey(ch2)== true){ // if it is true then it means that character of string 2 is already mapped with someone else.
+                if(map2.containsKey(ch2) == true){ // if it is true then it means that character of string 2 is already mapped with someone else.
                     return false;
                 }else{
                     map1.put(ch1,ch2);
