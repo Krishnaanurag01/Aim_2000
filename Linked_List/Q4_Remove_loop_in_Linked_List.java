@@ -96,7 +96,7 @@ public class Q4_Remove_loop_in_Linked_List {
             }
         }
         
-        // this is the case when our loop starts from head. if we don't do this then we'll los our rest of the nodes.
+        // this is the case when our loop starts from head. if we don't do this then we'll lose our rest of the nodes.
         // check copy for better understanding.
         if(tortoise == head2){
             while (hare.next != tortoise) {
