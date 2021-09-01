@@ -1,6 +1,5 @@
 package Searching_and_Sorting;
 
-import java.util.Arrays;
 
 public class Q12_Stickler_Thief {
     public static void main(String[] args) {
