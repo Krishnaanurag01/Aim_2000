@@ -75,7 +75,7 @@ public class Q8_Move_last_element_to_front_of_a_given_Linked_List {
 
         node current = head2 ;
 
-        while (current.next.next!= null) {
+        while (current.next.next!= null) { // if we do current.next then we'll not able to remove the link of last node. so it will stop in 2nd last node.
             current = current.next;
         }
 

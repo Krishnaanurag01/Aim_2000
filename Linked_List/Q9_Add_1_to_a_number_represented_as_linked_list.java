@@ -58,9 +58,6 @@ public class Q9_Add_1_to_a_number_represented_as_linked_list {
         // first reverse the list.
 
        node head2 = reverse(head);
-
-
-
        
        node temp = head2;
  // this is the main steps.

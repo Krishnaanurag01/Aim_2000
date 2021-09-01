@@ -132,6 +132,6 @@ public class Q13_Merge_Sort_for_Linked_List {
 
       node newHead =  merge_sort(ll.head);
 
-        ll.printLinkedList(newHead);
+        printLinkedList(newHead);
     }
 }

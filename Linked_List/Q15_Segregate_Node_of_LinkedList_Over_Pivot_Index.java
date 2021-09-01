@@ -113,15 +113,6 @@ public class Q15_Segregate_Node_of_LinkedList_Over_Pivot_Index {
 
 
 
-
-
-
-
-
-
-
-
-
         return previous_smaller_head.next;
     }
 
