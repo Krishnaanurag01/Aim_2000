@@ -125,13 +125,6 @@ public class Q11_Find_All_Four_Sum_Numbers {
 
 
 
-
-
-
-
-
-
-
         return list;
     }
 }
