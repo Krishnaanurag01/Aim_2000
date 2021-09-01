@@ -1,8 +1,5 @@
 package Matrix;
 
-import java.util.Collections;
-import java.util.PriorityQueue;
-
 public class KthSmallestElementInMatrix_Q10 {
     public static void main(String[] args) {
        int mat[][] =     {{16, 28, 60, 64},
