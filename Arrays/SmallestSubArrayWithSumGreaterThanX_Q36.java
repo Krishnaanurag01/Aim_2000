@@ -19,6 +19,7 @@ public class SmallestSubArrayWithSumGreaterThanX_Q36 {
         int answer = Integer.MAX_VALUE ;
         int sum  = arr[start];
         if(sum > x ) return 1;
+        
         if(end < n) sum += arr[end];
 
         while(start < n && end < n){
