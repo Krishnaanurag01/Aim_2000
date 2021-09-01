@@ -18,7 +18,7 @@ public class RearraningArrayInAlternatePosition_Q25 {
         int k = 0 ;// for  traversing array
         while (k < n ) {
             if(k % 2 == 0){
-                // for even \position getting negative numbers.
+                // for even position getting negative numbers.
                 if(arr[k]>=0){
                     i=k;
                     while (i<n && arr[i]>= 0) {
