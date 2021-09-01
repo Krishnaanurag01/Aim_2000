@@ -54,7 +54,7 @@ public class MedianOfTwoSortedArrays_Q40_Q41 {
 
 
 
-    // ********************  overall run time complexity : O(log (m+n)) *************************
+    // ********************  overall run time complexity : O(log (m+n)) ************************* // works for both sorted and unsorted arrays.
 
     public static int getMedian(int[] nums1 , int[] nums2) {
 
