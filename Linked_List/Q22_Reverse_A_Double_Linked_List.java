@@ -69,15 +69,7 @@ public class Q22_Reverse_A_Double_Linked_List {
     }
 
 
-
-
-
-
-
-
-
-
-
+    
     public static void main(String[] args) {
         Q22_Reverse_A_Double_Linked_List ll = new Q22_Reverse_A_Double_Linked_List();
 
