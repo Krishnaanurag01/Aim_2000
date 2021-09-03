@@ -5,7 +5,7 @@ package Linked_List;
 
 public class Q1_Reverse_Linked_List {
 
-       static Node head ;
+       Node head ;
       static class Node{
  
          int data ;
@@ -79,12 +79,12 @@ public class Q1_Reverse_Linked_List {
       list.head.next.next.next = new Node(35);
       list.head.next.next.next.next = new Node(25);
 
-      list.printLinkedList(head);
+      list.printLinkedList(list.head);
 
     //   head = list.reverse(head);
     //   list.printLinkedList(head);
 
-       head = list.reverseRecursivly(head);
+      Node head = list.reverseRecursivly(list.head);
       list.printLinkedList(head);
 
     }
