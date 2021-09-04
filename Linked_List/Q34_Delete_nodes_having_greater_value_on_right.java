@@ -44,27 +44,60 @@ public class Q34_Delete_nodes_having_greater_value_on_right {
         
     }
 
+
+    public static Node reverse(Node head) {
+        if(head == null || head.next == null){
+            return head ;
+        }
+
+        Node current = head ;
+        Node prev = null;
+
+        while (current != null) {
+            Node forwaNode = current.next;
+            current.next = prev ; 
+            prev = current ;
+            current = forwaNode ;
+        }
+
+        return prev ;
+
+    }
+
+
+
+    // if you search from left side then it will give wrong answer becuase we have to find the largest number in whole right side.
+    // so we reverse the list and keep track of largest number, whenever we found any larger number than current larger then we will add it to the anser list.
+    
+    
+    // time comp : o(n) and o(1) space.
+
+
     public static Node delete_Node_whose_right_is_larger(Node listHead) {
         if(listHead == null || listHead.next == null){
             return listHead;
         }
 
-        Node curr = listHead ;
+        Node curr = reverse(listHead) ;
+        int max = 0 ;
+
         Node newHead = new Node(-1);
         Node ptr = newHead;
+        
 
-        while (curr.next != null) {
-            Node forward = curr.next ;
-            if(curr.data < curr.next.data){
-                ptr.next = curr.next;
-                ptr = ptr.next ;
+        while (curr != null) {
+            if(curr.data > max){
+                max = curr.data ;
+                ptr.next = curr ;
+                ptr = ptr.next;
             }
-            
-                curr = forward ;
+
+            curr = curr.next ;
             
         }
+    ptr.next = null ;
 
-        return newHead.next;
+        return reverse(newHead.next);
 
         
     }
