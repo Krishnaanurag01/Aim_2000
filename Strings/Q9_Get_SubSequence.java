@@ -2,7 +2,7 @@ package Strings;
 
 import java.util.ArrayList;
 
-// we can't use the to print larger size string as it take 2^n-1 . n character space. for example : if our string is of 31 length then it takes 31gb of memory to store all the characters. so better use print sub_sequence code.
+// we can't use  to print larger size string as it take 2^n-1 . n character space. for example : if our string is of 31 length then it takes 31gb of memory to store all the characters. so better use print sub_sequence code.
 
 public class Q9_Get_SubSequence {
  public static void main(String[] args) {
