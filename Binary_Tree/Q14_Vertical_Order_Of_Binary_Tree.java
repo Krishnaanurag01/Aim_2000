@@ -6,6 +6,7 @@ import java.util.LinkedList;
 import java.util.List;
 
 
+
 public class Q14_Vertical_Order_Of_Binary_Tree {
 
     private static TreeNode root ;
@@ -83,6 +84,51 @@ public class Q14_Vertical_Order_Of_Binary_Tree {
 
 
 
+    // method 2 : time and space is  o(n) but  here we didn't extra space for hashmap.
+
+
+    public static void width(TreeNode root , int level , int[] arr) {  // first find the width. check q15 for it.
+        if(root == null) return ;
+
+        arr[0] = Math.min(arr[0], level);
+        arr[1] = Math.max(arr[1], level);
+
+        width(root.left, level-1, arr);
+        width(root.right, level+1, arr);
+    }
+
+    public static List<List<Integer>> vertical_order(TreeNode root) {
+        List<List<Integer>> anslist = new ArrayList<>() ;
+
+        if(root == null) return anslist ;
+
+        int[] minMax = new int[2] ;
+        width(root,0, minMax);
+        int len = minMax[1] - minMax[0] + 1 ; // gives the width of tree.
+
+        LinkedList<vPair> queue = new LinkedList<>() ; // for level order traversal.
+
+        queue.add(new vPair(root, Math.abs(minMax[0]))); // here minMax[0] will have left most vertical level and most probably in negative so if take abs of that will then we can store directly to anslist. for ex : if left most is -2 then abs give 2 so root level becomes 2 and left most will be 0 level .
+
+
+        for (int i = 0; i < len ; i++)  anslist.add(new ArrayList<>()) ; // initializing list for every anslist.
+
+
+        while (queue.size() != 0) {
+            int size = queue.size() ;
+
+            while (size-- > 0) {
+                vPair rp = queue.removeFirst() ;
+
+                anslist.get(rp.hl).add(rp.node.data) ; // adding to the anslist.
+
+                if(rp.node.left !=null) queue.add(new vPair(rp.node.left, rp.hl - 1));  // moving left with level - 1 ; 
+                if(rp.node.right !=null) queue.add(new vPair(rp.node.right, rp.hl + 1)); // moving right with level + 1 ;
+            }
+        }
+
+        return anslist ;
+    }
 
 
 
@@ -107,5 +153,6 @@ public class Q14_Vertical_Order_Of_Binary_Tree {
         root.right.left.right = new TreeNode(8);
 
        System.out.println(vertical_level_of_BT(root));
+       System.out.println(vertical_order(root));
     }
 }
