@@ -16,6 +16,7 @@ public class Q25_EKOSPOJ {
         Arrays.sort(woodArr);
 
         System.out.println(getHightOfBlade(woodArr, minWood));
+        sc.close();
     }
 
     // time complexcity : o(nlogn) and o(1) space
