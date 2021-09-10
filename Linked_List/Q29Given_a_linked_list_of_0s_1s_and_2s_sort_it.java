@@ -5,7 +5,7 @@ package Linked_List;
  */
 public class Q29Given_a_linked_list_of_0s_1s_and_2s_sort_it {
 
-    static Node head ;
+    Node head ;
     public static class Node {
 
         int data ;
