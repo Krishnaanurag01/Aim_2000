@@ -18,6 +18,7 @@ public class Q32_ROTI_Prata_SPOJ {
             }
             getMinTime(chefs, prata, chefCount);
         }
+        sc.close();
     }
 
     public static void getMinTime(int[] chefs, int prata , int chefsCount) {
