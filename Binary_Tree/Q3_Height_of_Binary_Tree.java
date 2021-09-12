@@ -27,7 +27,7 @@ public class Q3_Height_of_Binary_Tree {
         int leftHeight = height_of_bt(node.left);
         int rightHeight = height_of_bt(node.right);
 
-        int maxHeightFromBothSide = Math.max(leftHeight, rightHeight) + 1 ;
+        int maxHeightFromBothSide = Math.max(leftHeight, rightHeight) + 1 ; // 1 is for current node .
 
         return maxHeightFromBothSide ;
 

@@ -1,11 +1,10 @@
 package Binary_Tree;
-import java.util.*;
+// import java.util.*;
 
-import Linked_List.Q10_Add_two_numbers_represented_by_linked_lists.node;
 
 public class Q23_Binary_Tree_to_DLL {
 
-    private static TreeNode root ;
+    // private static TreeNode root ;
 
     static class TreeNode {
 

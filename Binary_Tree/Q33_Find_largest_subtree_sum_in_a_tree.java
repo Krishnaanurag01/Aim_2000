@@ -23,7 +23,7 @@ public class Q33_Find_largest_subtree_sum_in_a_tree {
             return 0;
         }
 
-        int left = largest_sum_subTree(node.left); // simply so for left and right .
+        int left = largest_sum_subTree(node.left); // simply go for left and right .
         int right = largest_sum_subTree(node.right);
 
 

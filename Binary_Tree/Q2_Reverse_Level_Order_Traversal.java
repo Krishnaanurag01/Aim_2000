@@ -37,13 +37,13 @@ public class Q2_Reverse_Level_Order_Traversal {
             TreeNode temp = queue.peek() ;
             list.add(temp.data);
 
-            if(temp.right != null) queue.add(temp.right);
+            if(temp.right != null) queue.add(temp.right);  // simply adding right first then left
             if(temp.left != null) queue.add(temp.left);
             
             queue.remove() ;
         }
 
-        Collections.reverse(list);
+        Collections.reverse(list); // and then reversing the list.
 
         return list;
     }

@@ -84,7 +84,7 @@ public class Q14_Vertical_Order_Of_Binary_Tree {
 
 
 
-    // method 2 : time and space is  o(n) but  here we didn't extra space for hashmap.
+    // method 2 : time and space is  o(n) but  here we didn't used extra space for hashmap.
 
 
     public static void width(TreeNode root , int level , int[] arr) {  // first find the width. check q15 for it.

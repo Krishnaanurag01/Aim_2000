@@ -17,27 +17,27 @@ public class Q37_Min_distance_between_two_given_nodes_of_a_Binary_Tree {
     }
 
 
-    public static int minDustance(TreeNode root , int a , int b) {
+    // public static int minDustance(TreeNode root , int a , int b) {
 
-        if(root == null){
-            return 0 ;
-        }
+    //     if(root == null){
+    //         return 0 ;
+    //     }
         
-        int left = minDustance(root.left, a, b);
-        int right = minDustance(root.right, a, b) ;
+    //     int left = minDustance(root.left, a, b);
+    //     int right = minDustance(root.right, a, b) ;
 
-        if(root.data == a || root.data == b){
-            return 1 ;
-        }
-        if(left != 0 && right != 0 ){
-            return left + right ;
-        }
+    //     if(root.data == a || root.data == b){
+    //         return 1 ;
+    //     }
+    //     if(left != 0 && right != 0 ){
+    //         return left + right ;
+    //     }
 
-        if(left == 0 && right == 0) return 0 ;
+    //     if(left == 0 && right == 0) return 0 ;
 
-        return left==0 ? right : left + 1 ;
+    //     return left==0 ? right : left + 1 ;
         
-    }
+    // }
 
 
     // lca same as previous.

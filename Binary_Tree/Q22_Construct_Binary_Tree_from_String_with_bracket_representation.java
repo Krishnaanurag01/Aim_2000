@@ -1,13 +1,13 @@
 package Binary_Tree ;
 
-import java.util.Stack;
+
 
 /**
  * Q22_Construct_Binary_Tree_from_String_with_bracket_representation
  */
 public class Q22_Construct_Binary_Tree_from_String_with_bracket_representation {
 
-    private static TreeNode root ;
+    // private static TreeNode root ;
 
     static class TreeNode {
 

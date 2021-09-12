@@ -44,7 +44,8 @@ public class Q16_Maximum_Width_Of_BinaryTree {
         while (queue.size() != 0) { // travesal of each level.
             int size = queue.size() ; // find the size of each traversal
             int left_max = queue.getFirst().index ; //  assign index to both left and right .
-            int right_max = queue.getFirst().index ; // 
+            int right_max = queue.getFirst().index ; //   we took first node index and keep updating with the while loop index.
+            // ************* insted of this we can use getLast() method.
 
             while (size-- > 0) { // now  traverse into  your level.
                 Pair rp = queue.removeFirst(); // remove first and add it left or right if present.

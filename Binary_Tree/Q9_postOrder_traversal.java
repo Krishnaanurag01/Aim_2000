@@ -18,7 +18,10 @@ public class Q9_postOrder_traversal {
         public TreeNode(int d) {
             data = d ;
         }
-    }
+    } 
+
+
+    // method 1 : recursive way:
 
     public static void postOrder_traversal(TreeNode node) {
         if(node == null) {
@@ -30,6 +33,7 @@ public class Q9_postOrder_traversal {
         System.out.println(node.data);
     }
 
+    // method - 2 :
     public static ArrayList<Integer> postOrder_Traversal_iteratively(TreeNode node) {
         ArrayList<Integer> list = new ArrayList<>() ;  // took as asked in question.
 
@@ -98,10 +102,6 @@ public class Q9_postOrder_traversal {
             //    System.out.println(out_stack.pop().data);
             list.add(out_stack.pop().data);
            }
-
-
-
-
             return list ;
         }
 

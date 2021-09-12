@@ -1,5 +1,6 @@
 package Binary_Tree;
 
+
 import java.util.Stack;
 
 
@@ -25,7 +26,7 @@ public class Q10_pre_post_in_one_loop {
 
         public Pair(TreeNode node, int state) {
             this.node = node ;
-            state = 0 ;
+            this.state = state ;
         }
     }
 
@@ -42,6 +43,7 @@ public class Q10_pre_post_in_one_loop {
         String post = " ";
         String in = " ";
 
+      
 
         while (stack.size() > 0 ) {
 
@@ -72,15 +74,17 @@ public class Q10_pre_post_in_one_loop {
 
             else{
                 post += top.node.data + " " ;
-                stack.pop();
+                 stack.pop();
             }
             
         }
 
 
+
+
         System.out.println(pre);
-        System.out.println(post);
         System.out.println(in);
+        System.out.println(post);
     }
 
 
