@@ -19,7 +19,7 @@ public class MinimiseTheMaxDiffBetHeight {
         int minEle , maxEle ;
         int result = arr[n-1] - arr[0];
         for (int i = 1; i <arr.length; i++) {
-            if(arr[i]<=k){
+            if(arr[i]>=k){
                 maxEle = Math.max(arr[i-1]+k, arr[n-1]-k);
                 minEle = Math.min(arr[0]+k, arr[i]-k);
                 result = Math.min(result,maxEle-minEle);
