@@ -31,7 +31,7 @@ public static int getMaxProfitAtmostTwoPurchase(int[] arr , int n) {
     int mpist = 0; 
     int leastSoFar = arr[0];
     int[] dpLeft = new int[n];
-    for (int i = 1; i < n; i++) {
+    for (int i = 1; i < n; i++) { // started with 1 becoz if we buy and sell at index 0 then 0 profit earn.
         if(arr[i] < leastSoFar){
             leastSoFar = arr[i];
         }
