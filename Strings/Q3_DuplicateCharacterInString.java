@@ -33,7 +33,7 @@ public class Q3_DuplicateCharacterInString {
         }
     }
 
-    // using hashmap : o(N logn)
+    // using hashmap : o(N )
 
     public static void findDuplicateCharUsingHash(String str) {
         
