@@ -17,21 +17,21 @@ public class Q6_Count_and_Say {
 
         for (int i = 3; i <=num; i++) {
             
-            str+= '$';
-            int count =1;
+            str+= '$'; // so that we can identify the last element.
+            int count =1; // becauze every element have 1 count by default.
             char[] charArray = str.toCharArray();
-            String temp = "";
+            String temp = ""; /// will add the answer here.
 
-            for (int j = 1 ; j < charArray.length; j++) {
+            for (int j = 1 ; j < charArray.length; j++) {  // started from 1 so that we can compare with 1-0 index.
                 
-                if(charArray[j]!= charArray[j-1]){
+                if(charArray[j]!= charArray[j-1]){ // when nulll then add count and number and set count = 1 for next number
 
                     temp+=count ;
                     temp+= charArray[j-1];
 
                     count=1;
                 }
-                else{
+                else{ // else increase the count.
                     count++;
                 }
             }
