@@ -11,7 +11,7 @@ public class Q4_Check_if_strings_are_rotations_of_each_other_or_not {
  // USING A BUILT-IN FUNCTION .
  public static boolean isRotationOf(String str1 , String str2) {
      
-    return (str1.length()== str2.length() && (str1 + str2).indexOf(str2) !=-1);
+    return (str1.length()== str2.length() && (str1 + str1).indexOf(str2) !=-1);
  }
 
  //WITHOUT USING ANY BUILT-IN FUNCTION.
