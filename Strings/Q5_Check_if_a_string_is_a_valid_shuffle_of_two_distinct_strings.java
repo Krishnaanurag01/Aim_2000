@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class Q5_Check_if_a_string_is_a_valid_shuffle_of_two_distinct_strings {
     public static void main(String[] args) {
-        System.out.println(isValid("XY", "12", "Y21XX"));
+        System.out.println(isValid("XXY", "12", "Y21XX"));
     }
     public static boolean isValid(String str1, String str2 , String shuffledString) {
         
