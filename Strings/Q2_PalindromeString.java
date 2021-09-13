@@ -5,6 +5,7 @@ public class Q2_PalindromeString {
         String S = "racecar";
         System.out.println(isPlaindrome(S));
     }
+    
     static int isPlaindrome(String S) {
         // code here
     int left = 0;

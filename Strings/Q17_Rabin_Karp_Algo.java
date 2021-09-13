@@ -5,7 +5,8 @@ public class Q17_Rabin_Karp_Algo {
         String txt = "AABAACAADAABAAABAA";
         String pat = "AABA";
         // search(txt, pat);
-        rabin_Karp_search(txt, pat);
+       
+
     }
 
 
@@ -63,14 +64,14 @@ public class Q17_Rabin_Karp_Algo {
             }
 
             // now searching in forward.
-            if(i < text.length()-ptr.length()){
+            if(i < text.length()-ptr.length()){ // this defines if we have a text lengt which is not smaller than i. so that it will help in not giving error in second next line of code.
 
                 // for this we'll first remove the first character hash from textHash.
                 textHash = textHash - ((text.charAt(i) - 'A'+1)*(int) Math.pow(p, ptr.length()-1));
             
                 // now adding the next character hash in textHash.
 
-                textHash = textHash * p + (text.charAt(i+ptr.length()) - 'A'+1);
+                textHash = textHash * p + (text.charAt(i + ptr.length()) - 'A'+1); // i + ptr.length will take index of lastchar which is  to added.
 
             }
         }
