@@ -19,6 +19,9 @@ public class Q18_KMP_Algo {
         int j = 0 ; // for pattern
         int i = 0 ; //for text
 
+        for (int k : lps) {
+            System.out.print(lps[i]+" ");
+        }
         while (i < n) {
             if(ptr.charAt(j) == txt.charAt(i)){
                 j++;
