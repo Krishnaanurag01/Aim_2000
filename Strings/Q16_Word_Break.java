@@ -13,6 +13,11 @@ public class Q16_Word_Break {
      System.out.println(wordBreak("ilike", B));
  }
 
+
+//  Expected time complexity: O(s2)
+
+// Expected auxiliary space: O(s) , where s = length of string A
+
  public static int wordBreak(String s, ArrayList<String> wordDict )
  {
   int[] dp = new int[s.length()];
@@ -21,11 +26,11 @@ public class Q16_Word_Break {
          for(int j = 0 ; j <= i ; j++){
              String seq = s.substring(j , i+1);
              if(wordDict.contains(seq)){
-                 if(j > 0){
-                     dp[i] += dp[j-1];
+                 if(j > 0){ // if its not given then ,when i  = 0  then it gives error.
+                     dp[i] += dp[j-1]; // here adding to the ith index becuase there might be possible that it found some other substring too so we'll add into this.
                  }
                  else{
-                     dp[i] += 1;
+                     dp[i] += 1; // otherwise just add 1.
                  }
              }
          }
