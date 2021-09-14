@@ -5,6 +5,8 @@ public class Q13_Edit_Distance {
         System.out.println(minDistance("geek", "gesek"));
     }
 
+    // /Time Complexity: O(m x n) 
+    // Auxiliary Space: O(m x n)
     public static int minDistance(String s, String t) {
 
         // initializing matrix. 
@@ -27,7 +29,7 @@ public class Q13_Edit_Distance {
                      // when last element is same then storing data of last  value.
                      dp[i][j] = dp[i-1][j-1];
                  }
-                 else{
+                 else{ // its logic in the dsa copy 3rd last page.
                      int f1 = 1 + dp[i-1][j-1] ; //replace
                      int f2 = 1 + dp[i-1][j]; // for delete
                      int f3 = 1 + dp[i][j-1]; // when inserting
