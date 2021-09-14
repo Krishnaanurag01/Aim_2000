@@ -2,11 +2,11 @@ package Strings;
 
 public class Q17_Rabin_Karp_Algo {
     public static void main(String[] args) {
-        String txt = "AABAACAADAABAAABAA";
-        String pat = "AABA";
+        String txt = "aylnlfdxfi";
+        String pat =  "dxfi";
         // search(txt, pat);
-       
-
+        rabin_Karp_search(txt, pat);
+        
     }
 
 
@@ -49,18 +49,28 @@ public class Q17_Rabin_Karp_Algo {
         int ptrHash = 0;
 
         for (int i = 0; i < ptr.length(); i++) {  // Generating Hash values for pattern and first window text
-            ptrHash = ptrHash * p;
+            ptrHash = ptrHash * p; // don't look when i= 0 , its here because when we come back for the second itration then it will multiply with hashvalue and for the last value it will not multiply because look will not excecute extra 1 step for last value and we multiply last value with p^0 which is 1. so it dosen't affect the answer.
             textHash = textHash * p;
 
             ptrHash = ptrHash + ((ptr.charAt(i) - 'A' + 1) % d);
             textHash = textHash + ((text.charAt(i) - 'A' + 1) % d);
         }
 
-        for (int i = 0; i < text.length(); i++) {
+        for (int i = 0; i <= text.length() - ptr.length(); i++) {
             
             // if out textHash pattern is equal to pattern hash then we have found the searched pattern so we'll print it.
             if(ptrHash == textHash){
-                System.out.println("Search Found at : " + i +" index.");
+                int j =0 ;
+                /* Check for characters one by one */
+              for (j = 0; j < ptr.length(); j++)
+              {
+                  if (text.charAt(i+j) != ptr.charAt(j))
+                      break;
+              }
+               if (j == ptr.length()){
+                System.out.println(j+" "+"Search Found at : " + i +" index.");
+               }
+                
             }
 
             // now searching in forward.
