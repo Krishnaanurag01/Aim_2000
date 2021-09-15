@@ -39,20 +39,39 @@ public class Q5_Check_for_BST {
 
 
 
-    public static void check_if_bst(Node root,Node prev, int[] f) {
-      if(root == null) return ;
 
-      check_if_bst(root.left, prev, f) ;
 
-      if(prev != null && root.data <= prev.data){
-          f[0] = 0;
-          return ;
-      }
-
-      check_if_bst(root.right, prev, f) ;
+    public static class BSTpair{
+        boolean isBst ; // this will tell our current node is bst or not.
+        int min ; // it will store the min value. 
+        int max ; // it will store the max value. 
     }
 
 
+
+    public static BSTpair isBST(Node root) {
+        if(root == null){ // when reached the null return bstpair .
+            BSTpair pair = new BSTpair() ;
+            pair.isBst = true ; // null node is also bst.
+            pair.min = Integer.MAX_VALUE ; // this is identity.
+            pair.max = Integer.MIN_VALUE ;
+            return pair ;
+        }
+
+        BSTpair left_pair = isBST(root.left);  // doing post order.
+        BSTpair right_pair = isBST(root.right) ;
+
+        BSTpair mp = new BSTpair() ;  /// now create a pair for current node.
+        mp.isBst = left_pair.isBst && right_pair.isBst && root.data >= left_pair.max && root.data <=  right_pair.min ; // it will store true if its left and right is also bst and root value is greater than left max and lower than rights min.
+
+        mp.min = Math.min(root.data, Math.min(left_pair.min , right_pair.min)); // it will store the min 
+        mp.max = Math.max(root.data, Math.max(left_pair.max , right_pair.max)); // store the max.
+        
+
+        return mp ;
+  
+        
+    }
 
 
 
@@ -68,13 +87,15 @@ public class Q5_Check_for_BST {
         tree.insert_node(60);
         tree.insert_node(80);
 
-      int[] f = new int[1] ;
-      f[0] = 1 ;
+    //   int[] f = new int[1] ;
+    //   f[0] = 1 ;
 
-      Node prev = null ;
-      check_if_bst(tree.root, prev, f);
+    //   Node prev = null ;
+    //   check_if_bst(tree.root, prev, f);
 
-      System.out.println(f[0]);
+    System.out.println( isBST(tree.root).isBst) ;
+
+    //   System.out.println(f[0]);
         
     }
     
