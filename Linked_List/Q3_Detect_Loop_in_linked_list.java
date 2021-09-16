@@ -74,7 +74,7 @@ public class Q3_Detect_Loop_in_linked_list {
        System.out.println(detect_loop_LL(ll.head)) ;
     }
 
-    // ********* This algorithm is known as Floyd's Cycle detection algorithm and (hare and tortoise algorithm) ,also this algorithm is import from interview point of view.
+    // ********* This algorithm is known as Floyd's Cycle detection algorithm  (hare and tortoise algorithm) ,also this algorithm is important from interview point of view.
 
     private static boolean detect_loop_LL(node head2) {
         if(head2 == null){
