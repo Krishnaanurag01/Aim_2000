@@ -69,7 +69,7 @@ public class Q16_Middle_of_the_Linked_List {
         node slow = listHead;
         node fast = listHead;
 
-        while (fast != null && fast.next != null) {
+        while (fast != null && fast.next != null) {   // use fast.next && fast.next.next when you want to return ( ex: 1,2,3,4,5,6) => 3
             fast = fast.next.next;
             slow = slow.next ;
         }
