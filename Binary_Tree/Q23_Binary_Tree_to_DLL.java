@@ -6,74 +6,60 @@ public class Q23_Binary_Tree_to_DLL {
 
     // private static TreeNode root ;
 
-    static class TreeNode {
+    static class Node {
 
         int data ; 
-        TreeNode left ;
-        TreeNode right ;
+        Node left ;
+        Node right ;
 
-        public TreeNode(int d) {
+        public Node(int d) {
             data = d ;
         }
     }
 
 
+    //   same as BST Q11 
 
+    public static Node convert_BST_To_DLL(Node root) {
 
-    // public static Node bt_to_dll(Node node) {
-    //     if(node == null) return null ;
-
-    //     Node head = null ;
-    //     Node prev = null ;
-    //     int[] flag = {0};
-
-    //     inorder(node,head,prev,flag);
-    //     return head;
-    // }
-
-
-    // private static void inorder(Node node, Node head, Node prev, int[] flag) {
-
-    //     if(node == null ) return ;
-
-    //     inorder(node.left,head,prev,flag);
-
-    //     if(flag[0] == 0){
-    //         head = node ;
-    //         prev = node ;
-    //     }
-    //     else{
-    //         prev.right = node ;
-    //         prev.right.left = prev ;
-    //         prev = node ;
-    //     }
-
-
-    //     inorder(node.right,head,prev,flag);
-    // }
-
-
-    static TreeNode head ; 
-    static TreeNode prev = null;
-
-    public static void binaryTree_to_dll(TreeNode node) {
-        if(node == null){
-            return ;
+        if(root == null){
+            return root ;
         }
 
-        binaryTree_to_dll(node.left);
+        Node dummy = new Node(-1) ;
+        prev = dummy ;
 
-        if(prev == null){
-            head = node ;
-            prev = node ;
-        }
-        else{
-            node.left = prev ;
-            prev.right = node ;
-            prev = prev.right;
-        }
+        convert_BST_To_DLL_(root);
+
+        Node head = dummy.right ;
+
+        dummy.right = head.left = null ;  
+
+
+        // do this when want to return circular ll .
+
+        // head.left = prev ;
+        // prev.right = head ;
+
+        return head ;
     }
 
+    static Node prev  ;
+
+    public static void convert_BST_To_DLL_(Node root) {
+        if(root == null) return ;
+         
+        // doing inorder traversal : it will give sorted ll.
+
+        convert_BST_To_DLL_(root.left) ;
+
+        root.left = prev ;
+        prev.right = root ;
+        prev = root ;
+
+
+        convert_BST_To_DLL_(root.right);
+    }
 
 
 
