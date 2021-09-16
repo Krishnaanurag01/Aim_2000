@@ -60,7 +60,7 @@ public class Q17_Quick_sort_for_Linked_list {
         return length;
     }
 
-    // you already knew its working.
+    // you already know its working.
     public static node[] segregate(node head , int pivotIndex) {
         if( head == null || head.next == null){
             return null;
