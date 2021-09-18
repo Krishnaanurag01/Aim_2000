@@ -138,7 +138,7 @@ public class Q20_Check_if_Linked_List_is_Palindrome {
 
         ll.insertNode(5);
         ll.insertNode(6);
-        ll.insertNode(7);
+        ll.insertNode(5);
         ll.insertNode(5);
         ll.insertNode(6);
         ll.insertNode(5);
