@@ -1,7 +1,6 @@
 package Binary_Search_Tree;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 
@@ -39,19 +38,23 @@ public class Q25_Check_whether_BST_contains_Dead_End {
         return root;
     }
 
+
+
+    // method 1 : storing all the nodes value in hashmap and also storing every leaf nodes which takes o(n) space and o(n) time.
+
     public static void storing_values(Node root, HashSet<Integer> set ) {
         if(root == null) return ;
 
         storing_values(root.left, set);
 
-        set.add(root.data) ;
+        set.add(root.data) ; // storing every value in the hashset.
 
         storing_values(root.right, set);
 
     }
 
 
-    static List<Integer> list = new ArrayList<>() ;
+    static List<Integer> list = new ArrayList<>() ; /// this will store all the leaf nodes.
 
 
     public static void check_bst_have_deadEnds(Node root ) {
@@ -62,10 +65,26 @@ public class Q25_Check_whether_BST_contains_Dead_End {
         check_bst_have_deadEnds(root.left);
 
         if(root.left == null && root.right == null){
-            list.add(root.data) ;
+            list.add(root.data) ; /// storing leaf nodes to the list.
         }
 
         check_bst_have_deadEnds(root.right);
+    }
+
+
+    // method 2 :
+
+    // time is : o(n) and space is o(1).
+    public static boolean checking_dead_end(Node root, int start , int end) {
+        if(root == null) return false ;
+
+        if(start == end) return true ; // when range is same then it means we can't insert data from current node.
+
+      
+        // when we move left side then, left range will be start and right end will be root.data -1 becuase left side has root - 1 range.
+        // when we move right side then , right range will be root + 1 data to infinity.
+        // when either of left or right is true then return true. otherwise false.
+        return  checking_dead_end(root.left, start , root.data - 1) ||  checking_dead_end(root.right,root.data + 1 , end);
     }
 
 
@@ -94,6 +113,7 @@ public class Q25_Check_whether_BST_contains_Dead_End {
         
         check_bst_have_deadEnds(tree.root) ;
         
+        // now checking if any element of the leaf node has leaf -1 and leaf + 1 value in whole tree , if it has then we have dead end in the tree.
         for( int i : list){
             if(set.contains(i-1) && set.contains(i+1) ){
                 System.out.println(true);
