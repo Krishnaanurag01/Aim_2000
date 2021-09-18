@@ -67,21 +67,21 @@ public class Q19_Split_a_Circular_Linked_List_into_two_halves {
             return ;
         }
 
-        node midNode = midNode(head) ;
-        node secondPart = midNode.next;
+        node midNode = midNode(head) ;  /// findinf the mid node.
+        node secondPart = midNode.next; // midnodes next will be our second part.
 
-        midNode.next = null ;
+        midNode.next = null ; // now making midnode.node = null
 
-        midNode.next = head ;
+        midNode.next = head ; // and connecting it with the  head for creating ciruclar ll.
         
 
-        node temp = secondPart;
+        node temp = secondPart; // now take the second part. and traverse until it found null
 
         while(temp.next != null){
             temp = temp.next;
         }
 
-        temp.next = secondPart ;
+        temp.next = secondPart ; // then point to the second part head.
     }
 
     public static void main(String[] args) {
