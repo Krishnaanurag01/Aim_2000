@@ -73,7 +73,7 @@ public class Q23_Find_pairs_with_given_sum_in_doubly_linked_list {
                 startNode = startNode.next;
                 lastNode = lastNode.prev;
             }
-            else if( startNode.data + lastNode.data < k ){
+            else if( sum < k ){
                 startNode = startNode.next;
             }
             else{
