@@ -20,7 +20,7 @@ public class Q5_Climb_Stairs_With_Minimum_Moves {
 
     public static int climb_stairs_with_min_moves(int[] moves, int n) {
         
-        Integer[] dp = new Integer[n + 1] ;
+        Integer[] dp = new Integer[n + 1] ;  // using integer array store null for every element, whereas In int[] array int store 0 for every element.
 
         dp[n] = 0 ; // as there is 1 path to reach end from end ( that is stay wherever you are) and 0 moves so 0 stored.
 
