@@ -22,7 +22,7 @@ public class Q1_01_Knapsack_Problem {
     // The time complexity of this naive recursive solution is exponential (2^n).  
 
 
-    // Time Complexity: O(2n). 
+    // Time Complexity: O(2^n). 
     public static int maxProfitSum(int[] values , int[] weight , int w , int n) {
         
         // base conditon 
