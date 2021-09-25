@@ -108,9 +108,9 @@ public class Q25_Sort_a_k_sorted_doubly_linked_list {
                 lastNode = lastNode.next ;
             }
 
-            if( head != null){
-                pq.add(head);
-                head = head.next ;
+            if( listHead != null){
+                pq.add(listHead);
+                listHead = listHead.next ;
             }
         }
 
