@@ -72,7 +72,7 @@ public class Q26_Rotate_Doubly_linked_list_by_N_nodes {
         current.next = listHead;
 
         int final_rotation = N % length ;
-        // N = length - final_rotation ; as we have to rotate left to right so don't have to do this.
+        // N = length - final_rotation ; as we have to rotate left so don't have to do this.
 
         while (final_rotation -- > 0) {
             current = current.next ;
