@@ -19,6 +19,7 @@ public class Common_elements_in_all_rows_of_a_given_matrix_Q10 {
         
         HashMap<Integer,Integer> map = new HashMap<>();
 
+        // storing the first row value with frequency 1.
         for (int i = 0; i < matrix[0].length; i++) {
             map.put(matrix[0][i],1);
         }
