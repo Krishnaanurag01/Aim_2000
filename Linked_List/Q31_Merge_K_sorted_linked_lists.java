@@ -99,6 +99,8 @@ public class Q31_Merge_K_sorted_linked_lists {
     }
 
 
+    // starts from here.
+
     public static Node merge_k_list(Node[] list) {
         if(list.length == 0) return null;        // when list array length is zero return null.
 
