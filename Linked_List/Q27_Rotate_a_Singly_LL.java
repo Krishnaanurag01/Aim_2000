@@ -65,7 +65,7 @@ public class Q27_Rotate_a_Singly_LL {
         // insted of doing 40 rotations we can simply rotate by 43 % 5 (assumed 5 is length of list) = 3 .
         // then it means 3rd nodes next will be our head . and on the 3rd node we have to break the circular list. 
 
-        k = length - final_rotation ; // this is length where we have to make our head and break the loop. // just this one line is added here.
+        k = length - final_rotation ; // this is length where we have to make our head and break the loop. // just this one line is added here. when rotating to the right.
 
         while (k-- > 0) {
             current = current.next;
