@@ -18,6 +18,8 @@ public class FindSpecificPairInMatrix_Q8 {
 
         int maxValue = 0 ;
 
+
+        // first finding the max value. and taking index of that.
         for (int j2 = 0; j2 < arr.length; j2++) {
             for (int k = 0; k < arr[0].length ; k++) {
                 
@@ -30,7 +32,11 @@ public class FindSpecificPairInMatrix_Q8 {
             }
         }
 
+        // System.out.println(maxValue +"=>" +i +" "+ j);
+
         int ans =0 ;
+
+        // now search again from start to the index of max value and keep checking ans (such that max value - current value ) for each value and update answer if get the larger difference.
 
         for (int k = 0; k < i; k++) {
             for (int k2 = 0; k2 < j; k2++) {
