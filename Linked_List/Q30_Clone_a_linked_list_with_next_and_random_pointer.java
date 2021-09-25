@@ -26,7 +26,7 @@ public class Q30_Clone_a_linked_list_with_next_and_random_pointer {
 
         Node current = listHead ;
 
-        // creating a new hear of the clone.
+        // creating a new head of the clone.
         Node nHead = new Node(-1) ;
         Node prev = nHead ;
 
