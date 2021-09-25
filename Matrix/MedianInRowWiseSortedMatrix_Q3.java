@@ -10,6 +10,8 @@ public class MedianInRowWiseSortedMatrix_Q3 {
         System.out.println(getMedian(M, R, C));
 
     }
+
+    // applying binary search same as kth smallest element in matrix.
     public static int getMedian(int[][] matrix , int r ,int c) {
         int startValue= 0 , endValue = 2000, midValue;
         int n = r*c ;

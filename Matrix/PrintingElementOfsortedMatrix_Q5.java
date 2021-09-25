@@ -22,6 +22,8 @@ public class PrintingElementOfsortedMatrix_Q5 {
     }
     public static void printInSortedOrder(int[][] Matrix ,int row , int column) {
 
+        // normally adding all element to the arraylist then sorting it and then again pasting it to matrix.
+
       ArrayList<Integer> list = new ArrayList<>();
         
         for (int i = 0; i < Matrix.length; i++) {

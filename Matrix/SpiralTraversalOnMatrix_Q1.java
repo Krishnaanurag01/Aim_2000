@@ -11,7 +11,7 @@ public class SpiralTraversalOnMatrix_Q1 {
        spirallyTraversing(matrix, r, c);
     }
 
-    // time complexicity : 0(row*column).
+    // time complexicity : 0(row*column)
     
     public static void spirallyTraversing(int[][] arr, int row , int column) {
 

@@ -12,6 +12,8 @@ public class TransposeOfNxNMatrix {
         }
     }
 
+    // digonal's left element will beomes diagonal's right and right becomes left.
+
     public static void makeTranspose(int[][] arr) {
         
         for (int i = 0; i < arr.length; i++) {

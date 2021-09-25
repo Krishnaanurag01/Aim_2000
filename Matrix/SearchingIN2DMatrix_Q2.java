@@ -19,7 +19,7 @@ public class SearchingIN2DMatrix_Q2 {
         //initializing column.
         int j = matrix[0].length-1;
 
-        while(i < n && j>=0){
+        while(i < n && j>=0){   // searching from  last column of first row.
             if(matrix[i][j] == target){
                 return true;
             }

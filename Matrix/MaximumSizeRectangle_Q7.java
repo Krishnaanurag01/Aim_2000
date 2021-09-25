@@ -22,16 +22,15 @@ public class MaximumSizeRectangle_Q7 {
         for(int i = 0 ; i < matrix.length ; i++){
             for(int j = 0 ; j < colSize ; j++){
                 
-                if(matrix[i][j] == '1'){
+                if(matrix[i][j] == '1'){ // if has 1 then increament the height array by 1.
                     heights[j] += 1;
                 }
-                else{
+                else{ // otherwise completely delete the element with 0.
                     heights[j] = 0;
                 }
             }
-            
-            answer = Math.max(answer , largestRectangleArea(heights));
 
+            answer = Math.max(answer , largestRectangleArea(heights));
         }
         return answer;
         

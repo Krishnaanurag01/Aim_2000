@@ -31,7 +31,7 @@ public class RowWithMax1s {
 
 
 
-    // time complexicity : log(n+m)
+    // time complexicity : : o(n+m)
 
     public static int getRowWithMaxNum(int[][] arr , int r , int c) {
 
@@ -42,9 +42,9 @@ public class RowWithMax1s {
 
             for (int j = col ; j >=0 ; j--) {
 
-                if(arr[i][j] == 1){
-                    rowis = i ;
-                    col--;
+                if(arr[i][j] == 1){ // when found 1 update the rowis value.
+                    rowis = i ; // with the current row.
+                    col--; // here we are decrementing the col-- becuase we already found 1 in one row so we'll look into other column which is ahead of us .  for the next row. here once we found 1 then all next element will also be 1.
                 }
                 else break;
                 
