@@ -24,7 +24,7 @@ public class Q18_Paint_House {
             b = nb ;
             g = ng ;
         }
-
+ 
         return Math.min(r, Math.min(b, g)) ; // and returing the min of all three.
     }
     
