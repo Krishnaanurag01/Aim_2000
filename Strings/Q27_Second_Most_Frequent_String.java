@@ -1,7 +1,8 @@
 package Strings;
 
 import java.util.HashMap;
-import java.util.Map;
+
+import java.util.PriorityQueue;
 
 
 
@@ -24,22 +25,14 @@ public class Q27_Second_Most_Frequent_String {
         }
     }
 
-    int maxFreq = 0;
-    int secondMostFreq = 0;
-    for (Map.Entry<String,Integer> e : map.entrySet()) {
-        maxFreq = Math.max(maxFreq, (int) e.getValue());
-       if(secondMostFreq < (int) e.getValue() && (int) e.getValue() < maxFreq){
-           secondMostFreq = (int) e.getValue();
-       }
-    }
-
-    for (Map.Entry<String,Integer> e : map.entrySet()) {
-        if( (int) e.getValue() == secondMostFreq){
-            return (String) e.getKey();
-        }
-    }
+    // making a maxheap by using comparator in priority queue it will have value at head which have max freq in map and so on.
+    PriorityQueue<String> queue = new PriorityQueue<>( (a,b) -> map.get(b) - map.get(a));
+    queue.addAll(map.keySet());
+    queue.remove();
 
 
-    return null;
+
+
+    return queue.remove();
  }
 }
