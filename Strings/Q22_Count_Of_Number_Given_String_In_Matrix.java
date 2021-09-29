@@ -31,7 +31,7 @@ public class Q22_Count_Of_Number_Given_String_In_Matrix {
             index++;
 
             if(index ==  size){
-                found= 1;
+                found = 1;
             }
             else{
                 found += searchCHar(i, j + 1 , s , sArr , size , index);
