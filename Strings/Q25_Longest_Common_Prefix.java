@@ -2,7 +2,7 @@ package Strings;
 
 public class Q25_Longest_Common_Prefix {
     public static void main(String[] args) {
-     String[] arr = {"flower","flow","light"};
+     String[] arr = {"flower","flow","fight"};
      System.out.println(getLongestCommonPrefix(arr));
     }
     
