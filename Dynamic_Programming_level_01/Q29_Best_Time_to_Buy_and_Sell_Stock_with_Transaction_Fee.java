@@ -8,6 +8,8 @@ public class Q29_Best_Time_to_Buy_and_Sell_Stock_with_Transaction_Fee {
 
     public int maxProfit(int[] prices, int fee) {
         
+
+        // old buying and selling state price.
         int obsp = -prices[0];  // concept like include and exclude.
         int ossp =  0 ;
         
