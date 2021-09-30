@@ -14,7 +14,7 @@ public class Q4_Climbing_Stairs_with_Jumps {
             jumps[i] = sc.nextInt() ;
         }
 
-        System.out.println( climbing_stairs_with_jump(jumps, 6) );
+        System.out.println( climbing_stairs_with_jump(jumps, n) );
 
         sc.close();
         
@@ -27,7 +27,7 @@ public class Q4_Climbing_Stairs_with_Jumps {
 
         for (int i = n-1 ; i >= 0 ; i--) { // we'll start from last as min number of stairs takes to reach at the nth stair.
             for (int j = 0; j <= jumps[i] && i+j < dp.length ; j++) { // look for given array about where can we jump from current location and the location ( i + j ) should be under dp region. (o\w give out of bound error)
-                dp[i] += dp[i] + dp[i+j] ; // storing total ways to reach end.
+                dp[i] +=  dp[i+j] ; // storing total ways to reach end.
             }
         }
 
