@@ -53,8 +53,8 @@ public class Q37_Count_Inversion {
             if(left[i] <= right[j]){
                 mergedArray[k++] = left[i++];
             }
-            else{
-                count += (left.length - i) ;
+            else{ // when right side is smaller then it means it has to swap with left.length - i elements(this is rest elements) of left array.
+                count += (left.length - i) ; 
                 mergedArray[k++] = right[j++];
             }
         }
