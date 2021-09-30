@@ -1,8 +1,7 @@
 package Searching_and_Sorting;
 
 
-import java.util.Map;
-import java.util.TreeMap;
+import java.util.* ;
 
 
 public class Q39_Sorting_Arrays_with_repeated_elements_using_Hashmap {
