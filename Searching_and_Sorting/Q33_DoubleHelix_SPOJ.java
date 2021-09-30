@@ -30,6 +30,7 @@ public class Q33_DoubleHelix_SPOJ {
     
             getMaxSum(sequence1, sequence2);
         }
+        sc.close();
     }
 
     public static void getMaxSum(int[] sequence1 , int sequence2[]) {
