@@ -23,7 +23,7 @@ public class Q34_Subset_Sums_SPOJ {
 
             int mid = low + (high - low)/2;
 
-            if()
+            // if()
             
         }
     }
