@@ -64,6 +64,7 @@ public class Q35_Smallest_window_in_a_string_containing_all_the_characters_of_an
                 if(mapForStr1.getOrDefault(ch,0) < mapForStr2.getOrDefault(ch,0)){
                     msc--;
                 }
+                
                 f2 = true;
             }
 
