@@ -5,7 +5,7 @@ package  Searching_and_Sorting;
 public class Q21_Find_pivot_element_in_a_sorted_array {
 
     public static void main(String[] args) {
-        int[]  arr = {4,5,6,7,0,1,2};
+        // int[]  arr = {4,5,6,7,0,1,2};
         int[] arr2 = {90,324,350,400, 9808, 10, 45 };
 
         System.out.println(getPivotElement(arr2));
@@ -21,7 +21,7 @@ public class Q21_Find_pivot_element_in_a_sorted_array {
         while (low < high) {            /// logic is super simple : when the mid element is smaller than high element then it means we 
             int mid = (low+high)/2 ;                                //have to search in left side .and vice versa.
             if(arr[mid] < arr[high]){
-                high = mid;
+                high = mid ;
             }
             else{
                 low = mid+1 ;
