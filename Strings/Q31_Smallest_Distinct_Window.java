@@ -1,10 +1,12 @@
 package Strings;
 
+import java.util.HashMap;
 import java.util.HashSet;
 
 public class Q31_Smallest_Distinct_Window {
     public static void main(String[] args) {
         System.out.println(getSmallestWindow("AABBBCBBAC"));
+        System.out.println(getSmallestWindowSize("AABBBCBBAC"));
     }
 
     public static String getSmallestWindow(String s) {
@@ -49,5 +51,60 @@ public class Q31_Smallest_Distinct_Window {
         }
 
         return s.substring(startIndex, startIndex + min_window);
+    }
+
+    // using hashmap and hashset.
+    // time complexicity  : 0(n)
+
+    public static int getSmallestWindowSize(String s) {
+        
+        // getting all the distinct characters.
+        HashSet<Character> set = new HashSet<>();
+
+        for (Character ch : s.toCharArray()) {
+            set.add(ch);
+        }
+
+        int i = -1 ; 
+        int j = -1 ;
+
+        HashMap<Character,Integer> mHashMap = new HashMap<>();
+        int ans = Integer.MAX_VALUE;
+
+        while (true) {
+            boolean f1 = false;
+            boolean f2 = false;
+
+            // first acquire the characters.
+            while (i < s.length()-1 &&  mHashMap.size() < set.size() ) {
+                i++;
+                char ch = s.charAt(i);
+
+                mHashMap.put(ch, mHashMap.getOrDefault(ch,0) + 1 );
+                f1 = true;
+            }
+            // now release.
+
+            while (j < i && set.size() == mHashMap.size()) {
+                int currentLen = i-j;
+                if(currentLen < ans){
+                    ans = currentLen;
+                }
+                j++;
+                char ch = s.charAt(j);
+                if(mHashMap.get(ch)== 1){
+                    mHashMap.remove(ch);
+                }
+                else{
+                    mHashMap.put(ch, mHashMap.get(ch) - 1);
+                }
+                f2 = true;
+            }
+            if(f1 == false && f2  == false){
+                break;
+            }
+
+        }
+        return ans;
     }
 }
