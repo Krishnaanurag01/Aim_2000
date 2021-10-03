@@ -20,7 +20,7 @@ public class Q18_LPS {
         // as string of length 1 can't have any prefix and suffix so its already zero thats why i is inialized with 1. and arr[0] = 0 by default.
 
         while (i < n) {
-            if(s.charAt(i)== s.charAt(len)){
+            if(s.charAt(i) == s.charAt(len)){
                 len++;
                 lps[i] = len;
                 i++;
