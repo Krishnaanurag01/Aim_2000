@@ -32,7 +32,7 @@ public class MovingNegativeNumbersOneSide {
     public static void without_changing_order(int[] arr) {
         
         int end = arr.length-1 ;
-        int temp ;
+        // int temp ;
         int[] tempArr = new int[arr.length]; 
         int j = 0;
 
