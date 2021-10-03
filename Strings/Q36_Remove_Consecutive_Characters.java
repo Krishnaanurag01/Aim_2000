@@ -28,7 +28,7 @@ public class Q36_Remove_Consecutive_Characters {
     for (int i = 1; i < sArr.length; i++) {
         if(sArr[j] != sArr[i]){
             j++;
-            sArr[j] = sArr[i];
+            sArr[j] = sArr[i]; // when ditinct then it will store the distinct character next to the last distinct character.
         }
     }
     return String.valueOf(Arrays.copyOfRange(sArr,0,j+1));
