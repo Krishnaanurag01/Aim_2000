@@ -29,7 +29,7 @@ public class Q30_Program_to_generate_all_possible_valid_IP_addresses_from_given_
                 // else.
                 for (int k = 1; i + j + k < n && k < 4 ; ++k) {
                     String thirdPart = s.substring(i+j, i+j+k);
-                    String fourthPart = s.substring(i +j + k) ;
+                    String fourthPart = s.substring(i + j + k) ;
 
                     if( !isValid(thirdPart) || !isValid(fourthPart)){
                         continue;
