@@ -10,6 +10,8 @@ public class Q38_Function_to_find_Number_of_customers_who_could_not_get_a_comput
         System.out.println(getCustomerWhoDidntGetComputer(3, "GACCBGDDBAEE"));
         System.out.println(getCustomerWhoDidntGetComputer(1, "ABCBCADEED"));
 
+        // System.out.println('A' - 'A');
+
     }
     public static int getCustomerWhoDidntGetComputer(int total_computers , String s) {
         
@@ -21,7 +23,7 @@ public class Q38_Function_to_find_Number_of_customers_who_could_not_get_a_comput
 
        for (int i = 0; i < s.length(); i++) {
            
-        int index = s.charAt(i) - 'A' ;   // this will give index in 1,2,3.. ( ascii value - 65).
+        int index = s.charAt(i) - 'A' ;   // this will give index in 0,1,2,3.. ( ascii value - 65).
 
         // now check if the received index has no value.
         if(seen[index] == 0 ){
