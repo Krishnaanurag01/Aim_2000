@@ -30,7 +30,7 @@ public class Q41_Recursively_print_all_sentences_that_can_be_formed_from_list_of
 
     private static void printUntil(String[][] strArr, int m , int n , String[] output) {
 
-        output[m] = strArr[m][n] ;
+        output[m] = strArr[m][n] ; // stroring data.
         
 
         if( m == R-1){
