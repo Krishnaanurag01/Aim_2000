@@ -4,6 +4,7 @@ public class Q10_2_Keys_Keyboard {
 
     public static void main(String[] args) {
         
+        
     }
 
     public int minSteps(int n) {
