@@ -3,6 +3,8 @@ package Dynamic_Programming_level_02;
 public class Q2_KnapSack_Problem {
 
     public static void main(String[] args) {
+
+        
         
     }
 
