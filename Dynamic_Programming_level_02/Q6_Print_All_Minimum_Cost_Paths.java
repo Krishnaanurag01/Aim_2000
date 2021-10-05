@@ -6,6 +6,7 @@ public class Q6_Print_All_Minimum_Cost_Paths {
 
     public static void main(String[] args) {
         
+        
     }
 
     static class pair{
