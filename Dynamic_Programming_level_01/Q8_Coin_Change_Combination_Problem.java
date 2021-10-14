@@ -19,7 +19,7 @@ public class Q8_Coin_Change_Combination_Problem {
             for (int j = coins[i] ; j < dp.length ; j++) { // and starting from the element value till the sum.
 
                 // here checking if we pay coins[i] then dp have j - coins[i] ? whatever the value it has add it to the current dp[j].
-                // for eg: we are at 2nd index and current coin is 2 so we check if we pay 2 then dp have 2-2 ? (which is 0th index and oth index has 1) so we'll add it to the current location of dp otherwise if it could have 0 then if we add 0 then it doesn't affect our anser as 0 is identity of sum.
+                // for eg: we are at 2nd index and current coin is 2 so we check if we pay 2 then dp have 2-2 ? (which is 0th index and oth index has 1) so we'll add it to the current location of dp otherwise if it could have 0 then if we add 0 then it doesn't affect our answer as 0 is identity of sum.
                 dp[j] += dp[j - coins[i]] ;
                 
             }
