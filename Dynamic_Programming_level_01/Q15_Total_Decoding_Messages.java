@@ -25,7 +25,7 @@ public class Q15_Total_Decoding_Messages {
 
        int[] dp = new int[str.length()] ; // making dp.
         
-        dp[0] = str.charAt(0) == '0'? 0 : 1 ; // if our first char of str is 0 then store 0 elese 1.
+        dp[0] = str.charAt(0) == '0'? 0 : 1 ; // if our first char of str is 0 then store 0 else 1.
 
         for (int i = 1; i < dp.length; i++) {
             char fc = str.charAt(i-1) ; // taking the previous char
