@@ -36,8 +36,8 @@ public class Q12_Count_Binary_Strings {
 
     public static void binaryString_of_len_n2(int n) {
 
-        int obczeros = 1 ;  // old binary cound zeros is 1 by default.
-        int obcones = 1; // old binary cound of one is 1 by default.
+        int obczeros = 1 ;  // old binary cound zeros is 1 by default. /// this means , there are only 1 binary number possible of one length which ends at 0
+        int obcones = 1; // old binary cound of one is 1 by default.  same as above
 
         for (int i = 2; i <= n ; i++) {
             int nbczeros = obcones ;
