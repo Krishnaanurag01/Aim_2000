@@ -12,6 +12,7 @@ public class Q28_Burst_Balloons {
 
         int[][] dp = new int[arr.length][arr.length] ;
 
+        // gap strategy 2.0 : 
         for (int g = 0; g < arr.length; g++) {
             for (int i = 0, j = g ; j < arr.length; i++ , j++) {
                 
