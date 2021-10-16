@@ -25,9 +25,9 @@ public class Q25_Rod_Cutting_Problem {
 
         for (int i = 2; i < dp.length; i++) {
 
-            dp[i] = np[i] ; // storing the original value by defaly.
+            dp[i] = np[i] ; // storing the original value by default.
 
-            int l = 1 ;
+            int l = 1 ;  // something like catalan numbers.
             int r = i-1 ;
 
             while (l <= r) { // the moment l == r that point is mid point so stoping after that
