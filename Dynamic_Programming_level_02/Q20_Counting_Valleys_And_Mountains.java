@@ -16,6 +16,8 @@ public class Q20_Counting_Valleys_And_Mountains {
         
     }
 
+    // ditto same as catalan number.
+
     public static int count_valleys(int n) {
         
         int[] dp = new int[n+1] ;
