@@ -2,7 +2,7 @@ package Dynamic_Programming_level_02;
 
 import java.util.ArrayDeque;
 
-public class Q7_Print_Paths_with_Maximum_Gol {
+public class Q7_Print_Paths_with_Maximum_Gol { // max gold prob
 
 
     public static void main(String[] args) {
