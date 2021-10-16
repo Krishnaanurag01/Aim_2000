@@ -8,7 +8,7 @@ public class Q22_Circle_And_Chords {
     
 
     // You have to find the number of ways in which these chords can be drawn.
-
+    // again  catalan logic.
     public static int get_total_ways(int n) {
         
         int[] dp = new int[n+1] ;
