@@ -3,7 +3,7 @@ package Dynamic_Programming_level_02;
 public class Q24_Dyck_Path {
     
 
-    // using catalan numbers method.
+    // using catalan numbers method.  // think of this question as if counting valleys and mountain is rotated a bit.
     static Long dyckPaths(int N) {
         
         long[] dp = new long[N+1];
