@@ -126,7 +126,7 @@ public class Q26_Palindrome_Partitioning_with_Minimum_Cuts {
                 int min = Integer.MAX_VALUE ;
 
                 
-                for (int i = j ; i >= 1 ; i--) { // start from j to 1 we didn't go to 0 as if did this then the whole string would be selected.
+                for (int i = j ; i >= 1 ; i--) { // start from j to 1 we didn't go to 0 as, if did this then the whole string would be selected.
                     if(dp[i][j]){/// checking if it palindrome
                         min = Math.min(min, strg[i-1]) ; // if yes then find count of cut in 0 to current index of string - 1 part.
                     }
