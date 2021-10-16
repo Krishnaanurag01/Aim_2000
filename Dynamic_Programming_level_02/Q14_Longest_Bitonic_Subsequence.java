@@ -27,7 +27,7 @@ public class Q14_Longest_Bitonic_Subsequence {
             lis[i] = max + 1 ;
         }
 
-        // finding longest decreasing subsequence.
+        // finding longest decreasing subsequence. // or you can simply reverse the lis and store the value in lds.
 
         int[] lds = new int[n] ;
 
