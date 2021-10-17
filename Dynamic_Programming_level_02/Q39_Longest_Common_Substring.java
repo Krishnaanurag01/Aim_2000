@@ -19,7 +19,7 @@ public class Q39_Longest_Common_Substring {
         int[][] dp = new int[n1 + 1 ][n2 + 1 ] ;
 
 
-        // starting from bottom.
+        // starting from bottom. //leaving the the last row and column
         for (int i = n1 ; i >= 0 ; i--) {
             for (int j = n2 ; j >= 0 ; j--) {
 
