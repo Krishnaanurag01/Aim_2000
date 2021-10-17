@@ -37,7 +37,7 @@ public class Q30_Boolean_Parenthesization {
                     dpf[i][j] = str1.charAt(i) == 'T' ? 0 : 1 ;
                 }
                 else{
-                    for (int k = i ; k < j ; k++) {  // now running loop from i to k-1.
+                    for (int k = i ; k < j ; k++) {  // now running loop from i to j-1.
                         char optr = str2.charAt(k); // finding the operator.
 
                         int ltc = dpt[i][k] ; // this is left true count
