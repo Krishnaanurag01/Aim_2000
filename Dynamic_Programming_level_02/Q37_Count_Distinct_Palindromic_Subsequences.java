@@ -14,8 +14,8 @@ public class Q37_Count_Distinct_Palindromic_Subsequences {
         int n = s.length() ;
         int[][] dp = new int[n][n] ;
 
-        int[] next = new int[n] ;
-        int[] prev = new int[n] ;
+        int[] next = new int[n] ;  // this will store the index of every arr[i] next index 
+        int[] prev = new int[n] ; // and this store the previous arr[i] index.
 
         HashMap<Character,Integer> map = new HashMap<>() ;
 
@@ -49,6 +49,22 @@ public class Q37_Count_Distinct_Palindromic_Subsequences {
 
             map.put(ch, i) ;
         }
+
+
+        // using gap strategy : 
+
+        /* formula : 
+
+        when c != c2 : dps(c1m) + dps(mc2) - dps(m)
+        
+        when c == c2 : 
+        if a ------ a : 2*dps(m) + 2 ;
+        if a ----a ------- : 2*dps(m) + 1 ;
+        if a ---- a --- a ------ : 2*dps(m) - dps(m') ;
+                    |^|
+                     m' 
+
+        */
 
 
         for (int g = 0; g < n ; g++) {
