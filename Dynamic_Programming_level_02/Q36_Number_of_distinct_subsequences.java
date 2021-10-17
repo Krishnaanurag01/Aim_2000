@@ -2,7 +2,7 @@ package Dynamic_Programming_level_02;
 
 import java.util.HashMap;
 
-public class Q36_Number_of_distinct_subsequences {
+public class Q36_Number_of_distinct_subsequences  {
 
     public static void main(String[] args) {
         
@@ -21,11 +21,11 @@ public class Q36_Number_of_distinct_subsequences {
             
             dp[i] = (2*dp[i-1])%mod ; // store previous subsequence * 2. directly
 
-            if(map.containsKey(s.charAt(i-1))){ // now chheck if exist in hashtable then get value of that key and subtract.
-                dp[i] = (dp[i]  - dp[map.get(s.charAt(i-1)) - 1] + mod )%mod;
+            if(map.containsKey(s.charAt(i-1))){ // now check if exist in hashtable then get value of that key and subtract.
+                dp[i] = (dp[i]  - dp[map.get(s.charAt(i-1)) - 1] + mod )%mod; // here getting the index from hashmap of same character and subtracting from the  index we got from (i-1)-1 .
             }
 
-            map.put(s.charAt(i-1), i); // now putting into the map.
+            map.put(s.charAt(i-1), i); // now putting into the map. storing the index.
             
         }
 
