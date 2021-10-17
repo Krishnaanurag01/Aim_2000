@@ -20,7 +20,7 @@ public class Q51_Knights_Probability_in_Chessboard {
         double[][] current_dp = new double[n][n] ;
         double[][] next_dp = new double[n][n] ;
 
-        current_dp[r][c] = 1 ;
+        current_dp[r][c] = 1 ; // probability of current place 
 
         for (int moves = 0 ; moves < steps ; moves++) { // playing steps times.
             for (int i = 0; i < n ; i++) { // row
@@ -37,7 +37,7 @@ public class Q51_Knights_Probability_in_Chessboard {
                             next_dp[ni][nj] += current_dp[i][j] / 8.0 ; // is valid then storing current value / 8 (as knight can go upto 8 moves.)
                         }
 
-                        // doing for this rest of the directions as well.
+                        // doing this for rest of the directions as well.
                         ni = i-1 ;
                         nj = j + 2 ;
                         if(isValid(n, ni, nj)){
