@@ -17,7 +17,7 @@ public class Q41_Regular_Expression_Matching {
         for (int i = 0; i < dp.length; i++) {
             for (int j = 0; j < dp[0].length; j++) {
                 
-                if(i==0 && j == 0){ // this will always be 0 as "-" == "-"
+                if(i==0 && j == 0){ // this will always be 0 as "-" == "-" , empty char == empty char.
                     dp[i][j] = true ;
                 }
                 else if(i==0){ // else false
@@ -36,10 +36,10 @@ public class Q41_Regular_Expression_Matching {
                     else if( pc == '*'){ // if this comes look aove i-2
                             dp[i][j] = dp[i-2][j] ;
 
-                            char previousChar = ptr.charAt(i-2) ;
+                            char previousChar = ptr.charAt(i-2) ; // i - 1(for checking char as 1st row is dummy) - 1(for prev char)
 
                             // if '*' above character is same as current string char then you can also check left column if true then store true.
-                            if(previousChar == s.charAt(j-1) || previousChar == '.'){
+                            if(previousChar == s.charAt(j-1) || previousChar == '.'){ // "." can match any single char
                                 dp[i][j] = dp[i-2][j] || dp[i][j-1] ;
                             }
                     } // else false.
