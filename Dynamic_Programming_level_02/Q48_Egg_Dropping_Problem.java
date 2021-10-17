@@ -17,16 +17,28 @@ public class Q48_Egg_Dropping_Problem {
         
         */
 
+
+        // skipped the first row and first col as first row denotes 0 eggs(so answer is already 0) and first column denotes the 0th floor(so answer is 0 already )
+
         for (int i = 1; i < dp.length; i++) { // row : denotes egg. 
             for (int j = 1; j < dp[0].length; j++) { // col : denotes floor.
 
-                if(i==1){ // when egg is 1.
+                if(i==1){ // when egg is 1,then store floor(means we try in each floor.)
                     dp[i][j] = j ;
                 }
                 else if(j==1){ // when floor is 1.
                     dp[i][j] = 1 ;
                 }
                 else{
+
+                    /* formula is :
+                    
+                    eggs | floor := when egg breaks then check egg-1 | floor - 1 ,
+
+                    when egg not breaks then check egg | floor - x ;
+
+
+                    */
 
                     int min = Integer.MAX_VALUE ;
 
