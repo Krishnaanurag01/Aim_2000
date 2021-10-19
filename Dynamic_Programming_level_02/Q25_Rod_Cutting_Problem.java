@@ -67,7 +67,7 @@ public class Q25_Rod_Cutting_Problem {
           int l = 1 ;
           int r = i-1 ;
 
-          while (r >= 0) {
+          while (r >= 0) {  // L+ r == i // eg : 1 , 2, 3, 4, 5  and i is at 5th index so adding 1+4  == 5 , 2+3 = 5 and so on.
               dp[i] = Math.max(dp[i], narr[l] + dp[i-l]) ; // here 1 cut we getting from original array and one from dp (optimized value stored there)
 
               l++;
