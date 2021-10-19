@@ -31,5 +31,7 @@ public class Q61_Minimum_Insertions_To_Make_Palindrome {
         return  s.length() - dp[0][s.length() - 1 ]  ; // this means some part of s which is palindrome are removed and the rest left is non palindrome so we have to add same rest to make it palindrome.
         
     }
+
+    // same concept apply if asked , minimum deletion to make string palindrome
     
 }
