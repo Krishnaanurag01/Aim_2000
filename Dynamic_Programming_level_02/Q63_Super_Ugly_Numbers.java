@@ -80,7 +80,7 @@ public class Q63_Super_Ugly_Numbers {
             pq.add(new pair(primes[i], 1, primes[i]));
         }
 
-        dp[1] = 1; // stored 1st igly number that is 1 at 1st index.
+        dp[1] = 1; // stored 1st ugly number that is 1 at 1st index.
 
         for (int i = 2 ; i < dp.length;) { // now starting from 2 to n
 
