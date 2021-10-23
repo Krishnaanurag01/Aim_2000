@@ -8,6 +8,7 @@ public class Q88_Minimum_cost_to_fill_given_weight_in_a_bag {
         get_min_cost(arr, 5);
     }
 
+    // need correction
     public static void get_min_cost(int[] cost , int w) {
         
         int[][] dp = new int[cost.length+1][w+1] ;
@@ -32,7 +33,7 @@ public class Q88_Minimum_cost_to_fill_given_weight_in_a_bag {
         System.out.println(dp[cost.length][w]);
     }
 
-    
+    //
 
     public static int get_min_cost2(int[] cost , int w) {
         
