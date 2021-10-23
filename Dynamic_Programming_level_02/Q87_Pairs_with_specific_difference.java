@@ -31,5 +31,5 @@ public class Q87_Pairs_with_specific_difference {
         System.out.println( sum );
 
     }
-    
+    //
 }
