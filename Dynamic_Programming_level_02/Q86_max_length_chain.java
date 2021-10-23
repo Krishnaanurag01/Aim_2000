@@ -45,7 +45,7 @@ public class Q86_max_length_chain {
             }
 
             dp[i] = max + 1 ; // adding one because we are adding current chain. 
-            ans = Math.max(ans, dp[i]) ; // also updating the answer.
+            ans = Math.max(ans, dp[i]) ; // also updating the answer
         }
 
 
