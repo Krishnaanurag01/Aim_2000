@@ -30,7 +30,7 @@ public class Q83_Count_all_subsequence_having_product_less_than_K {
           
           answer += right - left + 1 ;  //if both left and right at the same positio then we add 0-0+1 for only element else if right side is at 2nd index and left side is at 0th index then 2-0 = 2 that is subarray from 0 to 2 and +1 for current element itself. 
           
-          right++; // incrementing the right window.
+          right++; // incrementing the right window
             
         }
         
