@@ -60,7 +60,7 @@ public class Q96_Weighted_Job_Scheduling {
 
     //     System.out.println( Math.max(include, exclude) );
     // }
-
+    
 
     public static void Max_prfit(int[] startTime , int[] endTime , int[] profit) {
         
