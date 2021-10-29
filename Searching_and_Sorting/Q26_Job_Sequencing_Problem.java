@@ -15,7 +15,7 @@ public class Q26_Job_Sequencing_Problem {
 
         Job[] arr = { new Job(1,4,3), new Job(2,6,5), new Job(4,7,2) ,new Job(6,8,6), new Job(5,9,4) , new Job(7,10,8)};
 
-        int[] ans = MaxProfitJobSequence(arr, 4);
+        int[] ans = MaxProfitJobSequence(arr,arr.length);
 
         for (int i : ans) {
             System.out.print(i+" ");
