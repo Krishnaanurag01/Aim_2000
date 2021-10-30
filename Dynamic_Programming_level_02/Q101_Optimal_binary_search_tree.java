@@ -58,7 +58,7 @@ public class Q101_Optimal_binary_search_tree {
             }
         }
         
-        //
+    
         return dp[0][keys.length-1] ;
         
         
