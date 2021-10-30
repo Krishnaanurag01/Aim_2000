@@ -3,6 +3,10 @@ package Dynamic_Programming_level_01;
 public class Q31_Best_Time_to_Buy_and_Sell_Stocks_Two_Transaction_Allowed {
 
     public static void main(String[] args) {
+
+        int price[] = { 2, 30, 15, 10, 8, 25, 80 } ;
+
+        System.out.println( maxProfit(price) );
         
     }
 
