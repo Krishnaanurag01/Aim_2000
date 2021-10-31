@@ -13,7 +13,7 @@ public class Q32_Best_Time_to_Buy_and_Sell_Stocks_K_Transaction_Allowed {
 
         int[][] dp = new int[k+1][prices.length] ; // dp of transaction (k) rows and prices column.
 
-        for (int ts = 0; ts < dp.length; ts++) {  // ts : transaction.
+        for (int ts = 1; ts < dp.length; ts++) {  // ts : transaction.
             for (int d = 1; d < dp[0].length; d++) {  // d : days.
 
                 dp[ts][d] = dp[ts][d-1] ;  // storing the same row previous column data first and
