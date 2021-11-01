@@ -52,6 +52,7 @@ public class Q2_Find_All_Paths_in_Graph_using_Depth_First_Search {
         
     }
 
+    // almost same as q1
     public static void print_all_paths(ArrayList<Edge>[] graph , int source , int dest , boolean[] visited , String psf) {
         
         if( source == dest ) {
