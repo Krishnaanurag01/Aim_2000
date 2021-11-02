@@ -26,7 +26,7 @@ public class Q2_Find_All_Paths_in_Graph_using_Depth_First_Search {
 
         int vert = Integer.parseInt( br.readLine() ) ;
 
-        ArrayList<Edge>[] graph = new ArrayList[vert] ;
+        ArrayList<Edge>[] graph = new ArrayList[vert] ; //
 
         for (int i = 0; i < graph.length; i++) {
             graph[i] = new ArrayList<>() ;
