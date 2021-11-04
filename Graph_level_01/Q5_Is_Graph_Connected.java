@@ -39,7 +39,7 @@ public class Q5_Is_Graph_Connected {
 
             graph[v1].add(new Edge(v1, v2, weight)) ;
             graph[v2].add(new Edge(v2, v1, weight)) ;
-        }
+        }                                                            // rest of the code is same as Q4.
 
         boolean[] visited = new boolean[vertex] ;
 
@@ -54,7 +54,7 @@ public class Q5_Is_Graph_Connected {
             }
         }
 
-        System.out.println( compo.size() == 1);
+        System.out.println( compo.size() == 1); // if graph has only one component then it will return true otherwise false.
 
     }
 
