@@ -18,7 +18,7 @@ public class Q12_Is_graph_cyclic {
         }
      }
 
-     // making an extra pair class.
+     // making an extra custom pair class.
      static class Pair{
         int v ;
         String psf ;
