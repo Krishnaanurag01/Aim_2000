@@ -16,7 +16,7 @@ public class Q11_BFS {
         }
      }
      
-     
+     // extra pair class.
      static class Pair{
          int src ;
          String psf ;
