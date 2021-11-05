@@ -41,43 +41,43 @@ public class Q9_Hamiltonian_Path_Cycles {
   
         // write all your codes here
 
-        HashSet<Integer> visited = new HashSet<>() ;
+        HashSet<Integer> visited = new HashSet<>() ; // work same as boolean visited array.
 
         print_path(graph,src,visited , src +"",src) ;
      }
 
     private static void print_path(ArrayList<Edge>[] graph, int src, HashSet<Integer> visited, String psf,int original_src) {
 
-        if( visited.size() == graph.length - 1 ) {
-            System.out.print(psf);
+        if( visited.size() == graph.length - 1 ) { // the moment visited set becomes equal to graph.length -1 which means that visited set contains all the vertex of graph.
+            System.out.print(psf); // so printint the path.
 
-            boolean is_cycle = false ;
+            boolean is_cycle = false ; // this will denotes if path is hamiltonian cycle.
 
-            for (Edge e : graph[src] ) {
+            for (Edge e : graph[src] ) { // if any of the edge node is equal to original source then it is cycle. 
                 if(e.nbr == original_src){
-                    is_cycle = true ;
+                    is_cycle = true ; // so make true and break the loop.
                     break ;
                 }
             }
 
-            if(is_cycle == true){
+            if(is_cycle == true){ // if it's cycle then add " * " at the end of the path.
                 System.out.print("*");
             }
-            else{
+            else{ // if it's not cycle then it is hamiltonian path so adding " . " at the end of the path.
                 System.out.print(".");
             }
         }
 
 
-        visited.add(src) ;
+        visited.add(src) ; // adding vertex to the set.
 
-        for (Edge e : graph[src]) {
+        for (Edge e : graph[src]) { // running loop on all its edges.
             if(visited.contains(e.nbr) == false){
                 print_path(graph, e.nbr , visited, psf + e.nbr, original_src);
             }
         }
 
-        visited.remove(src) ;
+        visited.remove(src) ; // now removing the vertex from set as it is visited so making unvisited for next iteration.
     
     }
 }
