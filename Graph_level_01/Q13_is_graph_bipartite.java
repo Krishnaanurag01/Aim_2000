@@ -18,7 +18,7 @@ public class Q13_is_graph_bipartite {
     }
  }
  
- static class Pair{
+ static class Pair{ // custom pair class.
      int v ;
      String psf ;
      int level ;
