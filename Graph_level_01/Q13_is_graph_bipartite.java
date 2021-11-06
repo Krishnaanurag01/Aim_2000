@@ -19,9 +19,9 @@ public class Q13_is_graph_bipartite {
  }
  
  static class Pair{ // custom pair class.
-     int v ;
-     String psf ;
-     int level ;
+     int v ; // denotes vertex.
+     String psf ; // path so far.
+     int level ; // denotes level.
      
      Pair(int v , String psf , int level){
          this.v = v ;
