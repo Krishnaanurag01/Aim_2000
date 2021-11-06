@@ -2,14 +2,13 @@ package Graph_level_01;
 
 import java.util.*;
 import java.io.*;
-import java.lang.reflect.Array;
 
 public class Q12_Is_graph_cyclic {
     
     static class Edge {
-        int src;
-        int nbr;
-        int wt;
+        int src; // denotes vertex.
+        int nbr; // denotes neigbours.
+        int wt; // denotes weight.
   
         Edge(int src, int nbr, int wt) {
            this.src = src;
