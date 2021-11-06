@@ -72,7 +72,7 @@ public class Q14_Spread_Infection {
   
 
 
-     static class Pair{
+     static class Pair{ // using custom pair.
          int src  , time ;
 
          Pair(int src , int time){
