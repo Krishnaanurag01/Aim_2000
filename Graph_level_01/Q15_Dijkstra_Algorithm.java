@@ -69,9 +69,9 @@ public class Q15_Dijkstra_Algorithm {
 
 
      static class Pair implements Comparable<Pair> {
-        int src ;
-        String psf ;
-        int wsf ;
+        int src ; // denotes vertex
+        String psf ; // denotes path so far.
+        int wsf ; // denotes weight so far.
 
         Pair(int src , String psf , int wsf ){
             this.src = src ;
