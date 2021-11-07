@@ -45,8 +45,8 @@ public class Q18_Iterative_Depth_First_Traversal {
   
         int src = Integer.parseInt(br.readLine());
   
-        // write your code here  
-
+        // logic starts from here.
+        
         boolean[] visited = new boolean[vtces] ;
         Stack<Pair> stack = new Stack<>() ; // using stack instead of queue.
 
