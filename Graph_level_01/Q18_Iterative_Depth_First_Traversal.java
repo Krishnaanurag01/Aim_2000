@@ -63,7 +63,7 @@ public class Q18_Iterative_Depth_First_Traversal {
             // else make it visit.
             visited[rem.vertex] = true ;
 
-            System.out.println(rem.vertex + "@" + rem.psf);
+            System.out.println(rem.vertex + "@" + rem.psf); // printing the answer.
 
             for (Edge e : graph[rem.vertex]) { // adding neigbours if they are not viisted before.
                 if(visited[e.nbr] == false){
