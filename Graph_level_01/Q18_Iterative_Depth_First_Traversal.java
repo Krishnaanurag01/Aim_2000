@@ -61,7 +61,6 @@ public class Q18_Iterative_Depth_First_Traversal {
             }
 
             // else make it visit.
-
             visited[rem.vertex] = true ;
 
             System.out.println(rem.vertex + "@" + rem.psf);
