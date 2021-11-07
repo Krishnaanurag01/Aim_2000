@@ -46,7 +46,7 @@ public class Q18_Iterative_Depth_First_Traversal {
         int src = Integer.parseInt(br.readLine());
   
         // logic starts from here.
-        
+
         boolean[] visited = new boolean[vtces] ;
         Stack<Pair> stack = new Stack<>() ; // using stack instead of queue.
 
@@ -54,7 +54,7 @@ public class Q18_Iterative_Depth_First_Traversal {
 
         while (stack.size() > 0) {
             
-            Pair rem = stack.pop() ;
+            Pair rem = stack.pop() ; // removing the top pair.
 
             if( visited[rem.vertex] == true){ // means already visited.
                 continue ;
