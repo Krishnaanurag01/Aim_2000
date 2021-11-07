@@ -12,9 +12,9 @@ public class Q1_Has_Path_between_src_desti {
      */
     public static class Edge {
 
-        int src ;
-        int nebh ;
-        int wt ;
+        int src ; // denotes vertex.
+        int nebh ; // denotes neigbours.
+        int wt ; // and weight.
 
         Edge(int src , int nebh , int wt){
             this.src = src ;
@@ -59,6 +59,7 @@ public class Q1_Has_Path_between_src_desti {
 
     }
 
+    // using DFS!
 
     public static boolean has_path(ArrayList<Edge>[] graph , int src , int dest , boolean[] visited) {
         
@@ -77,10 +78,9 @@ public class Q1_Has_Path_between_src_desti {
                     return true ;
                 }
             }
-
         }
 
-// otherwise return false.
+    // otherwise return false.
         return false ;
     }
     
