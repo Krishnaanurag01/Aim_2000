@@ -57,7 +57,7 @@ public class Q18_Iterative_Depth_First_Traversal {
             Pair rem = stack.pop() ; // removing the top pair.
 
             if( visited[rem.vertex] == true){ // means already visited.
-                continue ;
+                continue ; // skipping when already visited.
             }
 
             // else make it visit.
