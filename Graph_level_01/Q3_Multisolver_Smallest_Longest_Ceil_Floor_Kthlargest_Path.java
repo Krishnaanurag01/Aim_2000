@@ -27,7 +27,7 @@ public class Q3_Multisolver_Smallest_Longest_Ceil_Floor_Kthlargest_Path {
            this.psf = psf;
         }
   
-        public int compareTo(Pair o){
+        public int compareTo(Pair o){ // comparision on the weight.
            return this.wsf - o.wsf;
         }
      }
@@ -77,7 +77,9 @@ public class Q3_Multisolver_Smallest_Longest_Ceil_Floor_Kthlargest_Path {
      static Integer cpathwt = Integer.MAX_VALUE;
      static String fpath;
      static Integer fpathwt = Integer.MIN_VALUE;
+
      static PriorityQueue<Pair> pq = new PriorityQueue<>();
+
      public static void multisolver(ArrayList<Edge>[] graph, int src, int dest, boolean[] visited, int criteria, int k, String psf, int wsf) {
          
          if(src == dest) {
@@ -119,7 +121,7 @@ public class Q3_Multisolver_Smallest_Longest_Ceil_Floor_Kthlargest_Path {
          visited[src] = true ;
          
          for(Edge e  : graph[src]){
-             if(visited[e.nbr] != true){
+             if(visited[e.nbr] != true){ 
                  
                  multisolver(graph, e.nbr , dest,visited,  criteria, k,  psf + e.nbr, wsf+ e.wt);
                  
