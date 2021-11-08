@@ -2,11 +2,6 @@ package Graph_level_01;
 
 public class Q6_Count_Number_of_Islands {
 
-    public static void main(String[] args) {
-        
-    
-    }
-
     public static void get_count_island(int[][] grid) {
         
         int count =0 ;
