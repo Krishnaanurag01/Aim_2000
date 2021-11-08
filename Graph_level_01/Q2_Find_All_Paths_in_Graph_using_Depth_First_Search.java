@@ -55,20 +55,20 @@ public class Q2_Find_All_Paths_in_Graph_using_Depth_First_Search {
     // almost same as Questions 01.
     public static void print_all_paths(ArrayList<Edge>[] graph , int source , int dest , boolean[] visited , String psf) {
         
-        if( source == dest ) {
-            System.out.println( psf );
+        if( source == dest ) { // when source == destination then print the path so far.
+            System.out.println( psf ); // printing the path.
             return ;
         }
 
-        visited[source] = true ;
+        visited[source] = true ; // making it visited.
 
         for (Edge edge : graph[source]) {
-            if(visited[edge.nebh] != true){
+            if(visited[edge.nebh] != true){ // if neigbours are not visited then call the function with source = neigbours.
                 print_all_paths(graph, edge.nebh , dest, visited, psf+edge.nebh);
             }
         }
 
-        visited[source] = false ;
+        visited[source] = false ; // making it unvisited. so that, we can run with another vertex.
 
     }
     
