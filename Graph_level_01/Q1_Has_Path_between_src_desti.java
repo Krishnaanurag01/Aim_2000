@@ -62,13 +62,13 @@ public class Q1_Has_Path_between_src_desti {
         
         if(src == dest) return true ; // the moment source == destination then return true.
 
-        visited[src] = true ; // mark source vertex vsisited.
+        visited[src] = true ; // mark source vertex visited.
 
         for (Edge edge : graph[src]) { // now running for each edges in Arraylist of source.
             
             if(visited[edge.nebh] == false) { // if the neighbor is not visited then only run otherwise it won't stop.
 
-            // if the neighbor can reach the destination then we can also reach the destination by going to neighbor.
+            // if the neigbour can reach the destination then we can also reach the destination by going to neighbor.
                 boolean path = has_path(graph, edge.nebh, dest, visited) ; // finding has_path with neighbor. 
                 
                 if (path == true) { // so even if one vertex gives true then immediately return true. 
