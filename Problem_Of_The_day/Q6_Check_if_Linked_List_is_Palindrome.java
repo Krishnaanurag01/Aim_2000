@@ -43,6 +43,7 @@ public class Q6_Check_if_Linked_List_is_Palindrome {
             current = forward ;
         }
 
+        //
         return prev ;
     }
 
