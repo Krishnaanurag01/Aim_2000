@@ -17,6 +17,7 @@ public class Q7_Count_the_number_of_subarrays {
         return total_subArr_less_than_r - total_subArr_less_than_l ;
     }
 
+    //
 
     private long find_count_of_sub(int[] a, int n, long x) {
 
