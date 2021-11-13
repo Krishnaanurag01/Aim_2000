@@ -1,6 +1,5 @@
 package Problem_Of_The_day;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 
 public class Q5_Ruling_Pair {
