@@ -48,7 +48,7 @@ public class Q2_Circular_Prime_Number {
                 return false ;
             }
         }
-        
+        //
         return true ;
         
     }
