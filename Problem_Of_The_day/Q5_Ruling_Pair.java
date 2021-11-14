@@ -10,7 +10,7 @@ public class Q5_Ruling_Pair {
         System.out.println( RulingPair(arr, 5) );
     }
     static int RulingPair(int arr[], int n) { 
-        // 
+        
 
         HashMap<Integer,Integer> map = new HashMap<>() ;
 
