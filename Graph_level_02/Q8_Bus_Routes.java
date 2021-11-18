@@ -37,7 +37,7 @@ public class Q8_Bus_Routes {
 
 
         while (queue.size() > 0) {
-            // size of current level
+            // size of current level.
             int size = queue.size() ; // help in level order traversal.
 
             while (size-- > 0) {
