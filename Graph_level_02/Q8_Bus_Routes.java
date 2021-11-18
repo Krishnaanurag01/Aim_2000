@@ -18,7 +18,7 @@ public class Q8_Bus_Routes {
                 int bus_stop = routes[i][j] ; // this is bus stop
                 ArrayList<Integer> bus_list = map.getOrDefault(bus_stop, new ArrayList<>()) ;
 
-                bus_list.add(i) ; // adding ith bus
+                bus_list.add(i) ; // adding ith bus.
 
                 map.put(bus_stop, bus_list) ; // storing in map.
 
