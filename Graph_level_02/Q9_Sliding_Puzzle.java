@@ -30,7 +30,7 @@ public class Q9_Sliding_Puzzle {
         int level = 0 ;
         
         while(queue.size() > 0){
-            
+            // size of current level
             int size = queue.size();
             
             while(size-- > 0){
