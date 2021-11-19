@@ -6,7 +6,7 @@ import java.util.LinkedList;
 public class Q12_Word_ladder {
 
 
-    // Expected Time Compelxity: O(N2 * M)
+    // Expected Time Compelxity: O(N2 * M).
 // Expected Auxiliary Space: O(N * M) where N = length of wordList and M = |wordListi|
 
     public int wordLadderLength(String startWord, String targetWord, String[] wordList)
