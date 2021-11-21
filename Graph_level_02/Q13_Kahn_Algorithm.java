@@ -6,7 +6,7 @@ import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.LinkedList;
 
-// this is topological sorts Iterative method.
+// This is topological sorts Iterative method.
 
 public class Q13_Kahn_Algorithm {
 
