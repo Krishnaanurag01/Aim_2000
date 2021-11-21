@@ -1,9 +1,6 @@
 package Problem_Of_The_day ;
 
 
-/**
- * Q12_Longest_common_prefix
- */
 public class Q12_Longest_common_prefix {
 
     public static void main(String[] args) {
