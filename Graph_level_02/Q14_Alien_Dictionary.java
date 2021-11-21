@@ -9,7 +9,6 @@ public class Q14_Alien_Dictionary {
     public String findOrder(String [] dict, int N, int K)
     {
         
-
         HashMap<Character , HashSet<Character> > map = new HashMap<>() ;
         HashMap<Character,Integer> indegree = new HashMap<>() ;
 
