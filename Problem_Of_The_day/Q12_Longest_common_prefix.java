@@ -1,6 +1,5 @@
 package Problem_Of_The_day ;
 
-import java.util.*;
 
 /**
  * Q12_Longest_common_prefix
