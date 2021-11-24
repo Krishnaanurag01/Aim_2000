@@ -39,7 +39,7 @@ public class Q15_Dijkstra_Algorithm {
         int src = Integer.parseInt(br.readLine());
         
 
-        // *************************** Same as BFS with Priority Queue ****************************
+        // *************************** Same as BFS but with Priority Queue ****************************
 
         PriorityQueue<Pair> queue = new PriorityQueue<>() ;
         boolean[] visited = new boolean[vtces] ; // identify if vertex is visisted or not.
