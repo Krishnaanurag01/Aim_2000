@@ -8,15 +8,15 @@ public class Q15_kruskal_algo {
 
   public static void main(String[] args) throws Exception {
     BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-    int v = Integer.parseInt(br.readLine());
-    int e = Integer.parseInt(br.readLine());
+    int v = Integer.parseInt(br.readLine()); // vertex
+    int e = Integer.parseInt(br.readLine()); // edges
 
     int[][] edges = new int[e][3];
     for (int i = 0; i < e; i++) {
       String[] st = br.readLine().split(" ");
-      edges[i][0] = Integer.parseInt(st[0]);
-      edges[i][1] = Integer.parseInt(st[1]);
-      edges[i][2] = Integer.parseInt(st[2]);
+      edges[i][0] = Integer.parseInt(st[0]); // u
+      edges[i][1] = Integer.parseInt(st[1]); // v
+      edges[i][2] = Integer.parseInt(st[2]); // weight
     }
 
     System.out.println(minCostToSupplyWater(v, edges));
@@ -50,8 +50,8 @@ public class Q15_kruskal_algo {
       Pair[] arr = new Pair[pipes.length] ;
       
       for( int i = 0 ; i < n ; i++){
-          parent[i] = i ;
-          rank[i] = 1 ;
+          parent[i] = i ; // making every node their parent by default.
+          rank[i] = 1 ; // with 1 rank.
           
       }
       
@@ -60,14 +60,14 @@ public class Q15_kruskal_algo {
            arr[i] = new Pair( pipes[i][0] , pipes[i][1] , pipes[i][2]) ;
       }
       
-      Arrays.sort(arr);
+      Arrays.sort(arr); // sorting based on weights.
       int ans = 0 ;
       
       for( int i = 0 ; i < n ; i++){
           
           boolean isIncluded = union( arr[i].u , arr[i].v ) ;
           
-          if(isIncluded == true){
+          if(isIncluded == true){ // if merge operation occured then add weight to answer.
               ans += arr[i].wt ;
           }
          
@@ -81,28 +81,30 @@ public class Q15_kruskal_algo {
   
   public static boolean union(int x , int y){
       
-      int lx = find(x) ;
-      int ly = find(y) ;
+      int lx = find(x) ; // getting parent of x.
+      int ly = find(y) ; // getting parent of y.
       
-      if(lx != ly){
+      if(lx != ly){ // if the parents are not same then
           
-          if(rank[lx] < rank[ly]){
+          if(rank[lx] < rank[ly]){ // if the degree/rank of x is smaller then making y parent of x.
               parent[lx] = ly ;
           }
-          else if(rank[ly] < rank[lx]){
+          else if(rank[ly] < rank[lx]){ // else vice versa
               parent[ly] = lx ;
           }
           else{
               parent[lx] = ly ;
-              rank[ly]++ ;
+              rank[ly]++ ; // increasing rank.
           }
-          return true; 
+          return true;  // and returing true means merge operations occured.
       }
       else{
-          return false ;
+          return false ; // means merge operations doesn't occured.
       }
   }
   
+
+  // this function will return the parent of vertex.
   
   public static int find(int x ){
       if(parent[x] == x ) return x ;
