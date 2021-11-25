@@ -50,7 +50,7 @@ public class Q14_Minimum_sum {
             
             int sum = s1.charAt(i) - '0' + s2.charAt(j) - '0' + carry ; // calculating sum
 
-            carry = sum / 10 ; // getting carry
+            carry = sum / 10 ; // getting carry.
 
             if(sum > 0){ // adding sum to sb
              sb.append(sum % 10) ;
