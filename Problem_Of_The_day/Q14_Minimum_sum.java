@@ -52,7 +52,7 @@ public class Q14_Minimum_sum {
 
             carry = sum / 10 ; // getting carry.
 
-            if(sum > 0){ // adding sum to sb
+            if(sum > 0){ // adding sum to sb.
              sb.append(sum % 10) ;
             }
 
