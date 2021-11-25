@@ -48,7 +48,7 @@ public class Q14_Minimum_sum {
 
         while (i >= 0 && j >= 0) { // adding both char of s1 and s2.
             
-            int sum = s1.charAt(i) - '0' + s2.charAt(j) - '0' + carry ; // calculating sum
+            int sum = s1.charAt(i) - '0' + s2.charAt(j) - '0' + carry ; // calculating sum.
 
             carry = sum / 10 ; // getting carry.
 
