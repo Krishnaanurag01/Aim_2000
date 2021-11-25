@@ -16,7 +16,7 @@ public class Q14_Minimum_sum {
     }
 
     static String solve(int[] arr, int n) {
-        // code here
+       
 
         Arrays.sort(arr);
 
