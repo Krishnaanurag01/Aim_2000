@@ -61,7 +61,7 @@ public class Q14_Minimum_sum {
         }
 
 
-        while (i >= 0) { // if s1 left with numberse then add it to the sb
+        while (i >= 0) { // if s1 left with numberse then add it to the sb.
 
             int sum = s1.charAt(i) - '0' + carry ;
 
