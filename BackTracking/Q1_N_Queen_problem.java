@@ -29,6 +29,7 @@ public class Q1_N_Queen_problem {
             return ;
         }
 
+
         for (int col = 0; col < board.length; col++) {
             if(isItSafeHere(board,row,col) == true){
                 board[row][col] = 1 ;
