@@ -57,7 +57,7 @@ public class Q19_BellmanFord {
             if(path[i] != Integer.MAX_VALUE){ // this denotes that there's no cycle and must be answer then print
                 System.out.print(path[i] + " ");
             }
-            else{// else print 1e9 for negative cycle.
+            else{// else print 1e9 for negative cycle....
                 System.out.print("1000000000"+" ");
             }
         }
