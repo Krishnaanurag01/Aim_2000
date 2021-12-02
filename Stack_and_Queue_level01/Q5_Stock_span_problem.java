@@ -7,6 +7,7 @@ public class Q5_Stock_span_problem {
     public static int[] calculateSpan(int price[], int n)
     {
 
+        //
         Stack<Integer> stack = new Stack<>() ;
         int[] ans = new int[n] ;
 
