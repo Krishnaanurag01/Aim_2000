@@ -33,8 +33,6 @@ public class Q18_Kth_Smallest_Number_in_Multiplication_Table {
 
     // method - 02
 
-
-
    public int KthSmallest(int m, int n, int k) {
     int low = 1 , high = m * n ;
 
