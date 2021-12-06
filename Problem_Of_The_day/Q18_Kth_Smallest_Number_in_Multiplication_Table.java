@@ -3,6 +3,9 @@ package Problem_Of_The_day;
 
 public class Q18_Kth_Smallest_Number_in_Multiplication_Table {
 
+
+    // method - 01
+
     // public int KthSmallest(int m, int n, int k) {
         
     //     PriorityQueue<Integer> queue = new PriorityQueue<>( Collections.reverseOrder() ) ;
