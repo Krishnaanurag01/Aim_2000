@@ -26,7 +26,7 @@ public class Q33_Basic_Calculator {
 
                 i--; // decrementing because for loop will also increment i by 1 by the end of this iteration.
 
-                val = val * sign ; // multiplying extracted value with previous sign
+                val = val * sign ; // multiplying extracted value with previous sign.
 
                 sum += val ; // adding to sum
 
