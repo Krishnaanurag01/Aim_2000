@@ -30,7 +30,7 @@ public class Q33_Basic_Calculator {
 
                 sum += val ; // adding to sum
 
-                sign = 1 ; // resetting sign
+                sign = 1 ; // resetting sign.
 
             }
             else if(ch == '('){ // if it is open bracket the.
