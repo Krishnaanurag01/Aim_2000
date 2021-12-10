@@ -28,7 +28,7 @@ public class Q33_Basic_Calculator {
 
                 val = val * sign ; // multiplying extracted value with previous sign.
 
-                sum += val ; // adding to sum
+                sum += val ; // adding to sum.
 
                 sign = 1 ; // resetting sign.
 
