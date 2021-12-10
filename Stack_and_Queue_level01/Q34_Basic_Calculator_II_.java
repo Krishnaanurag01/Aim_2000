@@ -15,7 +15,7 @@ public class Q34_Basic_Calculator_II_ {
         for (int i = 0; i < s.length() ; i++) {
             char ch = s.charAt(i) ;
 
-            if (Character.isDigit(ch)) { // find whole digit
+            if (Character.isDigit(ch)) { // find whole digit.
                 int val = 0 ;
 
                 while (i < s.length() && Character.isDigit(  s.charAt(i) - '0' )) {
