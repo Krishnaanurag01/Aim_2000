@@ -48,7 +48,7 @@ public class Q33_Basic_Calculator {
                 sum += st.pop() ; // adding pevious value(value outside of bracket)
 
             }
-            else if(ch == '-'){ //if - comes then multiply the sign by -1
+            else if(ch == '-'){ //if - comes then multiply the sign by -1.
                 sign *= -1 ;
             }
         }
