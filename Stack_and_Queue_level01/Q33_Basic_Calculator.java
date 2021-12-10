@@ -33,7 +33,7 @@ public class Q33_Basic_Calculator {
                 sign = 1 ; // resetting sign
 
             }
-            else if(ch == '('){ // if it is open bracket the
+            else if(ch == '('){ // if it is open bracket the.
 
                 st.push(sum) ; // push sum and sign in stack and reset both to 0 and 1.
                 st.push(sign) ;
