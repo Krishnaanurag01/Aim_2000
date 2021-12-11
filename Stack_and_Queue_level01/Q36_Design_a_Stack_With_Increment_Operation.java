@@ -23,7 +23,7 @@ public class Q36_Design_a_Stack_With_Increment_Operation {
     }
     
     public int pop() {
-        if(index == -1){ // if index is -1 ==> stack is empty
+        if(index == -1){ // if index is -1 ==> stack is empty.
             return -1 ; // so returning -1
         }
         
