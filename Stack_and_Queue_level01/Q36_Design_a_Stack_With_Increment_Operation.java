@@ -1,6 +1,4 @@
 package Stack_and_Queue_level01;
-import java.util.*;
-
 
 public class Q36_Design_a_Stack_With_Increment_Operation {
 
