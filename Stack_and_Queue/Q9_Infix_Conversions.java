@@ -40,12 +40,12 @@ public class Q9_Infix_Conversions {
                     postfix.push(post_val) ;
                 }
 
-                opr.pop() ;
+                opr.pop() ; // popping opening bracket.
 
             }
             else if( (ch >= '0' && ch <= '9' ) || (ch >= 'a' && ch <= 'z' ) || (ch >= 'A' && ch <= 'Z') ){
 
-                prefix.push(ch+"") ;
+                prefix.push(ch+"") ; // adding as string
                 postfix.push(ch+"") ;
 
             }
