@@ -37,24 +37,26 @@ public class Q1_Fractional_Knapsack {
     {
         // Your code here
 
-        Arrays.sort(arr , new itemComparator());
+        Arrays.sort(arr , new itemComparator()); // sorting based on the value/weight ratio
 
-        double answer = 0 ;
+        double answer = 0 ; // this will contain ans
 
-        int current_weight = 0 ;
+        int current_weight = 0 ; // this will keep an eye of capacity of bag
 
         for (int i = 0; i < arr.length; i++) {
             
-            if(current_weight + arr[i].weight <= W){
+            if(current_weight + arr[i].weight <= W){ // if it becomes <= after adding weight then add to ans and capacity
                 current_weight += arr[i].weight ;
                 answer += arr[i].value ;
             }
 
             else{
+
+                /// else find the remaining capacity
                 int remain = W - current_weight ;
 
                 double profit_ratio = (double) arr[i].value/ (double) arr[i].weight ;
-                answer += (profit_ratio* (double) remain ) ;
+                answer += (profit_ratio* (double) remain ) ; // and add ratio*remain in answer.
                 break ;
             }
         }
