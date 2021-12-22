@@ -1,70 +1,75 @@
 package Strings;
+import java.util.*;
+
 
 // finding same thing which was done in Q 17.
 public class Q18_KMP_Algo {
     public static void main(String[] args) {
-        String txt = "ABABDABACDABABCABAB";
-        String pat = "ABABCABAB";
-        KMP_Algo(txt, pat);
+        String txt = "hqg";
+        String pat = "q";
+        KMP_Algo(pat,txt);
     }
 
-    public static void KMP_Algo(String txt , String ptr) {
+    static ArrayList<Integer> KMP_Algo(String pat, String txt)
+    {
+        String s = pat+"#"+txt ; // making new string with pattern + "#" + text 
+        System.out.println(s);
+        int[] lps = lps_func(s) ; // now finding lps of new string s.
+
+        int m = pat.length() ; // length of pattern
+        System.out.println(m);
         
-        int n = txt.length(); // size of text
-        int m = ptr.length(); // size of pattern.
+        ArrayList<Integer> list = new ArrayList<>() ;
+        
+        for(int i = m+1+1 ; i < lps.length ; i++ ) {
+            if(lps[i] == m ){ // wherever the lps value equals to m then add first calculate its first index and add to list
 
-        int[] lps = new int[m];
+                if(m == 1){ // if size is 1 then we don't have to find first pos as it has only one char so it is already first
 
-        findLpsArray(ptr , lps ,m);
-        int j = 0 ; // for pattern
-        int i = 0 ; //for text
-
-        for (int k : lps) {
-            System.out.print(lps[i]+" ");
-        }
-        while (i < n) {
-            if(ptr.charAt(j) == txt.charAt(i)){
-                j++;
-                i++;
-            }
-            if(j == m){
-                System.out.println(ptr + " Occurence present at " + (i-j) +" index.");
-                j = lps[j-1];
-            }
-            else if (i < n && ptr.charAt(j) != txt.charAt(i)){
-                if(j > 0){
-
-                    j = lps[j-1];
+                    list.add(i - m ); // so just subtracting m(length of patter) and as we have to give answer in 1 based indexing so not removing "#" size , it work as giving 1 based indexing.
                 }
                 else{
-                    i++;
+                    list.add(i - m - 1 - m + 2) ; // when m > 1 then first subtract pattern size and # size from indexing and then go to first positon from last position and then adding 2 for 1 based indexing.
                 }
             }
         }
+
+        System.out.println(list);
+       return list ;
     }
-
-    // checkout lps solution in Q19_LPS
-    public static void findLpsArray(String ptr , int[] lps , int m) {
-        int len = 0 ;
-        int i = 1;
-
-        while (i < m) {
-            if(ptr.charAt(i) == ptr.charAt(len)){
-                len++;
-                lps[i] = len;
-                i++;
+    
+    // check q19 for better explanation.
+    static int[] lps_func(String s) {
+        // code here
+        int n = s.length() ;
+        int[] lps = new int[n] ;
+        
+        int len = 0 ; // denotes last size of lps.
+        int i = 1 ;
+        // starting from 1 as when i = 0 (so it has no proper prefix and suffix so ans is 0 which is already present by default)
+        
+        while( i < n ){
+            
+            char ch = s.charAt(i) ;
+            
+            if(ch == s.charAt(len)){
+                len++ ;
+                lps[i] = len ;
+                i++ ;
             }
             else{
-                if(len > 0){
-                    len = lps[len - 1];
+                if(len > 0 ){
+                    len = lps[len - 1] ;
                 }
                 else{
                     lps[i] = 0 ;
-                    i++;
+                    i++ ;
                 }
             }
-
-
+            
         }
+        
+        return lps ;
+        
     }
 }
