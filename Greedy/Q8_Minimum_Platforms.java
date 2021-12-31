@@ -57,29 +57,36 @@ public class Q8_Minimum_Platforms {
     }
 
 
+    //method 02
+
     static int findPlatform2(int arr[], int dep[], int n)
     {
-        int[][] pairArr = new int[n][n] ;
+     
+        Arrays.sort(arr) ; // sorting the trains on starting time.
+        Arrays.sort(dep) ; // and also sorting the dept time of trains.
         
-        for (int i = 0; i < n; i++) {
-            pairArr[i][0] = arr[i] ;
-            pairArr[i][1] = dep[i] ;
+        int cp = 1 ; // took current platform is 1.
+        int max_pl = 1 ; // max platform
+        
+        int i = 1 ;// starting from 1 as we took cp 1 means 0th train is already standing on 1 platform.
+        int j = 0 ;// this denotes the depart index of trains.
+        
+        while(i < n){
+            // arrival time is greater than depart time of j then it means train i will arrive after depart of j train so departing and as we depart so we have left space of 1 platform so decrementing.
+            if( j < i && arr[i] > dep[j]){
+                cp-- ;
+                j++; // moving to next depart of train
+            }
+            
+            cp++ ; // and one train arrives so increasing the platform
+            i++ ;
+            // updating max platform.
+            max_pl = Math.max(cp,max_pl) ;
+            
+            
         }
-
-
-        Arrays.sort(pairArr,  (a,b) -> a[1] - b[1]);
-
-        int c = 0 ;
-
-        // while(){
-
-        // }
-
-
-
-
-        return 0 ;
         
+        return max_pl ;
     }
 
 }
