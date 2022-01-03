@@ -83,8 +83,6 @@ public class Rotate_matrix_elements_clockwise {
             col++ ;
         }
 
-
-
         }
 
 
