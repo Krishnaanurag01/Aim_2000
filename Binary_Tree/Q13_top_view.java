@@ -1,12 +1,5 @@
 package Binary_Tree;
-
-
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.LinkedList;
-
-
-
+import java.util.* ;
 public class Q13_top_view {
     private static TreeNode root ;
 
@@ -35,46 +28,46 @@ public class Q13_top_view {
 
     // Method - 1 using extra space for hashmap. time and space is o(n).
 
-    public static ArrayList<Integer> get_top_view(TreeNode node) {
-        ArrayList<Integer> list = new ArrayList<>();
-        if(node == null){
-            return list ;
-        }
+    // public static ArrayList<Integer> get_top_view(TreeNode node) {
+    //     ArrayList<Integer> list = new ArrayList<>();
+    //     if(node == null){
+    //         return list ;
+    //     }
 
-        LinkedList<vPair> queue = new LinkedList<>() ;
+    //     LinkedList<vPair> queue = new LinkedList<>() ;
 
-        HashMap<Integer,Integer> map = new HashMap<>();
+    //     HashMap<Integer,Integer> map = new HashMap<>() ;
 
-        queue.add(new vPair(node,0));
+    //     queue.add(new vPair(node,0));
 
-        int min = 0 ; 
-        int max = 0 ;
-
-
-        while (queue.size() != 0) {
-            int size = queue.size() ;
-            while (size-- > 0) {
-                vPair rp = queue.removeFirst();
-
-                min = Math.min(min, rp.hl);
-                max = Math.max(max, rp.hl);
-
-                if(!map.containsKey(rp.hl)){
-                    map.put(rp.hl, rp.node.data);
-                }
-
-                if(rp.node.left != null) queue.addLast(new vPair(rp.node.left, rp.hl - 1));
-                if(rp.node.right != null) queue.addLast(new vPair(rp.node.right, rp.hl + 1));
-            }
-        }
-
-        for (int i = min ; i <= max ; i++) {
-            list.add(map.get(i));
-        }
+    //     int min = 0 ; 
+    //     int max = 0 ;
 
 
-        return list ;
-    }
+    //     while (queue.size() != 0) {
+    //         int size = queue.size() ;
+    //         while (size-- > 0) {
+    //             vPair rp = queue.removeFirst();
+
+    //             min = Math.min(min, rp.hl);
+    //             max = Math.max(max, rp.hl);
+
+    //             if(!map.containsKey(rp.hl)){
+    //                 map.put(rp.hl, rp.node.data);
+    //             }
+
+    //             if(rp.node.left != null) queue.addLast(new vPair(rp.node.left, rp.hl - 1));
+    //             if(rp.node.right != null) queue.addLast(new vPair(rp.node.right, rp.hl + 1));
+    //         }
+    //     }
+
+    //     for (int i = min ; i <= max ; i++) {
+    //         list.add(map.get(i));
+    //     }
+
+
+    //     return list ;
+    // }
 
 
     // method - 2
@@ -148,7 +141,6 @@ public class Q13_top_view {
         // root.right.left.left = new TreeNode(7);
         // root.right.left.right = new TreeNode(8);
 
-    get_top_view(root);
     System.out.println(get_top_view2(root));
         
     }
