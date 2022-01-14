@@ -128,19 +128,21 @@ public class Q9_postOrder_traversal {
     public static void main(String[] args) {
 
         
-        root = new TreeNode(1);
-        root.left = new TreeNode(2);
-        root.right = new TreeNode(3);
-        root.left.left = new TreeNode(4);
-        root.right.left = new TreeNode(5);
+        root = new TreeNode(8);
+        root.left = new TreeNode(1);
+        root.left.right = new TreeNode(3);
+        root.left.right.left = new TreeNode(7);
+        root.right = new TreeNode(5);
+        root.left.left = new TreeNode(2);
+        root.right.left = new TreeNode(4);
         root.right.right = new TreeNode(6);
-        root.right.left.left = new TreeNode(7);
-        root.right.left.right = new TreeNode(8);
+        root.right.left.left = new TreeNode(11);
+        root.right.right.left = new TreeNode(9);
 
 // /        postOrder_traversal(root);
 
         // postOrder_Traversal_iteratively(root);
-        postorder_traversal_iteratively2(root);
+      System.out.println( postorder_traversal_iteratively2(root  ) );
 
         
     }
