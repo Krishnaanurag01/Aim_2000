@@ -61,7 +61,7 @@ public class Q4_Diameter_of_Binary_Tree {
 
         max[0] = Math.max(max[0], left_part + right_part) ; // keep updating value when found bigger.
 
-        return 1 + left_part + right_part ; // this calculates the height.
+        return 1 + Math.max( left_part , right_part ) ; // this returns the height
 
     }
 
