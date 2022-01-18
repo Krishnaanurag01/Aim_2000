@@ -65,4 +65,102 @@ public class Q41_Minimum_Domino_Rotations_For_Equal_Row {
         
     }
 
+
+    // method 02 : 
+
+
+    public static int minDominoRotations2(int[] tops, int[] bottoms) {
+        
+        int count1 = 0  ;
+        int count2 = 0  ;
+        int count3 = 0  ;
+        int count4 = 0  ;
+
+        int num1 = tops[0] ;
+        int num2 = bottoms[0] ;
+
+        for(int i = 0 ; i < tops.length ; i++){
+
+            // count 1 : no of swap required to make top as num1
+
+            if(count1 != Integer.MAX_VALUE){
+                if (tops[i] == num1) {
+                    // this denotes we have already num1 in top so skip.
+                    // continue ;
+                }
+                else if(bottoms[i] == num1){
+                   
+                    count1++ ;
+                }
+                else{
+                    count1 = Integer.MAX_VALUE ;
+                }
+
+            }
+
+
+            
+           if(count2 != Integer.MAX_VALUE){
+               
+                if(bottoms[i] == num1){
+                    // this denotes we have already num1 in bottom so skip.
+                    // continue ;
+                }
+                else if (tops[i] == num1) {
+                    count2++ ;
+                }
+                else{
+                    count2 = Integer.MAX_VALUE ;
+                }
+
+            }
+
+
+            
+            // count 3 : no of swap required to make top as num2
+
+            if(count3 != Integer.MAX_VALUE){
+                if (tops[i] == num2) {
+                    // this denotes we have already num2 in top so skip.
+                    // continue ;
+                }
+                else if(bottoms[i] == num2){
+                    // no of swap required to make top1 as num1 by swapping element of bottom
+                    count3++ ;
+                }
+                else{
+                    count3 = Integer.MAX_VALUE ;
+                }
+
+            }
+
+
+            
+            // count 4 : no of swap required to make bottom as num 2
+
+            if(count4 != Integer.MAX_VALUE){
+                if (bottoms[i] == num2) {
+                    // this denotes we have already num2 in bottom so skip.
+                    // continue ;
+                }
+                else if(tops[i] == num2){
+                    // no of swap required to make top1 as num1 by swapping element of bottom
+                    count4++ ;
+                }
+                else{
+                    count4 = Integer.MAX_VALUE ;
+                }
+
+            }
+
+        }
+
+        int ans = Math.min( Math.min(count1, count2), Math.min(count3, count4)) ;
+
+
+        return ans != Integer.MAX_VALUE ? ans : -1 ;
+    }
+
+
+
 }
