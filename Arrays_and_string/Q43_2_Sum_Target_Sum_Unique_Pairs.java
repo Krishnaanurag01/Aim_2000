@@ -68,9 +68,6 @@ public class Q43_2_Sum_Target_Sum_Unique_Pairs {
             if( i > 0 && arr[i] == arr[i-1]){
                 i++ ;
             }
-            else if(j < arr.length-1 && arr[j] == arr[j+1]){
-                j-- ;
-            }
             else if( arr[i] + arr[j] == target ){
 
                 List<Integer> in = new ArrayList<>() ;
