@@ -70,6 +70,8 @@ public class Q55_Design_TicTacToe {
             if (ans != 0)
                 break;
         }
+
+        scn.close();
     }
 
 }
