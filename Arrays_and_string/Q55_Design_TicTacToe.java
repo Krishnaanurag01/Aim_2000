@@ -13,7 +13,7 @@ public class Q55_Design_TicTacToe {
         static int adiag; // reverse diagonal
 
         public TicTacToe(int n) {
-            this.n = n;
+            // this.n = n;
             rowSum = new int[n];
             colSum = new int[n];
         }
