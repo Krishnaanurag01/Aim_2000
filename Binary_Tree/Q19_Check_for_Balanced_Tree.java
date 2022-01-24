@@ -35,6 +35,39 @@ public class Q19_Check_for_Balanced_Tree {
 
     }
 
+    // ways two : 
+
+    // boolean isB = true ;
+
+    // boolean isBalanced(TreeNode root)
+    // {
+    //     isBalanced_(root) ;
+        
+    //     return isB;
+	
+    // }
+    
+
+
+    // int isBalanced_(TreeNode root)
+    // {
+    //     if(root == null){
+    //         return 0 ;
+    //     }
+        
+    //     int left  = isBalanced_(root.left) ;
+        
+    //     int right  = isBalanced_(root.right) ;
+        
+    //     if( Math.abs(left - right) > 1){
+    //         isB = false ;
+    //         return Integer.MAX_VALUE ;
+    //     }
+        
+    //     return 1 + Math.max(left ,right) ;
+	
+    // }
+
 
 
 
