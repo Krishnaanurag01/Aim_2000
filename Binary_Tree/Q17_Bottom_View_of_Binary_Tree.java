@@ -45,7 +45,7 @@ public class Q17_Bottom_View_of_Binary_Tree {
     }
 
 
-    // this is same as top view we just have to override the value of each level.
+    // this is same as top view we'll just  override the value of each level.
     // we can also use method 1 of top view in this.
 
     // time and space is : o(n)
