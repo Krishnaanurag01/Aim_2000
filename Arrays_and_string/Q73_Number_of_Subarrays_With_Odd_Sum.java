@@ -19,4 +19,6 @@ public class Q73_Number_of_Subarrays_With_Odd_Sum {
         return count ;
     }
 
+    //method 02 : 
+
 }
