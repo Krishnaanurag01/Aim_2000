@@ -2,7 +2,7 @@ package Arrays_and_string;
 
 public class Q73_Number_of_Subarrays_With_Odd_Sum {
 
-    // method 01 : brute force
+    // method 01 : brute force time : -> complexity : O(n2)
 
     public int numOfSubarrays(int[] arr) {
         
