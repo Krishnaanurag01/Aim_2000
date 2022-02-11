@@ -36,7 +36,7 @@ public class Q15_Total_Decoding_Messages {
             }
             else if(fc != '0' && sc == '0'){ // if first char is 1-9 and second char is 0 then perform this,
                 if(fc == '1' || fc == '2'){ // if first char is 1 or 2 then only perform this becuase for ex: fc is 4 and sc is 0 then 40 is not a character thats why not considering it.
-                    dp[i] = i >= 2 ? dp[i-2] : 1 ; /// checking i is greater than 2 then we can comeback to i -2 otherwise store 1.
+                    dp[i] = i >= 2 ? dp[i-2] : 1 ; /// checking i is greater than 2 then we can goback to i -2 otherwise store 1.
                 }
                 else{
                     dp[i] = 0 ; // 
