@@ -18,7 +18,7 @@ public class Q12_Count_Binary_Strings {
         int dp0[] = new int[n+1] ;
         int[] dp1 = new int[n+1] ;
 
-        // as 0 length binary string so starting from 1.
+        // as there could not be 0 length binary string so starting from 1.
         dp0[1] = 1 ; // and 1 length of binary string which end at 0 without consecutive zeros is 1 that is "0"
         dp1[1] = 1 ; // and 1 length of binary string which end at 1 without consecutive zeros is 1 that is "1"
 
