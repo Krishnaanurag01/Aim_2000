@@ -97,4 +97,34 @@ public class Q33_Highway_Billboard {
         return dp[m] ;
       }
     
+
+      // method 03 :
+      // without using hashMap.
+
+      public static int method3(int m , int[] x, int[] rev, int t) {
+        
+        int[] dp = new int[m+1] ;
+
+        // storing the given poster so that we can identify the poster in dp array without using hashmap
+
+        for(int i = 0 ; i < x.length ; i++){
+            int idx = x[i] ;
+            int val = rev[i] ;
+
+            dp[idx] = val ;
+        }
+
+        for(int i = 1 ; i <= m ; i++){
+
+            if(dp[i] > 0 && i-t-1 >= 0){
+                dp[i] =  Math.max( dp[i] + (dp[i-t-1]) , dp[i-1] ) ;
+            }
+            else{
+                dp[i] =  Math.max( dp[i] , dp[i-1] ) ;
+            }
+
+        }
+
+        return dp[m];
+    }
 }
