@@ -1,6 +1,7 @@
 package Dynamic_Programming_level_02;
 
 import java.util.ArrayDeque;
+import java.util.LinkedList;
 
 public class Q5_Print_all_Paths_with_Minimum_Jumps {
 
@@ -76,6 +77,45 @@ public class Q5_Print_all_Paths_with_Minimum_Jumps {
             
         }
 
+
+    }
+
+
+    public static void print_path2(int[] arr) {
+        
+       int n = arr.length ;
+       Integer[] dp = new Integer[n] ;
+
+       dp[n-1] = 0 ;
+
+       for (int i = n-2 ; i >= 0 ; i--) {
+           int step = arr[i] ;
+           int min = Integer.MAX_VALUE ;
+
+           for (int j = 1 ; j <= step && i + j < dp.length ; j++) {
+               if(dp[i+j] < min){
+                   min = dp[i+j] ;
+               }
+           }
+
+           if(min != Integer.MAX_VALUE){
+               dp[i] = min + 1 ;
+           }
+       }
+
+       LinkedList<pair> q = new LinkedList<>() ;
+       
+       q.add( new pair(0, arr[0], dp[0], 0 +"") );
+
+       while (q.size() > 0) {
+           pair rp = q.removeFirst() ;
+
+           for (int i = 1 ; i <= rp.size && rp.index + i < dp.length ; i++) {
+               if (dp[i+rp.index] != null && dp[i + rp.index] == rp.jumps - 1 ) {
+                   q.addLast(new pair(i+rp.index, arr[i+rp.index], dp[i+rp.index], rp.path + " -> " + i));
+               }
+           }
+       }
 
     }
     
