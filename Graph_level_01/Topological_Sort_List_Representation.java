@@ -21,6 +21,7 @@ public class Topological_Sort_List_Representation {
         while(!stack.isEmpty()){
             
             ans[i++] = stack.pop() ;
+            
         }
         
         return ans ;
