@@ -9,6 +9,7 @@ public class Q24_Mother_Vertex {
         Stack<Integer> stack = new Stack<>() ; // this will store the vertices.
         boolean[] visited = new boolean[V] ;
         
+        // this is nothing but topo sort
         for( int i = 0 ; i < V ; i++){
             
             if(visited[i] == false){ // calling dfs1 for non visited neigbours and storing value in stack.
@@ -16,7 +17,7 @@ public class Q24_Mother_Vertex {
             }
         }
         
-        int ans = stack.pop() ; // the top element might be our answer.
+        int ans = stack.pop() ; // the top element might be our answer. // this becuase in  topo sort we arrange element in a way such that for any edge uv (u->v) v comes first the u should come so for mother vertex every nodes must be deriving from it so mother vertex(u) will come on top. 
         
         visited = new boolean[V] ; // again initialzing.
         
