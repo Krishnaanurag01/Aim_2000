@@ -24,7 +24,7 @@ public class Q11_Unbounded_Knapsack {
 
             for (int j = 0; j < wt.length; j++) { // and j represent the wt and val array.
 
-                if (i >= wt[j] && i - wt[j] >= 0) { // here we check if the weight of dp( i ) is greater of equal to our
+                if (i >= wt[j] ) { // here we check if the weight of dp( i ) is greater of equal to our
                                                     // wt[j] and i - wt[j] >= 0 ( this is used in second line thats why
                                                     // given here.)
                     dp[i] = Math.max(dp[i], dp[i - wt[j]] + val[j]); // we are storing the max value by checking if
