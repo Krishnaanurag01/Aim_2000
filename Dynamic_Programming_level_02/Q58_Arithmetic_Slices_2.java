@@ -10,6 +10,7 @@ public class Q58_Arithmetic_Slices_2 {
 
     public static int get_total_arithmatic_subsec(int[] arr) {
         
+        // In this hashMap array we will store the common difference of key (a[0]... - a[i]  ) and value as freq
         HashMap<Integer,Integer>[] map = new HashMap[arr.length] ; // making an hashmap array
 
         for (int i = 0; i < map.length; i++) {
@@ -18,6 +19,7 @@ public class Q58_Arithmetic_Slices_2 {
 
         int ans = 0 ;
 
+        // starting from 1 becuase we are making common difference map
         for (int i = 1 ; i < map.length; i++) { // now starting from 1st index to last
             for (int j = 0; j < i ; j++) { // and 0 to i
                 
