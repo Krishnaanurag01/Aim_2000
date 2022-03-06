@@ -6,6 +6,9 @@ public class Q41_Regular_Expression_Matching {
         
     }
 
+
+    // example : text : mississippi, pattern : mis*i.*p*i
+
     public static boolean regular_expr_matching(String s , String ptr) {
         
         int slen = s.length() ;
@@ -33,7 +36,7 @@ public class Q41_Regular_Expression_Matching {
                     if(pc == sc || pc == '.'){ // in this case look diagonally.
                         dp[i][j] = dp[i-1][j-1] ;
                     }
-                    else if( pc == '*'){ // if this comes look aove i-2
+                    else if( pc == '*'){ // if this comes look above i-2
                             dp[i][j] = dp[i-2][j] ;
 
                             char previousChar = ptr.charAt(i-2) ; // i - 1(for checking char as 1st row is dummy) - 1(for prev char)
