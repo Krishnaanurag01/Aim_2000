@@ -37,7 +37,7 @@ public class Q35_Longest_Palindromic_Substring {
 
                 }
 
-                // when current dp is true and g+1 (as gap 0 has 1 element so on..) is greater than len (length ) then update and 
+                // when current dp is true and g+1 (as gap 0 has 1 element so on..) is greater than len (length of last answer) then update and 
                 // also update the substring
                 if(dp[i][j] && len < g+1){
                     len = g+1 ;
