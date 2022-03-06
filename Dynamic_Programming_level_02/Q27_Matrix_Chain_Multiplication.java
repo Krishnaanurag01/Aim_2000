@@ -33,6 +33,10 @@ public class Q27_Matrix_Chain_Multiplication {
                         
                         int l = dp[i][k] ; // left is i to k
                         int r = dp[k+1][j] ; // right is k+1 to j
+                        // left's  dimention is i to k ( so i * k+1) 
+                        /// rights dimention is k+1 to j ( so k+1 * j+1)
+
+                        // multiplying left * right
                         int m = arr[i] * arr[k+1] * arr[j+1] ; //so formula is : r(first matrix row)*r(second matrix row)*m(second matrix column).
                         int total = l + r + m ;
                         if( total < min ){
