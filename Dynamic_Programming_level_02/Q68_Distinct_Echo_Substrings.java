@@ -34,4 +34,40 @@ public class Q68_Distinct_Echo_Substrings {
 
         return set.size(); // return the size of set(has all the distinct strings).
     }
+
+    
+    // correct but gives TLE
+
+    public int distinctEchoSubstrings2(String t ) {
+        
+        HashSet<String> set = new HashSet<>() ;
+        
+        int[][] dp = new int[t.length() ][t.length() ] ;
+        
+        for(int g = 0 ; g < t.length() ; g++){
+            for(int i = 0 , j = g ; j < dp.length ; i++ , j++){
+                
+                if(g == 0)
+                    continue ;
+                
+                String s = t.substring(i,j+1) ;
+                // System.out.println(s) ;
+                
+                String s1 = s.substring(0, s.length()/2 ) ;
+                
+                // System.out.println(s + " s1 -  " + s1) ;
+                
+                String s2 = s.substring( s.length()/2 , s.length() ) ;
+                
+                // System.out.println(s + " s1 -  " + s1 + " s2 - " + s2) ;
+                
+                if(s1.equals(s2)){
+                    set.add(s) ;
+                }
+            }
+        }
+        
+        
+        return set.size() ;
+    }
 }
