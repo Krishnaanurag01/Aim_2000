@@ -1,10 +1,14 @@
 package Dynamic_Programming_level_02;
 
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
 
 public class Q18_Nth_catalan_number {
 
-    public static void main(String[] args) {
-        System.out.println(nth_catalan(5));
+    public static void main(String[] args) throws Exception {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in)) ;
+
+        System.out.println(nth_catalan(br.read() - '0' ));
     }
 
     public static int nth_catalan(int n ) {
@@ -16,9 +20,13 @@ public class Q18_Nth_catalan_number {
 
         for (int i = 2 ; i < dp.length ; i++) {
             
-            for (int j = 0 ; j < i ; j++) {
-                
-                dp[i] += dp[j] * dp[i-j -1] ;
+            int left = 0 ;
+            int right = i-1 ;
+
+            while(left < i){
+                dp[i] += dp[left] * dp[right] ;
+                left++ ;
+                right-- ;
             }
         }
 
