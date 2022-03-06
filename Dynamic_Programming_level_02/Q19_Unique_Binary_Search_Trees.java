@@ -24,7 +24,7 @@ public class Q19_Unique_Binary_Search_Trees {
 
             while (l <= i-1) {
 
-                dp[i] = dp[l]*dp[r] ;  // multiply left with right.
+                dp[i] += dp[l]*dp[r] ;  // multiply left with right.
                 l++ ; // increament left.
                 r-- ; // decreament right.
             }
