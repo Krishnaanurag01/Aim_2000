@@ -11,7 +11,7 @@ public class Q69_Delete_and_Earn {
         int[] count = new int[10001]; // constraints! given that size could be 10^4;
         
         for(int i : nums){
-            count[i]++; // storing the frequency.
+            count[i]++; // storing the frequency of each ith element of nums array
         }
         
         int include = 0 ; // store sum  of when previous excluding number + current number(stores max )
