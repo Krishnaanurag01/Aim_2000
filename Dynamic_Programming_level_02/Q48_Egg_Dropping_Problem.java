@@ -37,7 +37,6 @@ public class Q48_Egg_Dropping_Problem {
 
                     when egg not breaks then check egg | floor - x ;
 
-
                     */
 
                     int min = Integer.MAX_VALUE ;
