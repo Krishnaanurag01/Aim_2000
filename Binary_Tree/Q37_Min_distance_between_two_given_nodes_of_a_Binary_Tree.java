@@ -49,13 +49,13 @@ public class Q37_Min_distance_between_two_given_nodes_of_a_Binary_Tree {
         TreeNode left =  getLCA(node.left, n1, n2) ;
         TreeNode right = getLCA(node.right, n1, n2) ;
 
-        if(left == null){
+        if(left == null){ // means left part does not have any of the element
             return right ;
         }
-        else if(right == null){
+        else if(right == null){ // means right part does not have any of the element
             return left ;
         }
-        else{
+        else{ // when both has element then current node is the lowest common ancestor
             return node ;
         }
     }
