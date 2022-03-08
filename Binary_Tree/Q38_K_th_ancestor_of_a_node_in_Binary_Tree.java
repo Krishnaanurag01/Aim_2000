@@ -54,7 +54,7 @@ public class Q38_K_th_ancestor_of_a_node_in_Binary_Tree {
 
             if(root == null ) return -1 ;
 
-            int[] arr = new int[n + 1] ;  // this will create an array for storing the acestor of each node.
+            int[] arr = new int[n + 1] ;  // this will create an array for storing the ancestor of each node.
             setup_ancestor(root,arr); // generating the ancestor. 
 
             int count = 0 ; // count updating so that when its equal to k then break it.
