@@ -8,8 +8,7 @@ public class Q10_Count_Of_Substrings_Having_All_Unique_Characters {
     // same as previous questions
 
     public static int solution(String s) {
-		// write your code here
-
+		
 		int count = 0 ;
 
 		int i = -1 ;
