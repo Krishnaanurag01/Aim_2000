@@ -1,5 +1,4 @@
 package Bit_Manipulation;
-
 import java.util.Scanner;
 
 public class Q10_One_Repeating_And_One_Missing {
