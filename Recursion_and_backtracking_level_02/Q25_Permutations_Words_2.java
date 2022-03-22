@@ -30,7 +30,6 @@ public class Q25_Permutations_Words_2 {
 
             }
         }
-
     }
 
     public static void main(String[] args) throws Exception {
