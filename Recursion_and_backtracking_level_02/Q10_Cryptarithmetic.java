@@ -32,7 +32,7 @@ public class Q10_Cryptarithmetic {
           }
         }
     
-        boolean[] usedNumbers = new boolean[10]; // this will help us in identifying whether the a number is used before or not
+        boolean[] usedNumbers = new boolean[10]; // this will help us in identifying whether the number is used before or not
         solution(unique, 0, charIntMap, usedNumbers, s1, s2, s3);
         scn.close();
       }
