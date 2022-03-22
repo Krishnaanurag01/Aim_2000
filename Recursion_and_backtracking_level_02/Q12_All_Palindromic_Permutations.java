@@ -15,6 +15,9 @@ public class Q12_All_Palindromic_Permutations {
 
         HashMap<Character, Integer> fmap = new HashMap<>() ;
 
+        // for any string to be palindrome  : 
+        // each char should be either even count or each char should be even + only one char could be of odd freq
+
         
         // storing frequency of each char in string s
         for(int i = 0 ; i < s.length() ; i++){
@@ -24,7 +27,7 @@ public class Q12_All_Palindromic_Permutations {
 
 
         Character oddch = null ; // this will contain the character that has odd freq 
-        int oddCount = 0 ; /// total count of char that has freq
+        int oddCount = 0 ; /// total count of char that has odd freq
         int totalLen = 0 ; // total len of string after dividing the freq in half
 
         // dividing the freq in half 
@@ -33,7 +36,7 @@ public class Q12_All_Palindromic_Permutations {
             char ch = e.getKey() ;
             int freq = e.getValue() ;
 
-            if(freq % 2 == 1){ // when freq id odd
+            if(freq % 2 == 1){ // when freq is odd
                 oddch = ch ;
                 oddCount++ ;
             }
