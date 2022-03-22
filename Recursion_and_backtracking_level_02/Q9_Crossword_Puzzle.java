@@ -13,7 +13,7 @@ public class Q9_Crossword_Puzzle {
           return ;
         }
         
-        String word = words[vidx] ;
+        String word = words[vidx] ; // getting word.
     
         for(int i = 0 ; i < arr.length ; i++){
           for(int j = 0 ; j < arr[0].length ; j++){
