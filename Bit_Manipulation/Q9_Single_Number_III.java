@@ -27,10 +27,10 @@ public class Q9_Single_Number_III {
         for(int val : nums){
             if( (rsb & val) == 0){
                 /// means set bit does not matched.
-                num2 = num2 ^ val ;
+                num2 = num2 ^ val ; // so xor with num2
             }
             else{
-                num1 = num1 ^ val ;
+                num1 = num1 ^ val ; // else xor with num1
             }
         }
         
