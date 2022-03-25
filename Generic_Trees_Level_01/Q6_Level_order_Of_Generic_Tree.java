@@ -25,6 +25,7 @@ public class Q6_Level_order_Of_Generic_Tree {
             }
           }
         }
+        
         System.out.println(".");
       }
     
