@@ -77,4 +77,28 @@ public class Q8_Construct_BST_from_given_preorder_traversal {
         preOrder(root);
         
     }
+
+
+    // leetcode solution : 
+
+    class Solution {
+        public Node bstFromPreorder(int[] preorder) {
+            return helper(preorder,0,preorder.length-1) ; //paasing to helper function with some ranges.
+        }
+        
+        public Node helper(int[] pre, int si, int ei){
+            
+            if(si > ei ) return null ;
+            
+            Node root = new Node( pre[si] ) ; // creating root node by taking the first node of preorder(that is always root)
+            if(si == ei) return root ; // if both become equal then simply return.
+    
+            int rootIdx = si+1 ; // this is the index where the first element arrives that is greater than root.
+            while(rootIdx < pre.length && pre[rootIdx] < pre[si]) rootIdx++ ;
+            
+            root.left = helper(pre,si+1,rootIdx - 1) ; // so sending left with range si +1 to rootTdx-1(that is first greater element -1)
+            root.right = helper(pre, rootIdx, ei ) ;// right range is first greater element to end.
+            return root ;
+        }
+    }
 }
