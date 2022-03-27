@@ -82,5 +82,34 @@ public class Q4_Diameter_of_Binary_Tree {
         System.out.println(height(bt.root));
         System.out.println(diameter2(bt.root, new int[]{0}));
     }
+
+
+
+    // approch 3rd (self approch) :
+
+    static int ans ;
+    int diameter3(TreeNode root) {
+       
+       ans = 0 ;
+       helper(root);
+       
+       return ans+1 ;
+    }
+    
+    int helper(TreeNode root){
+        
+        if(root == null){
+            return -1 ;
+        }
+        
+        int left = helper(root.left) ;
+        int right = helper(root.right) ;
+        
+        if(left + right + 2 > ans){
+            ans = left + right + 2 ;
+        }
+        
+        return left >= right ? left + 1 : right + 1 ;
+    }
     
 }
