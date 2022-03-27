@@ -41,6 +41,8 @@ public class Q5_Check_for_BST {
 
 
 
+    // method 01 :
+
     public static class BSTpair{
         boolean isBst ; // this will tell our current node is bst or not.
         int min ; // it will store the min value. 
@@ -98,5 +100,66 @@ public class Q5_Check_for_BST {
     //   System.out.println(f[0]);
         
     }
+
+
+   
     
+}
+
+ // easiest sol : just check the inorder of tree , if it is sorted then it is a bst else not a bst
+class Solution
+{
+
+    public static class Node {
+
+        int data;
+        Node left, right;
+
+        public Node(int d) {
+            this.data = d;
+        }
+
+    }
+    
+
+    // method 02 :
+      
+   // just check the inorder traversal. as inorder traversal is always sorted if not then not a nst.
+    boolean isBST(Node root){
+        prev = null ;
+        isBST_ = true ;
+        helper(root) ;
+        
+        return isBST_ ;
+    }
+    
+    static boolean isBST_ ;
+    static Integer prev ;
+  
+    public void helper(Node node ){
+        if(node == null){
+            return ;
+        }
+        
+        helper(node.left) ;
+        
+        if(prev == null){
+            prev = node.data ;
+        }
+        else{
+            if(prev >= node.data){
+                isBST_ = false ;
+                return ;
+            }
+            else{
+                prev = node.data ;
+            }
+        }
+        
+        helper(node.right) ;
+    }
+
+
+    // method 03 : using Inorder morris traversal. time will be same and space comp is not O(1)
+    // check the next Q5.
 }
