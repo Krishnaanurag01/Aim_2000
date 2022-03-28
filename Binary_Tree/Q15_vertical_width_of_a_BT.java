@@ -34,17 +34,17 @@ public class Q15_vertical_width_of_a_BT {
 
 
 
-    private static void width(TreeNode root, int level, int[] arr) {
+    private static void width(TreeNode root, int vlevel, int[] arr) {
 
         if(root == null){
             return ;
         }
 
-        arr[0] = Math.min(arr[0],level); // keep updating the min height if found lower
-        arr[1] = Math.max(arr[1],level); // keep updating the max height if found higher.
+        arr[0] = Math.min(arr[0],vlevel); // keep updating the min height if found lower
+        arr[1] = Math.max(arr[1],vlevel); // keep updating the max height if found higher.
 
-        width(root.left, level-1 , arr); // now traverse left with current level - 1 ;
-        width(root.right, level+1 , arr); // and level + 1 traverse in right side.
+        width(root.left, vlevel-1 , arr); // now traverse left with current vlevel - 1 ;
+        width(root.right, vlevel+1 , arr); // and vlevel + 1 traverse in right side.
 
     }
 
