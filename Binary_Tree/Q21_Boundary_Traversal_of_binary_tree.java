@@ -167,7 +167,7 @@ public class Q21_Boundary_Traversal_of_binary_tree {
 
         if(node == null) return list ;
 
-        if(isLeaf(node) == false) list.add(node.data);
+        if(isLeaf(node) == false) list.add(node.data); // when it is leaf then don't add becuase the below add_leaves function will automatically add those leaves 
 
         add_left_boundry(node,list);
 
