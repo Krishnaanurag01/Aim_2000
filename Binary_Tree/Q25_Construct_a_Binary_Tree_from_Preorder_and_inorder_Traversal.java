@@ -1,4 +1,5 @@
- package Binary_Tree;
+
+package Binary_Tree;
 
 import java.util.HashMap;
 
@@ -46,7 +47,7 @@ public class Q25_Construct_a_Binary_Tree_from_Preorder_and_inorder_Traversal {
         TreeNode root = new TreeNode(preorder[preStart]); // now make the node .
 
         int rootIdx = map.get(root.data); // find the root index in inorder .that will be the main key for further steps.
-        int leftElements = rootIdx - inStart ;// finding the length of rest elements.
+        int leftElements = rootIdx - inStart ;// finding the length of rest left elements.
 
 
         // now send preorder with prestart + 1 for next tree and preEnd will be prestart + left elements.
