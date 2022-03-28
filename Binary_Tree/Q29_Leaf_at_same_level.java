@@ -1,4 +1,5 @@
 package Binary_Tree;
+import java.util.*;
 
 
 public class Q29_Leaf_at_same_level {
@@ -60,6 +61,38 @@ public class Q29_Leaf_at_same_level {
         }
 
       return check_leaf(node.left, height+1, arr) && check_leaf(node.right, height+1, arr); // if any return false then return false.
+    }
+
+
+    /// method 3 : and the best one.
+
+    boolean check(TreeNode root)
+    {
+        
+        HashSet<Integer> set = new HashSet<>() ; // this will contain all the height of leaf nodes, if all leaf node have same height then this set will contain only one value. else it has more than 1 value
+        
+        // sending the set and 0(height) initally
+        helper(root,set, 0) ;
+        
+        return set.size() == 1 ; // checking if set has only one height
+    
+    }
+    
+    void helper(TreeNode root, HashSet<Integer> set, int h){
+        
+        if(root == null)
+        return ;
+        
+        if(root.left == null && root.right == null){
+            /// adding leaf height
+            set.add(h) ;
+            return ;
+        }
+        
+        // sending to child with height + 1
+        helper(root.left,  set, h+1) ;
+        helper(root.right, set, h+1) ;
+        
     }
 
 
