@@ -1,5 +1,6 @@
 package Binary_Tree;
 import java.util.*;
+
 public class Q50_Diagonal_Sum_In_Binary_Tree {
 
     class Node{
@@ -44,5 +45,25 @@ public class Q50_Diagonal_Sum_In_Binary_Tree {
            }
            
            return ans ;
+    }
+
+    // recursive approach.
+
+    public static ArrayList <Integer> diagonalSum2(Node root) 
+    {
+        ArrayList <Integer> ans = new ArrayList<>() ;
+        helper(root,0,ans) ; // 0 denotes currently we are at 0th level diagonal
+        return ans ;
+    }
+    
+    static void helper(Node root, int lvl , ArrayList<Integer> ans){
+        
+        if(root == null) return ;
+        
+        if(lvl == ans.size() ) ans.add(0) ; // when size equals level then add one 0, it denotes we have found a new diagonal
+        ans.set( lvl, ans.get(lvl) + root.data ) ; // add the value on lvl index 
+        
+        helper(root.left, lvl + 1 ,ans); // go left with lvl + 1
+        helper(root.right, lvl ,ans); // and right with lvl + 0
     }
 }
