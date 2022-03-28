@@ -76,11 +76,8 @@ public class Q10_pre_post_in_one_loop {
                 post += top.node.data + " " ;
                  stack.pop();
             }
-            
+               
         }
-
-
-
 
         System.out.println(pre);
         System.out.println(in);
