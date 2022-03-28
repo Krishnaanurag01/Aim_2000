@@ -54,6 +54,38 @@ public class Q20_Diagnol_Traversal_of_a_Binary_tree {
         
     }
 
+    // this is for anti clock wise
+
+    public static ArrayList<ArrayList<Integer>> get_diagonal_traversal2(TreeNode node) {
+
+        ArrayList<ArrayList<Integer>> parentList = new ArrayList<>() ;
+        if(node == null) return parentList ;
+
+        LinkedList<TreeNode> queue = new LinkedList<>() ;
+        queue.add(node) ;
+
+        while (queue.size() != 0) {
+            int size = queue.size() ;
+            ArrayList<Integer> innerList = new ArrayList<>() ;
+
+            while (size-- > 0) { // checking each node of a level
+                TreeNode rnode = queue.removeFirst() ; // remove the first node and if right present then add to queue .
+                while (rnode != null) { // keep running untill becomes null.
+                    innerList.add(rnode.data); // add to the list.
+
+                    if(rnode.right != null) queue.addLast(rnode.right); // if right present then add to queue.
+
+                    rnode = rnode.left ; // move to left
+                }
+            }
+
+            parentList.add(innerList);
+        }
+
+        return parentList ;
+        
+    }
+
 
 
 
