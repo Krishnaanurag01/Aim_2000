@@ -38,7 +38,7 @@ public class Q11_Convert_Binary_Search_Tree_to_Sorted_Doubly_Linked_List_Using_D
 
 
 
-    // time is : o(n) and space is o(n).
+    // time is : o(n) and space is o(height of tree) [using recursive space].
 
 
     public static Node convert_BST_To_DLL(Node root) {
