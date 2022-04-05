@@ -104,7 +104,7 @@ public class Q19_Rod_cutting {
                        }
                       curr[j] = Math.max(notCutting,cutting) ;
                     }
-        //             prev = curr ;
+        //           prev = curr ;
                 }
                 
                 return curr[n] ;
