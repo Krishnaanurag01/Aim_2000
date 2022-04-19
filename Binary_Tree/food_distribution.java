@@ -24,7 +24,7 @@ public class food_distribution {
             return q ;
         }
 
-        int selfCount = q-1 ; 
+        // int selfCount = q-1 ; 
 
 
         return 0 ;
