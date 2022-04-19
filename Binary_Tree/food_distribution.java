@@ -12,6 +12,7 @@ public class food_distribution {
         int q = sc.nextInt() ;
 
         helper(p,q) ;
+        sc.close();
     }
 
     private static int helper(int p, int q) {
