@@ -8,8 +8,7 @@ public class Q78_Complete__Binary_Tree_Inserter {
 
 class TreeNode {
      int val;
-     TreeNode left;
-     TreeNode right;
+     TreeNode left,right;
      TreeNode() {}
      TreeNode(int val) { this.val = val; }
      TreeNode(int val, TreeNode left, TreeNode right) {
