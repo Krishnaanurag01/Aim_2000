@@ -41,7 +41,7 @@ public class Q2_Find_Itinerary_From_Tickets {
 
 			if(map.containsKey(srce)){ // checking if we can move from srce
 				System.out.print(srce + " -> ");
-				srce = map.get(srce) ; // moving to next tuicket
+				srce = map.get(srce) ; // moving to next ticket
 			}
 			else{
 				System.out.print(srce + "."); // ending at the last stopage.
