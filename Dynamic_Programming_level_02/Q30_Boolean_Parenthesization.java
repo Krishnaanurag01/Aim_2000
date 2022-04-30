@@ -9,7 +9,7 @@ public class Q30_Boolean_Parenthesization {
 
     public static int count_ways(String s) {
 
-        String str1= "", str2="" ;  // now storing both bool and operation seperately.
+        String str1= "", str2="" ;  //  storing both bool and operation seperately.
 
         for (int i = 0; i < s.length() ; i++) {
             if(s.charAt(i) == 'T' || s.charAt(i) == 'F'){
