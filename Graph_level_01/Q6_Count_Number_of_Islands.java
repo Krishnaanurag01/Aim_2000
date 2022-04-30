@@ -4,7 +4,7 @@ public class Q6_Count_Number_of_Islands {
 
     public static void get_count_island(int[][] grid) {
         
-        int count =0 ;
+        int count = 0 ;
 
         boolean[][] visited = new boolean[grid.length][grid[0].length] ; 
 
