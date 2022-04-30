@@ -30,6 +30,9 @@ public class Q13_is_graph_bipartite {
      }
  }
 
+ // a graph is bipartite if it can be divided in two component such that all vertices are mutually exclusive and exhuastive.
+ // if graph contains cycle and odd in length then it is not bipartite else bipartite
+
  public static void main(String[] args) throws Exception {
     BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
