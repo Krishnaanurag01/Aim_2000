@@ -36,4 +36,29 @@ public class Q75_Palindrome_Partitioning_II {
         }
         return true ;
     }
+
+
+
+    // converted to tabulations : 
+
+    public int minCut2(String s) {
+
+        int[] dp = new int[s.length()+1] ;
+        int ei = s.length() ;
+        
+        for(int si = s.length() - 1 ; si >= 0 ; si--){
+                if(si == ei) continue ;
+                
+                 int min = (int)1e9 ;
+        
+                 for(int i = si ; i < ei; i++){
+                     if(isPalind(si,i,s)){
+                     int cost = 1 + dp[i+1] ;
+                     min = Math.min(min,cost) ;
+                     }
+                 }
+                dp[si] = min ;
+            }
+        return dp[0] - 1 ;
+    }
 }
