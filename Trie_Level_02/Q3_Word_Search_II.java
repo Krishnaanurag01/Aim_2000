@@ -7,7 +7,6 @@ public class Q3_Word_Search_II {
 
      
     static class Node{
-        
         public Node[] childs = new Node[26] ;
         public String s ; // this will store at the end point
         int count = 0 ; // denotes total active child of current node 
