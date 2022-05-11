@@ -5,7 +5,6 @@ public class Q78_Complete__Binary_Tree_Inserter {
     
 }
 
-
 class TreeNode {
      int val;
      TreeNode left,right;
