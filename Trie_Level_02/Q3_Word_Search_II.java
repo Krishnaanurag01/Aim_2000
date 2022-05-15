@@ -4,7 +4,6 @@ import java.util.*;
 public class Q3_Word_Search_II {
 
     // optimal solution.
-
      
     static class Node{
         public Node[] childs = new Node[26] ;
