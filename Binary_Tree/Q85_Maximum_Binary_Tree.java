@@ -20,7 +20,7 @@ public class Q85_Maximum_Binary_Tree {
         
         int max = -1;
         int idx = -1;
-        // finding the max value and it's index.
+        // finding the max value and it's index
         for(int k = i ; k <= j ; k++){
             if(nums[k] > max){
                 max = nums[k] ;
