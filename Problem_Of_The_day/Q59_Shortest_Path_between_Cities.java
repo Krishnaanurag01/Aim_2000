@@ -6,7 +6,7 @@ public class Q59_Shortest_Path_between_Cities {
         
         int move = 0 ;
         
-        int p1 = x ;
+        int p1 = x ; //
         int p2 = y ;
         
         while(p1 != p2){
@@ -25,5 +25,5 @@ public class Q59_Shortest_Path_between_Cities {
         
         return move ;
     }
-    
+
 }
