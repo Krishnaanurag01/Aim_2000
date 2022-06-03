@@ -64,7 +64,7 @@ public class Q23_Strongly_Connected_Components_Kosarajus_Algo {
     
     public static void dfs2(int src ,  ArrayList<ArrayList<Integer>> adj ,  boolean[] visited){
         
-        visited[src] = true ; // only make true
+        visited[src] = true ; // only make true.
         ArrayList<Integer> innerNbrs = adj.get(src) ;
         
         for( int in : innerNbrs){  // add neigbours if not visited only
