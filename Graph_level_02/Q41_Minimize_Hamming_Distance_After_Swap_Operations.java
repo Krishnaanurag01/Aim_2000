@@ -114,8 +114,6 @@ public class Q41_Minimize_Hamming_Distance_After_Swap_Operations {
         
     }
     
-    
-    
     public int find(int x , int[] parent){
         if(parent[x] == x){
             return x ;
