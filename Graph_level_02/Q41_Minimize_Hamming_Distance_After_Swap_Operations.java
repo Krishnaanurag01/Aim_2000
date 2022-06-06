@@ -86,7 +86,7 @@ public class Q41_Minimize_Hamming_Distance_After_Swap_Operations {
     
     
      
-     // DSU OPERAATIONS:
+     // DSU OPERAATIONS :
     
      public boolean union(int x , int y ){
         
