@@ -14,12 +14,11 @@ public class Q49_Binary_Tree_Level_Order_Traversal_II {
                  this.left = left;
                  this.right = right;
              }
-         }
+    }
 
     public List<List<Integer>> levelOrderBottom(TreeNode root) {
 
         LinkedList<List<Integer>> ll = new LinkedList<>() ;
-        
         List<List<Integer>> ans = new ArrayList<>() ;
         LinkedList<TreeNode> q = new LinkedList<>() ;
         q.add(root) ;
@@ -31,9 +30,7 @@ public class Q49_Binary_Tree_Level_Order_Traversal_II {
 
             while (size-- > 0) {
                 TreeNode rn = q.removeFirst() ;
-
                 inList.add(rn.val) ;
-
                 if (rn.left != null) {
                     q.add(rn.left) ;
                 }
@@ -44,7 +41,6 @@ public class Q49_Binary_Tree_Level_Order_Traversal_II {
             }
 
             ll.add(inList) ;
-            
         }
 
         while ( ll.size() != 0 ) {
