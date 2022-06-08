@@ -5,24 +5,14 @@ import java.util.ArrayList;
 public class Q41_Morris_Traversal_Inorder {
 
     TreeNode root ;
-    
     static class TreeNode {
-
         int data;
         TreeNode left;
         TreeNode right;
-
-        public TreeNode(int d) {
-            data = d;
-        }
+        public TreeNode(int d) { data = d; }
     }
 
-
-
-
     // takes nearly o(n) time ( o(n) + o(w) for thread) and o(1) space.
-
-
     public static ArrayList<Integer> morris_traversal_Inorder(TreeNode root) {
         ArrayList<Integer> list= new ArrayList<>() ;
         TreeNode curr = root ; // take the current as root.
@@ -35,7 +25,7 @@ public class Q41_Morris_Traversal_Inorder {
             }
             else{
                 prev = curr.left ; // now if not null then take the left node and search the right most node and then connect it with the root.
-
+                
                 while (prev.right != null && prev.right != curr) { // if prev.right is not null and not connected with the root then keep moving.
                     prev = prev.right ;
                 }
