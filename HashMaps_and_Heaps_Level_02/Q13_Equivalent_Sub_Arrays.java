@@ -60,7 +60,7 @@ public class Q13_Equivalent_Sub_Arrays {
                     count += (n-i+1) ;
                 }
                 
-                // now releasing the jth number
+                // now releasing the jth number.
                 int num = arr[j] ;
                 
                 int freq = map.get(num) ;
