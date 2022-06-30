@@ -6,7 +6,7 @@ public class Q16_Abbreviation_1_Using_Bits {
 
     public static void solve(String str){
        
-        for(int i = 0 ; i < ( 1 << str.length() ) ; i++){ /// running for all the numbers of bit of size str.length for str.size = 3 it will run for 000 to 111
+        for(int i = 0 ; i < ( 1 << str.length() ) ; i++){ /// running for all the numbers of bit of size str.length for str.size = 3 it will run for 000 to 111.
  
             StringBuilder sb = new StringBuilder() ;
             int count = 0 ;
