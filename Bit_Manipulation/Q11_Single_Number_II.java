@@ -32,5 +32,4 @@ public class Q11_Single_Number_II {
         // System.out.println(tnp1) ;
         return tnp1 ;
     }
-
 }
