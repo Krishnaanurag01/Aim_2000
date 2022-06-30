@@ -28,7 +28,6 @@ public class Q11_Single_Number_II {
             tn = tn | cwtn2 ;
             tnp2 = tnp2 & (~cwtn2) ;
         }
-        
         // System.out.println(tnp1) ;
         return tnp1 ;
     }
