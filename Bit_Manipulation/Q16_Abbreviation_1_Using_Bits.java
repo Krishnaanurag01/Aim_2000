@@ -39,7 +39,6 @@ public class Q16_Abbreviation_1_Using_Bits {
             if(count > 0 ) // if count is greater than 3 then directly add the count as there are no characters left.
             sb.append(count) ;
  
- 
             System.out.println(sb); // printing the abbreviation.
         }
      }
