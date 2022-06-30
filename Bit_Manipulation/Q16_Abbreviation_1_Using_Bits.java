@@ -40,7 +40,7 @@ public class Q16_Abbreviation_1_Using_Bits {
             sb.append(count) ;
  
  
-            System.out.println(sb); // printing the abbreviation
+            System.out.println(sb); // printing the abbreviation.
         }
      }
      
