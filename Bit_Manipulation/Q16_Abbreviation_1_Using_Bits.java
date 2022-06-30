@@ -48,5 +48,4 @@ public class Q16_Abbreviation_1_Using_Bits {
          solve(str);
          scn.close();
      }
-    
 }
