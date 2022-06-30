@@ -41,7 +41,6 @@ public class Q16_Abbreviation_1_Using_Bits {
             System.out.println(sb); // printing the abbreviation.
         }
      }
-     
      public static void main(String[] args) {
          Scanner scn = new Scanner(System.in);
          String str = scn.nextLine();
