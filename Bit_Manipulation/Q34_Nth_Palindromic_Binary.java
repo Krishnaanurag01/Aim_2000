@@ -15,7 +15,7 @@ public class Q34_Nth_Palindromic_Binary {
         }
 
         // getting the last count of len-1;
-        count -= (1 << (len - 1) /2) ; // removing the last added count will get us the count of len -1.
+        count -= (1 << (len - 1) /2) ; // removing the last added count will get us the count of len - 1.
 
         int offset = n - count - 1 ; // this is distance or denotes how far current element in his group of length.
 
