@@ -9,7 +9,7 @@ public class Q29_Count_total_set_bits {
         
         int x = largestPowerOfTwo(n) ; // getting power of two
         
-        // counting total bits till 2^x - 1
+        // counting total bits till x*2^x - 1
         int totalBits = x * ( 1 << ( x-1 )) ;
 
         // getting most significant bit from 2^x to n (inclusive)
