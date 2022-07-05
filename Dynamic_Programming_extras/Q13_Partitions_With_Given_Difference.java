@@ -7,7 +7,7 @@ public class Q13_Partitions_With_Given_Difference {
 		// Write your code here.
         int sum = 0 ;
         for(int i : arr) sum += i ;
-        // if after substraction it becomes 0 or if it is not evenn then return false;
+        // if after substraction it becomes 0 or if it is not even then return false;
         if((sum - d < 0) || (sum - d ) % 2 != 0 ) return 0 ;
         
         return helper(d,arr,(sum-d)/2) ; // this sum - d / 2 came from a formula that is : s1 - s2 = d.
