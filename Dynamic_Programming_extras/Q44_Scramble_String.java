@@ -44,7 +44,7 @@ public class Q44_Scramble_String {
         if(s1.equals(s2)) return true ;
         if(s1.length() <= 1) return false;
         
-        String key = s1 +"#"+s2 ; // forming key
+        String key = s1 +"#"+s2 ; // forming key.
         if(map.containsKey(key)) return map.get(key) ; // returning if already solved
         
         for(int i = 1 ; i < s1.length() ; i++){
