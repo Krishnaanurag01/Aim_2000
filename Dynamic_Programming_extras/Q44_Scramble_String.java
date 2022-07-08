@@ -57,7 +57,7 @@ public class Q44_Scramble_String {
             
             if(helper(s1.substring(0,i) , s2.substring(s2.length()-i ),map)  &&
                helper(s1.substring(i) , s2.substring( 0,s2.length()-i ),map)){
-               map.put(key,true) ; // storing and returning
+               map.put(key,true) ; // storing and returning.
                 return true ;  
             } 
         }
