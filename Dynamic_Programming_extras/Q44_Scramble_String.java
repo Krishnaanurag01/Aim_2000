@@ -35,7 +35,7 @@ public class Q44_Scramble_String {
 
     public boolean isScramble2(String s1, String s2) {
         if(s1.length() != s2.length()) return false;
-        HashMap<String,Boolean> map = new HashMap<>() ; // using map for memoization
+        HashMap<String,Boolean> map = new HashMap<>() ; // using map for memoization.
         return helper(s1,s2,map);
     }
     
