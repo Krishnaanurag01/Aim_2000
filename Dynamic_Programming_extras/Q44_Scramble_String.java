@@ -17,7 +17,7 @@ public class Q44_Scramble_String {
         
         for(int i = 1 ; i < s1.length() ; i++){
             
-            if(helper(s1.substring(0,i) , s2.substring(0,i))  && // comparing without swapping
+            if(helper(s1.substring(0,i) , s2.substring(0,i))  && // comparing without swapping.
                helper(s1.substring(i) , s2.substring(i))  ) return true ;
             
             if(helper(s1.substring(0,i) , s2.substring(s2.length()-i ))  && // comparing with swapping
