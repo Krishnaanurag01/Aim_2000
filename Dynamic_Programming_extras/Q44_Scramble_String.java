@@ -12,7 +12,7 @@ public class Q44_Scramble_String {
         
         
         if(s1.equals(s2)) return true ; // when equal return true.
-        if(s1.length() <= 1) return false; // when it is of 1 length then it is leaf so we wont't compare here so return false
+        if(s1.length() <= 1) return false; // when it is of 1 length then it is leaf so we wont't compare here so return false.
         
         
         for(int i = 1 ; i < s1.length() ; i++){
