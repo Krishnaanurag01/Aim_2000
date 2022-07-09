@@ -3,6 +3,7 @@ package Dynamic_Programming_extras;
 public class Q45_Egg_dropping_problem {
 
     // using memoization.
+    // aditya vermas approch
     static Integer[][] dp ;
     public int superEggDrop(int k, int n) {
         
