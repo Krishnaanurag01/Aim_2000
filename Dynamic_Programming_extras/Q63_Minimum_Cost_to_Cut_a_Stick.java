@@ -39,7 +39,7 @@ public class Q63_Minimum_Cost_to_Cut_a_Stick {
 
 
 
-    // here we are woking on the stick array instead on working on the stick.
+    // here we are working on the stick array instead on working on the stick.
 
     static Integer[][] dp2 ;
     public int minCost2(int n, int[] cuts) {
