@@ -42,6 +42,7 @@ public class Q1_Coloring_A_Border {
                 continue ;
             }
 
+            
             count++ ; // if we come here then it means we come to one direction so count it.
 
             if(grid[rowDash][colDash] == clr){ // this denotes that element is not visited as it is not negative so call dfs for that component.
