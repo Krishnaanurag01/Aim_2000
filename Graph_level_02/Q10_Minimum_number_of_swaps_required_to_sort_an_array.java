@@ -31,7 +31,7 @@ public class Q10_Minimum_number_of_swaps_required_to_sort_an_array {
 
                 swap(nums,i,map.get(temp[i])) ;
 
-                map.put(orignal_element,temp[i]);
+                map.put(orignal_element,map.get(temp[i]));
                 map.put(temp[i], i ) ;
 
             }
