@@ -12,7 +12,6 @@ public class Q31_Remove_Max_Number_of_Edges_to_Keep_Graph_Fully_Traversable {
         Arrays.sort(edges,(a,b) -> Integer.compare( b[0] , a[0] ) ) ;
         
         // we will make graph for both  alice and bob and check the max no of edges that are useless
-
         int[] parentA = new int[n+1] ; // for alice
         int[] parentB = new int[n+1] ; // for bob
         int[] rankA = new int[n+1] ; // alice
@@ -28,12 +27,10 @@ public class Q31_Remove_Max_Number_of_Edges_to_Keep_Graph_Fully_Traversable {
         
 
         // count of merged and removable edges
-
         // giving 1 initally becuase for the first time we add one edge with another edge.
 
         int mergedA = 1 ;
         int mergedB = 1 ;
-        
         int removed = 0 ;
         
         
@@ -121,14 +118,9 @@ public class Q31_Remove_Max_Number_of_Edges_to_Keep_Graph_Fully_Traversable {
                 parent[lx] = ly ;
                 rank[ly]++ ;
             }
-            
             return true ;
-            
         }
-        
-        
-            return false; 
-        
+           return false;
     }
     
     public int find(int x , int[] parent){
