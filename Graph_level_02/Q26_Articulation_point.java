@@ -3,7 +3,7 @@ import java.util.*;
 
 public class Q26_Articulation_point {
     static int[] parent ;
-    static int[] intTime ; // insertion time.
+    static int[] intTime ; // insertion time. // discovery
     static int[] low ;  // minimal time.
     static boolean[] visited ;
     static int time ;
