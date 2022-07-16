@@ -3,6 +3,8 @@ import java.util.*;
 
 
 public class Q23_Strongly_Connected_Components_Kosarajus_Algo {
+
+    // SCC : It is a component in which we reach every other node from any node within same component
     
     public int kosaraju(int V, ArrayList<ArrayList<Integer>> adj)
     {
@@ -24,12 +26,10 @@ public class Q23_Strongly_Connected_Components_Kosarajus_Algo {
             nGraph.add( new ArrayList<>() ) ; // initializing the new graph.
         }
         
-        
-        
-         for( int i = 0 ; i < adj.size() ; i++ ) {
+        for( int i = 0 ; i < adj.size() ; i++ ) {
             ArrayList<Integer> innerComp = adj.get(i) ; // finding all the neigbours.
             for(Integer nbr : innerComp){ 
-                    nGraph.get(nbr).add(i) ; // now adding reverse edge of nbr to i ( originally it was i to nbr )
+                nGraph.get(nbr).add(i) ; // now adding reverse edge of nbr to i ( originally it was i to nbr )
             }
         }
         
