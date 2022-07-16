@@ -3,6 +3,9 @@ import java.util.*;
 
 public class Q34_Euler_circuit_and_Path {
 
+    // (eulerian is same as hamiltonian only difference is eulerian is used for edges and hamiltonian is for vertices.)
+    // eulerian path : is a path starting from any node through which we can traverse or visit each edge
+
     public int isEularCircuitExist(int V, ArrayList<ArrayList<Integer>> adj)
     {
 
