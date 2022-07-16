@@ -37,10 +37,7 @@ public class Q24_Mother_Vertex {
     public static void dfs1(int src , ArrayList<ArrayList<Integer>>adj , boolean[] visited, Stack<Integer> stack){
         
         visited[src] = true ;
-        
-        ArrayList<Integer> innerComp = adj.get(src) ;
-        
-        for( Integer in : innerComp){
+        for( Integer in : adj.get(src) ){
             if(visited[in] == false){
                  dfs1(in,adj,visited,stack) ;
             }
@@ -50,19 +47,14 @@ public class Q24_Mother_Vertex {
     }
     
     static int count  ;
-    
     public static void dfs2(int src , ArrayList<ArrayList<Integer>>adj , boolean[] visited ){
         
         visited[src] = true ;
         count++ ;
-        
-        ArrayList<Integer> innerComp = adj.get(src) ;
-        
-        for( Integer in : innerComp){
+        for( Integer in : adj.get(src)){
             if(visited[in] == false){
                  dfs2(in,adj,visited) ;
             }
         }
     }
-    
 }
