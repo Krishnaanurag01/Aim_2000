@@ -5,7 +5,7 @@ public class Q1_Implement_Trie {
     // starts from here. 
     // used Array here.
 
-     static class Trie {
+    static class Trie {
     
         static class Node{
             
