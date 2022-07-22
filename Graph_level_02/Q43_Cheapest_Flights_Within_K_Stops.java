@@ -10,70 +10,75 @@ public class Q43_Cheapest_Flights_Within_K_Stops {
         for(int i = 0  ; i < n ; i++)
             graph.add(new ArrayList<>()) ;
         
+        // making adjency list (graph)
         for(int[] in : flights){
-            int tsrc = in[0]; 
-            int tdst = in[1] ;
+            int u = in[0]; 
+            int v = in[1] ;
             int tcost = in[2] ;
-            Pair p = new Pair(tsrc,tdst,tcost) ;
-            graph.get(tsrc).add(p);
+            Pair p = new Pair(v,tcost) ;
+            graph.get(u).add(p);
         }
+
         
-        LinkedList<edge> q = new LinkedList<>( ) ;
-        q.add( new edge(src,0) ) ;
-        k++ ;
+        int[] visited = new int[graph.size()] ; // here we will store cost so far
+        int[] stepsf = new int[graph.size()] ; // and stops taken at ith vertices so far.
+        // assigning max value by default
+        Arrays.fill(visited,(int)1e9) ; 
+        Arrays.fill(stepsf,(int)1e9) ;
         
-        int min = (int)1e9 ;
+        // using dikstras : 
+        PriorityQueue<QPair> q = new PriorityQueue<>((a,b) -> a.cost - b.cost ) ; // comparation on cost.
+        q.add(new QPair(src,0,1));
+        visited[src] = 0;
+        stepsf[src] = 1 ; //src has one stops
         
-        while(q.size() > 0 ){
+        while(q.size() > 0){
             // System.out.println(q) ;
-            if( k < 0 ) break ;
-            int size = q.size() ;
-            while(size-- > 0){
-                edge re = q.removeFirst() ;
-                // System.out.println(re.src + " -- "+ re.cost) ;
-                if(re.src == dst){
-                  min = Math.min(min,re.cost) ;  
-                } 
-                for(Pair p : graph.get(re.src)){
-                        q.add( new edge(p.dst, re.cost + p.cost) ) ;
+            QPair rp = q.poll() ;
+            if(rp.stops - 2 > k) continue ; // subtracting 2 becuase we had counted stops for src and dst as well.
+            if(rp.src == dst) return rp.cost ;
+            
+            
+            for(Pair p : graph.get(rp.src)){
+                if(rp.cost + p.cost <= visited[p.src] || rp.stops + 1 < stepsf[p.src]){ // if found min cost or with min stops then consider it.
+                    visited[p.src] = rp.cost + p.cost ;
+                    stepsf[p.src] = rp.stops + 1 ;
+                    q.add( new QPair(p.src, p.cost + rp.cost, rp.stops + 1)) ;
                 }
             }
-            k-- ;
         }
         
-        // System.out.print(q) ;
-        
-        return min == (int) 1e9 ?  -1 : min ;
+       return -1;
     }
     
     static class Pair{
         int src ;
-        int dst ;
         int cost ;
         
         Pair(){}
-        Pair(int x, int y, int z){
-            src = x ;
-            dst = y ; 
+        Pair( int y, int z){
+            src = y ; 
             cost = z ;
         }
         
         public String toString(){
-            return "" + src +  " - " + dst + " - " + cost ; 
+            return " - " + src + " - " + cost ; 
         }
     }
     
-    static class edge{
+    static class QPair{
         int src ;
         int cost ;
+        int stops ;
         
-        edge(int x, int y){
+        QPair(int x, int y, int z){
             src = x ;
             cost = y ;
+            stops = z ; 
         }
         
-         public String toString(){
-            return "" + src +  " -  - " + cost ; 
+        public String toString(){
+            return  src + " - " + cost + " - " +stops ; 
         }
     }
 }
