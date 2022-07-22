@@ -17,8 +17,6 @@ public class Q15_Total_Decoding_Messages {
     
 
     public static int get_total_decoding_msg(String str) {
-
-
         if(str.length() == 1 && str.charAt(0) == '0'){  // when our string is like this "0" then return 0 . 
             return 0 ;
         }
