@@ -17,13 +17,13 @@ public class Q15_Total_Decoding_Messages {
     
 
     public static int get_total_decoding_msg(String str) {
-        if(str.length() == 1 && str.charAt(0) == '0'){  // when our string is like this "0" then return 0 . 
+        if(str.charAt(0) == '0'){  // when our string is starting with this "0" then return 0 . // as it's encoding is not possible 
             return 0 ;
         }
 
        int[] dp = new int[str.length()] ; // making dp.
         
-        dp[0] = str.charAt(0) == '0'? 0 : 1 ; // if our first char of str is 0 then store 0 else 1.
+        dp[0] = 1 ; // if our first char of str is 0 then store 0 else 1.
 
         for (int i = 1; i < dp.length; i++) {
             char fc = str.charAt(i-1) ; // taking the previous char
