@@ -36,6 +36,7 @@ public class Detect_cycle_in_a_directed_graph {
             }
         }
 
+        dfs_visited[i] = false ;
         return false;
     }
 }
