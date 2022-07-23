@@ -81,4 +81,57 @@ public class Q43_Cheapest_Flights_Within_K_Stops {
             return  src + " - " + cost + " - " +stops ; 
         }
     }
+
+
+
+
+
+    
+
+    // normal bfs solution :
+
+    public int findCheapestPrice2(int n, int[][] flights, int src, int dst, int k) {
+        
+        ArrayList<ArrayList<Pair>> graph = new ArrayList<>() ;
+        for(int i = 0  ; i < n ; i++)
+            graph.add(new ArrayList<>()) ;
+        
+        // making adjency list (graph)
+        for(int[] in : flights){
+            int u = in[0]; 
+            int v = in[1] ;
+            int tcost = in[2] ;
+            Pair p = new Pair(v,tcost) ;
+            graph.get(u).add(p);
+        }
+        
+        LinkedList<Pair> pq = new LinkedList<>() ;
+        int[] visited = new int[n] ;
+        Arrays.fill(visited,(int)1e9) ;
+        pq.add( new Pair(src,0)) ;
+        int stops = 0 ;
+        
+        int min = (int)1e9 ;
+        while(pq.size() > 0){
+            if(stops > k+1) return min == (int)1e9 ? -1 : min ;
+            int size = pq.size() ;
+            
+            while(size-- > 0){
+                Pair rp = pq.removeFirst() ;
+                if(rp.src == dst){
+                    min = Math.min(min,rp.cost) ;
+                } 
+                     
+                for( Pair nbr : graph.get(rp.src) ){
+                    if(visited[nbr.src] > nbr.cost + rp.cost){
+                        visited[nbr.src] = nbr.cost + rp.cost ;
+                    pq.add(new Pair(nbr.src,nbr.cost + rp.cost));
+                    }
+                }
+            }
+            stops++;
+        }
+       return  min == (int)1e9 ? -1 : min ;
+    }
+
 }
