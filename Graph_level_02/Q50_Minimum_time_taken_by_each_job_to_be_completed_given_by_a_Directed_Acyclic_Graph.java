@@ -4,6 +4,7 @@ import java.util.*;
 public class Q50_Minimum_time_taken_by_each_job_to_be_completed_given_by_a_Directed_Acyclic_Graph {
 
     // using topo sort.
+    // kahns algorithm application
  
     public static int [] minimumTime(int n,int m, int[][] edges) {
        
