@@ -14,7 +14,7 @@ public class Q25_Floyd_Warshall {
                    
                 // if i to k is -1 ( infinity ) or k to i is -1( infinity ) then continue ;
 
-                   if(matrix[i][k] == -1 || matrix[k][j] == -1 ) continue ;
+                   if(matrix[i][k] == -1 || matrix[k][j] == -1 ) continue ; // means there is no edge between i and k or k and j.
                    
                    else if(matrix[i][j] == -1 ){ // else check if previously we had -1 then store directly i to k + k to i.
                        matrix[i][j] = matrix[i][k] + matrix[k][j] ;
