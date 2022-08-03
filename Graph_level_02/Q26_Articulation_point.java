@@ -58,7 +58,7 @@ public class Q26_Articulation_point {
                 continue ;
             }
             else if(visited[v] == true){
-                low[u] = Math.min(low[u] , intTime[v]);
+                low[u] = Math.min(low[u] , intTime[v]);// comparing low with discovery of v
             }
             else{
                 
