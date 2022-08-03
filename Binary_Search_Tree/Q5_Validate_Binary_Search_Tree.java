@@ -49,17 +49,16 @@ public class Q5_Validate_Binary_Search_Tree {
                     rightMostNode.right = null ;
                     
                     
-                   if(prev == null){
+                if(prev == null){
                     prev = curr.val ;
                 }
                 else if(curr.val <= prev ){
-                       return false;
-                      }
-                    else{
-                       prev = curr.val ;
-                      }
-                    
-                    curr = curr.right ;
+                    return false;
+                }
+                else{
+                    prev = curr.val ;
+                }
+                curr = curr.right ;
                 }
             }
         }
