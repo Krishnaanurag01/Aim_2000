@@ -8,7 +8,7 @@ public class Q148_Permutation_in_String {
         if(s2.length() < s1.length()) return false;
         
         HashMap<Character,Integer> map = new HashMap<>() ;
-        for(char ch : s1.toCharArray()){
+        for(char ch : s1.toCharArray()){ //
             map.put(ch, map.getOrDefault(ch,0)+1) ;
         }
         
