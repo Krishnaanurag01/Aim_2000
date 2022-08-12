@@ -23,14 +23,14 @@ public class Q171_Arithmetic_Subarrays {
             }
             
             Arrays.sort(arr) ; 
-            boolean flag = true ; // now sorting
+            boolean flag = true ; // now.
             
             Integer diff = null ;
             for(int s = 0 ; s < arr.length - 1; s++){
                 if(diff == null){ // checking if we have no previous diff calculated then make this diff as the difff that we will consider.
                     diff = arr[s+1] - arr[s] ;
                 }
-                else{ // now checking for every consecutive element
+                else{ // now checking for every consecutive element.
                     if(arr[s+1] - arr[s] != diff){
                         flag = false;
                         break;
