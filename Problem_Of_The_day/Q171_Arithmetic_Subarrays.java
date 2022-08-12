@@ -15,7 +15,7 @@ public class Q171_Arithmetic_Subarrays {
             }
             
             
-            // making a indivisual array of length provide by l and m array ith query
+            // making a indivisual array of length provide by l and m array ith query.
             int[] arr = new int[ei-si + 1] ;
             int p = 0 ;
             for(int k = si ; k <= ei ; k++){
