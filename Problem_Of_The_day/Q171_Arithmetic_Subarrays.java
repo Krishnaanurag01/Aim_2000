@@ -38,7 +38,7 @@ public class Q171_Arithmetic_Subarrays {
                 }
             }
             
-            if(flag == true){ //if correct then add it to answer
+            if(flag == true){ //if correct then add it to answer.
                 ans.add(true) ;
             }
             else{
