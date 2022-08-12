@@ -23,7 +23,7 @@ public class Q171_Arithmetic_Subarrays {
             }
             
             Arrays.sort(arr) ; 
-            boolean flag = true ; // now sorting;
+            boolean flag = true ; // now sorting
             
             Integer diff = null ;
             for(int s = 0 ; s < arr.length - 1; s++){
