@@ -9,7 +9,7 @@ public class Q171_Arithmetic_Subarrays {
         for(int i = 0 ; i < l.length ; i++){
             int si = l[i] ;
             int ei = r[i] ;
-            if(ei - si + 1 < 2) { // if length is less than 2 then add false and skip
+            if(ei - si + 1 < 2) { // if length is less than 2 then add false and skip.
                 ans.add(false) ;
                 continue;
             }
