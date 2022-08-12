@@ -42,7 +42,7 @@ public class Q171_Arithmetic_Subarrays {
                 ans.add(true) ;
             }
             else{
-                ans.add(false) ; // else this
+                ans.add(false) ; // else this.
             }
         }
         
