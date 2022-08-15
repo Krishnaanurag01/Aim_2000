@@ -1,7 +1,5 @@
 package Graph_level_02;
-
-import java.util.HashSet;
-import java.util.LinkedList;
+import java.util.*;
 
 public class Q12_Word_ladder {
 
@@ -81,4 +79,92 @@ public class Q12_Word_ladder {
         return 0 ;
     }
     
+
+
+
+
+
+
+
+
+
+
+    
+
+    // approach 2 : 
+
+    public int ladderLength(String beginWord, String endWord, List<String> wordList) {
+
+        wordList.add(beginWord) ; // adding begin word as it is not present intially in wordList
+        HashMap<String, ArrayList<String>> map = new HashMap<>() ; // this is graph (node -> list of nbrs)
+        HashSet<String> set = new HashSet<>() ;
+        boolean isPresent = false ;
+        
+        for(String word : wordList){
+            set.add(word) ;
+            if(word.equals(endWord)){
+                isPresent = true;
+            }
+        }
+        
+        if(isPresent == false){ // if end word is not present then return 0 directly.
+            return 0 ;
+        }
+        
+        // forming a graph.
+        
+        for(String curr : wordList){
+            for (int i = 0; i < curr.length() ; i++) {    
+                StringBuilder sb = new StringBuilder(curr) ; // we will check each word by updating one char only
+                for (char j = 'a' ; j <= 'z' ; j++) {
+                        sb.setCharAt(i, j);
+                        String temp = sb.toString() ;
+                        if (set.contains(temp)) { // if the new word present in our set list then add in map as a nbr.
+                           ArrayList<String> a = map.getOrDefault(curr, new ArrayList<>()) ;
+                            a.add(temp) ;
+                            map.put(curr,a) ;
+                        }
+                }
+            }
+        }
+        
+        return wordLadderLength(beginWord, endWord, map) ;
+    }
+
+    
+    public int wordLadderLength(String startWord, String targetWord, HashMap<String,ArrayList<String>> map)
+    {
+
+        // now using BFS.
+        
+        // System.out.println(map) ;
+
+        int level = 0 ;
+        LinkedList<String> queue = new LinkedList<>() ;
+        HashSet<String> visited = new HashSet<>() ;
+        visited.add(startWord) ;
+        queue.add(startWord) ;
+
+        while (queue.size() > 0) {
+            int size = queue.size() ;
+            level++ ;
+
+            while (size-- > 0) {
+                String curr = queue.removeFirst() ;
+                if(map.containsKey(curr) == false) continue ;
+                
+                for(String nbrs : map.get(curr)){ // checking all nbrs 
+                    if(visited.contains(nbrs) == false){ // if not visited add it in queue
+                        visited.add(nbrs) ;
+                        queue.add(nbrs) ;
+                        
+                        if(nbrs.equals(targetWord)) return level+1; // if answer then return level
+                        
+                    }
+                }
+            }
+        }
+
+        return 0 ;
+    }
 }
