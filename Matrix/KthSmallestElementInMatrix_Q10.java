@@ -14,13 +14,9 @@ public class KthSmallestElementInMatrix_Q10 {
         if(matrix==null) return 0;
 
        int startVal = matrix[0][0]; // first value is start value.
-
        int r = matrix.length; // row
-
        int c = matrix[0].length; // column
-
        int endVal = matrix[r-1][c-1]; // last value is end value.
-
        int midValue;
        
        
