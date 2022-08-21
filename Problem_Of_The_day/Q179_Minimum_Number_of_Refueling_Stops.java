@@ -11,7 +11,7 @@ public class Q179_Minimum_Number_of_Refueling_Stops {
         int last = 0 ;
         int count = 0 ;
         
-        // step 01 : add all the fuel whose location lies between the position(es position tak hum ja saktey)
+        // step 01 : add all the fuel whose location lies between the position(es position tak hum ja saktey).
         for(int i = 0 ; i < stations.length ; i++){
             if(stations[i][0] <= position){
                 pq.add(stations[i][1]) ;
