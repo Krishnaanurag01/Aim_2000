@@ -7,7 +7,7 @@ public class Q179_Minimum_Number_of_Refueling_Stops {
         if(target <= startFuel) return  0 ; // base condition
         PriorityQueue<Integer> pq = new PriorityQueue<>( (a,b) -> b - a ) ; // sort on max fuel
         
-        long position = startFuel ; // matlab intially hum yha tak ja saktey
+        long position = startFuel ; // matlab intially hum yha tak ja saktey.
         int last = 0 ;
         int count = 0 ;
         
