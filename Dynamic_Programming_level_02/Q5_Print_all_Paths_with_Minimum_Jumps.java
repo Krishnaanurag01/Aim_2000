@@ -32,7 +32,6 @@ public class Q5_Print_all_Paths_with_Minimum_Jumps {
 
         // first finding the path and storing it to the dp.
         for (int i = n-2 ; i >= 0; i--) {
-
             int min = Integer.MAX_VALUE ; // this will find the min .
             for (int j = 1 ; j <= arr[i] && i + j < dp.length ; j++) { // now going to 1 - arr[i] and fetching min value.
                 
