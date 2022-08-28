@@ -61,8 +61,6 @@ public class Q5_Print_all_Paths_with_Minimum_Jumps {
                     queue.add( new pair(ci, arr[ci] , dp[ci] , rpair +" -> "+ci) ) ; // making pair of current index , current index array size, it dp jump,and adding to the path.
                 }
             }
-
-            
         }
 
 
