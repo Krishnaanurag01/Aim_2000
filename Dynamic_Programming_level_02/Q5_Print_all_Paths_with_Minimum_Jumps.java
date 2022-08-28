@@ -49,7 +49,6 @@ public class Q5_Print_all_Paths_with_Minimum_Jumps {
 
         while (queue.size() > 0) {
             pair rpair = queue.removeFirst() ; // removing first pair.
-
             if(rpair.jumps == 0){ // if its jump becomes 0 then it means it reached the end so print it.
                 System.out.println(rpair.path +" .");
             }
