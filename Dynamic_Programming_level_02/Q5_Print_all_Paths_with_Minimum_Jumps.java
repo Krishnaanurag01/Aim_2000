@@ -44,8 +44,6 @@ public class Q5_Print_all_Paths_with_Minimum_Jumps {
         }
 
         System.out.println(dp[0]);
-        
-
         ArrayDeque<pair> queue = new ArrayDeque<>() ; // this acts like a bfs.
         queue.add( new pair(0, arr[0], dp[0], 0+"") ) ; // storing first pair of 0th index. (this 0+"" store the path to the end.)
 
