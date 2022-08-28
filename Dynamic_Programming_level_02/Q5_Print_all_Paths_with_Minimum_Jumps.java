@@ -62,8 +62,6 @@ public class Q5_Print_all_Paths_with_Minimum_Jumps {
                 }
             }
         }
-
-
     }
 
 
