@@ -55,7 +55,6 @@ public class Q5_Print_all_Paths_with_Minimum_Jumps {
 
             // now starting loop from 1 to rpair.size(acts as arr[i] which we used as size) and rpair.index  + i is condition so that we'll not go beyond the loop.
             for (int i = 1 ; i <= rpair.size && rpair.index + i < dp.length ; i++) { 
-
                 // now adding the pairs .
                 
                 int ci = rpair.index + i ; // storing current index.
