@@ -38,7 +38,7 @@ public class Q5_Print_all_Paths_with_Minimum_Jumps {
                     min = Math.min(min, dp[i+j]) ;
                 }
             }
-            if(min != Integer.MAX_VALUE){ // if min is not integer max then it is changed
+            if(min != Integer.MAX_VALUE){ // if min is not integer max then it is changed.
                 dp[i] = min + 1 ; // so ad it to the dp with + 1(this denotes current jump + min jump.)
             }
             
