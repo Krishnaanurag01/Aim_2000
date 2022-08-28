@@ -56,7 +56,6 @@ public class Q5_Print_all_Paths_with_Minimum_Jumps {
             // now starting loop from 1 to rpair.size(acts as arr[i] which we used as size) and rpair.index  + i is condition so that we'll not go beyond the loop.
             for (int i = 1 ; i <= rpair.size && rpair.index + i < dp.length ; i++) { 
                 // now adding the pairs .
-                
                 int ci = rpair.index + i ; // storing current index.
                 if(dp[ci] != null && dp[ci] == rpair.jumps - 1 ){ // checking if current index is not null and its dp value is rpair.jump-1 ( this means rpairs.jump made up by finding the min jump + 1 jump from its index so if we substract 1 jump of itself then we'll be able to find the previous jump value). then add this by making new pair.
                     queue.add( new pair(ci, arr[ci] , dp[ci] , rpair +" -> "+ci) ) ; // making pair of current index , current index array size, it dp jump,and adding to the path.
