@@ -28,7 +28,7 @@ public class Q5_Print_all_Paths_with_Minimum_Jumps {
         int n = arr.length ;
         Integer[] dp = new Integer[ n ] ;
 
-        dp[n-1] = 0 ; // on last stair it won't jump
+        dp[n-1] = 0 ; // on last stair it won't jump.
 
 
         // first finding the path and storing it to the dp.
