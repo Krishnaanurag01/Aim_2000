@@ -1,6 +1,7 @@
 package Problem_Of_The_day;
 
 public class Q222_Sum_of_k_smallest_elements_in_BST {
+    
     int sum = 0;
     int m ;
     int sum(Node root, int k) { 
