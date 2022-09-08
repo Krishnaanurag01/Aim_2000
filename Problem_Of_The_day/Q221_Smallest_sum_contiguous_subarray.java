@@ -11,13 +11,12 @@ public class Q221_Smallest_sum_contiguous_subarray {
          for(int i = 1 ; i < a.length ; i++){
              int val = a[i] ;
              currSum += val ;
-             
+        
              if(currSum > val){
                  currSum = val ;
              }
              bestSum = Math.min(bestSum,currSum) ;
          }
-         
          return bestSum ;
      }
 }
