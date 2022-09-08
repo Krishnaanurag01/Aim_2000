@@ -4,8 +4,7 @@ public class Q221_Smallest_sum_contiguous_subarray {
 
      // kadanes algorithm. (just change the max sum to min sum)
      static int smallestSumSubarray(int a[], int size)
-     {
-         
+     {   
          int bestSum = a[0] ;
          int currSum = a[0] ;
          
