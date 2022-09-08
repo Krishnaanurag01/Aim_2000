@@ -6,7 +6,6 @@ public class Q218_Find_First_Palindromic_String_in_the_Array {
         for(String word : words){
             if(isPalindrome(word)) return word;
         }
-        
         return "" ;
     }
     
