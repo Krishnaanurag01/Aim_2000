@@ -3,7 +3,6 @@ package Problem_Of_The_day;
 public class Q220_Count_Square_Sum_Triples {
 
     public int countTriples(int n) {
-
         var count = 0;
         for (var a = 1; a < n; a++)
             for (var b = 1; b < n; b++) {
