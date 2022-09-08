@@ -10,7 +10,6 @@ public class Q218_Find_First_Palindromic_String_in_the_Array {
     }
     
     boolean isPalindrome(String s){
-        
         int i = 0 ; 
         int j = s.length() - 1 ;
         
