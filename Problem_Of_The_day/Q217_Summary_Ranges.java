@@ -4,7 +4,6 @@ import java.util.*;
 public class Q217_Summary_Ranges {
 
     public List<String> summaryRanges(int[] nums) {
-        
         List<String> ans = new ArrayList<>() ;
         if(nums.length < 1) return ans ;
         
