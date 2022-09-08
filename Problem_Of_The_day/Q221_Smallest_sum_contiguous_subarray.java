@@ -2,7 +2,7 @@ package Problem_Of_The_day;
 
 public class Q221_Smallest_sum_contiguous_subarray {
 
-     // kadanes algorithm. (just change the max sum to min sum.)
+     // kadanes algorithm. (just change the max sum to min sum)
      static int smallestSumSubarray(int a[], int size)
      {
          
