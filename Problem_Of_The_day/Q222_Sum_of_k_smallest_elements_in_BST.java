@@ -19,7 +19,6 @@ public class Q222_Sum_of_k_smallest_elements_in_BST {
         sum += root.data ;
         m--;
         helper(root.right) ;
-        
     }    
 
     class Node{
