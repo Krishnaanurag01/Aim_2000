@@ -28,7 +28,6 @@ public class Q217_Summary_Ranges {
             String temp =  "" ;
             if(si == ei) temp = si+"" ;
             else temp = si+"->"+ei ;
-            
             if(s.equals(temp) == false) ans.add(temp) ;
         }
         else {
