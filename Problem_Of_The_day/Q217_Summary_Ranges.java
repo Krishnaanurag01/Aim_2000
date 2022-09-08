@@ -23,7 +23,6 @@ public class Q217_Summary_Ranges {
             }
         }
         
-        
         if(ans.size() > 0){
             String s = ans.get(ans.size() - 1) ;
             String temp =  "" ;
