@@ -1,4 +1,4 @@
-git apackage Trie_Level_02;
+package Trie_Level_02;
 import java.util.*;
 
 public class Q3_Word_Search_II {
