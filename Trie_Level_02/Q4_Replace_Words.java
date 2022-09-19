@@ -1,5 +1,4 @@
-package Trie_Level_02;
-
+package Trie_Level_02 ;
 import java.util.*;
 
 public class Q4_Replace_Words {
