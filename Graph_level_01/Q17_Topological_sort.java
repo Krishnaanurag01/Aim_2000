@@ -13,6 +13,8 @@ public class Q17_Topological_sort {
            this.nbr = nbr;
         }
      }
+
+     // topological sort : is a permutation of vertices in directed acyclic graph such that for any edge (u,v) -> u must appears before v.
   
      public static void main(String[] args) throws Exception {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
