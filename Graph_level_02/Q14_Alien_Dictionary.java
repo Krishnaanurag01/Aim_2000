@@ -83,7 +83,7 @@ public class Q14_Alien_Dictionary {
 
         int count = 0 ;
 
-        while (queue.size() > 0 ) {
+        while (queue.size()  > 0 ) {
 
             Character rem = queue.removeFirst() ;
             sb.append(rem) ;
