@@ -4,8 +4,6 @@ import java.util.*;
 import java.io.*;
 
 public class Q13_is_graph_bipartite {
-    
-    
    static class Edge {
     int src;
     int nbr;
@@ -37,9 +35,9 @@ public class Q13_is_graph_bipartite {
     BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
     int vtces = Integer.parseInt(br.readLine());
-    ArrayList<Edge>[] graph = new ArrayList[vtces];
+    ArrayList<ArrayList<Edge>> graph = new ArrayList<>();
     for (int i = 0; i < vtces; i++) {
-       graph[i] = new ArrayList<>();
+       graph.add(new ArrayList<>());
     }
 
     int edges = Integer.parseInt(br.readLine());
@@ -48,8 +46,8 @@ public class Q13_is_graph_bipartite {
        int v1 = Integer.parseInt(parts[0]);
        int v2 = Integer.parseInt(parts[1]);
        int wt = Integer.parseInt(parts[2]);
-       graph[v1].add(new Edge(v1, v2, wt));
-       graph[v2].add(new Edge(v2, v1, wt));
+       graph.get(v1).add(new Edge(v1, v2, wt));
+       graph.get(v2).add(new Edge(v2, v1, wt));
     }
 
     // write your code here
@@ -71,9 +69,8 @@ public class Q13_is_graph_bipartite {
     System.out.print(true); // else true.
  }
  
- public static boolean check_bipartitness(ArrayList<Edge>[] graph , int src , int[] visited){
-     ArrayDeque<Pair>  queue= new ArrayDeque() ;
-     
+ public static boolean check_bipartitness(ArrayList<ArrayList<Edge>> graph , int src , int[] visited){
+     ArrayDeque<Pair> queue = new ArrayDeque<>() ;
      queue.add(new Pair(src , src + " ",0)) ; /// adding first vertex with path and level is 0.
      
      while(queue.size() > 0 ){
@@ -89,9 +86,7 @@ public class Q13_is_graph_bipartite {
              visited[rp.v] = rp.level ;
          }
          
-         
-         
-         for( Edge e : graph[rp.v]){ // now accessing all the edges.
+         for( Edge e : graph.get(rp.v)){ // now accessing all the edges.
              if(visited[e.nbr] == -1){ // if neigbour of current vertex is not visited means is -1 then add it to the queue.
                  queue.add(new Pair(e.nbr , rp.psf + e.nbr , rp.level + 1 )); // adding with increased level.
              }
@@ -100,6 +95,5 @@ public class Q13_is_graph_bipartite {
      
      return true  ; // if loop didn't gave false then return true.
  }
- 
 
 }
