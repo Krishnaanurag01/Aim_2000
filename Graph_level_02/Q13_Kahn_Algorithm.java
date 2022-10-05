@@ -13,7 +13,6 @@ public class Q13_Kahn_Algorithm {
     public static void main(String[] args) throws NumberFormatException, IOException {
      
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in)) ;
-
         String[] fl = br.readLine().split(" ");
         int n = Integer.parseInt(fl[0]) ;
         int m = Integer.parseInt(fl[1]) ;
@@ -52,7 +51,6 @@ public class Q13_Kahn_Algorithm {
         int[] innerCount = new int[n] ; // this will contain the count of each vertex.
 
         for (int i = 0; i < n ; i++) {
-            
             for (int nbr : graph.get(i)) { // we access the neighbours of every vertex and increase the count.
                 innerCount[nbr]++;
             }
