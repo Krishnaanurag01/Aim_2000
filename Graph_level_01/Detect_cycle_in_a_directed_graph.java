@@ -10,9 +10,7 @@ public class Detect_cycle_in_a_directed_graph {
         boolean[] Dfs_visited = new boolean[V];
 
         for (int i = 0; i < V ; i++) {
-            
             if( visited[i] == false ){
-
                 if( check_cycle(adj,visited,Dfs_visited,i)){
                     return true ;
                 }
