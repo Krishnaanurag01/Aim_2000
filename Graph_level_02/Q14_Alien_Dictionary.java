@@ -34,30 +34,22 @@ public class Q14_Alien_Dictionary {
                 char ch2 = next.charAt(j);
 
                 if(ch1 != ch2 ){
-
                     // if they are not equal.
-
                     if(map.containsKey(ch1)){
-
                         HashSet<Character> set = map.get(ch1) ;
-                        set.add(ch2) ; // then add ch2 in hast set
+                        set.add(ch2) ; // then add ch2 in hash set
                         map.put(ch1, set) ;
                         indegree.put(ch2, indegree.get(ch2) + 1 ) ; // also increase the freq
-
                     }
                     else{
 
                         HashSet<Character> set = new HashSet<>() ;
-
                         set.add(ch2) ;
                         map.put(ch1, set) ;
                         indegree.put(ch2, indegree.get(ch2) + 1 ) ;
-
-
                     }
                     flag = true ; // this will denote that we got one different char.
                     break ;
-
                 }
             }
 
@@ -73,37 +65,26 @@ public class Q14_Alien_Dictionary {
         StringBuilder sb = new StringBuilder() ; // this will have answer.
 
         for (Character ch : indegree.keySet()) {
-
             if(indegree.get(ch) == 0){
                 queue.add(ch) ;
             }
-            
         }
         
 
         int count = 0 ;
-
         while (queue.size()  > 0 ) {
-
             Character rem = queue.removeFirst() ;
             sb.append(rem) ;
             count++ ;
-
             if(map.containsKey(rem) == true){
-
                 HashSet<Character> set = map.get(rem) ;
-
-
                 for (Character nbr : set) {
                     indegree.put(nbr, indegree.get(nbr) - 1) ;
-
                     if(indegree.get(nbr) == 0 ){
                         queue.add(nbr) ;
                     }
                 }
-
             }
-            
         }
 
 
