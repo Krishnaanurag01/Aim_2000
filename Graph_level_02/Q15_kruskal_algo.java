@@ -52,7 +52,6 @@ public class Q15_kruskal_algo {
       for( int i = 0 ; i < n ; i++){
           parent[i] = i ; // making every node their parent by default.
           rank[i] = 1 ; // with 1 rank.
-          
       }
       
       
@@ -74,10 +73,8 @@ public class Q15_kruskal_algo {
       }
       
       return ans ;
-      
-
-
   }
+
   
   public static boolean union(int x , int y){
       
