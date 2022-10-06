@@ -22,18 +22,18 @@ public class Q7_Perfect_Friends_Problem {
         int n = Integer.parseInt(br.readLine()) ; // vertex.
         int k = Integer.parseInt(br.readLine()) ; // edges.
 
-        ArrayList<Edge>[] graph = new ArrayList[n] ;
+        ArrayList<ArrayList<Edge>> graph = new ArrayList<>() ;
 
-        for (int i = 0; i < graph.length; i++) {
-            graph[i] = new ArrayList<>() ;
+        for (int i = 0; i < n; i++) {
+            graph.add(new ArrayList<>()) ;
         }
 
         for (int i = 0; i < k ; i++) {
             String[] path = br.readLine().split(" ") ;
             int v1 = Integer.parseInt(path[0]) ;
             int v2 = Integer.parseInt(path[1]) ;
-            graph[v1].add(new Edge(v1, v2));
-            graph[v2].add(new Edge(v2, v1));
+            graph.get(v1).add(new Edge(v1, v2));
+            graph.get(v2).add(new Edge(v2, v1));
         }
 
 
@@ -67,13 +67,11 @@ public class Q7_Perfect_Friends_Problem {
 
     // same as Q4.
 
-    private static void get_comp(ArrayList<Edge>[] graph, int src, boolean[] visited , ArrayList<Integer> list) {
-
+    private static void get_comp(ArrayList<ArrayList<Edge>> graph, int src, boolean[] visited , ArrayList<Integer> list) {
         visited[src] = true ;
         list.add(src) ;
         
-        for (Edge e : graph[src]) {
-            
+        for (Edge e : graph.get(src)) {
             if(visited[e.nbr] == false){
                 get_comp(graph, e.nbr , visited, list);
             }
