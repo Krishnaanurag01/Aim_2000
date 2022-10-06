@@ -5,7 +5,7 @@ public class Q25_Floyd_Warshall {
     
     public void shortest_distance(int[][] matrix)
     {
-       // finding the number of vertecies.
+       // finding the number of vertices.
        int v = matrix.length ;
        
        for(int k = 0 ; k < v ; k++){ // running k times.
