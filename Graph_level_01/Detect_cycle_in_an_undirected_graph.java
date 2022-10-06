@@ -8,12 +8,9 @@ public class Detect_cycle_in_an_undirected_graph {
 
         boolean[] visited = new boolean[V] ; // keep track if vertex is visited before or not.
 
-
         for (int i = 0; i < visited.length; i++) {
             if(visited[i] == false) {
-
                 Boolean is_cyclic = check_cycle(i,visited,adj) ; // if it gives true then stop and return true.
-
                 if(is_cyclic){
                     return true ;
                 }
@@ -25,9 +22,8 @@ public class Detect_cycle_in_an_undirected_graph {
     private Boolean check_cycle(int i, boolean[] visited, ArrayList<ArrayList<Integer>> adj) {
 
         ArrayDeque<Integer> q = new ArrayDeque<>() ;
-
         q.add(i) ;
-
+        
         while (q.size() > 0) {
             int rem = q.removeFirst() ;
 
