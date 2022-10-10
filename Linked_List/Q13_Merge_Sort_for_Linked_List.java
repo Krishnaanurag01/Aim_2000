@@ -16,40 +16,7 @@ public class Q13_Merge_Sort_for_Linked_List {
         }        
     }
 
-
-    public static void printLinkedList(node head) {
-
-        node printIt = head;
-        while(printIt != null){
-            System.out.print(printIt.data + " -> ");
-            printIt = printIt.next;
-        }
-
-        System.out.println();
-    }
-
-    public  void insertNode(int d) {
-        node newNode = new node(d);
-        if(head == null){
-            head = newNode ;
-            return;
-        }
-
-        node temp = head;
-
-        while (temp.next != null) {
-            temp = temp.next;            
-        }
-        
-        temp.next = newNode;
-        
-    }
-
-
-    // solutions starts from here.
-
     // this function helps in finding the mid point.
-
     public static node mid_point(node ListHead) {
         if(ListHead == null || ListHead.next == null){  // if we don't apply listHead == null then we might get wrong answer. for example: 2,3 if we applied list.next != null over list.next.next then we'll get 3 as mid which is wrong.
             return ListHead;
@@ -109,29 +76,4 @@ public class Q13_Merge_Sort_for_Linked_List {
         return merge_two_lists(ListNode1, ListNode2); // now returning the merge list.
     }
 
-
-
-
-
-
-
-
-
-
-
-
-    public static void main(String[] args) {
-
-        Q13_Merge_Sort_for_Linked_List ll = new Q13_Merge_Sort_for_Linked_List();
-
-        ll.insertNode(3);
-        ll.insertNode(4);
-        ll.insertNode(5);
-        ll.insertNode(2);
-        ll.insertNode(1);
-
-      node newHead =  merge_sort(ll.head);
-
-        printLinkedList(newHead);
-    }
 }
