@@ -4,7 +4,6 @@ public class Q10_Add_two_numbers_represented_by_linked_lists {
     
     node head ;
     public static class node {
-
         int data ;
         node next; 
 
@@ -66,8 +65,6 @@ public class Q10_Add_two_numbers_represented_by_linked_lists {
        while (c1 != null || c2 !=null || carry != 0 ) {
            // find sum .
            sum = carry + (c1!= null? c1.data : 0 ) + (c2!= null? c2.data : 0 );
-
-
            int lastDigit = sum%10 ;
            carry = sum/10 ;
 
