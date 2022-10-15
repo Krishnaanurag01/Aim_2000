@@ -31,7 +31,7 @@ public class Q252_Shortest_Distance_in_a_Binary_Maze {
                     continue;
                 }
                 
-                // visited[x][y] = true ;
+
                 pq.add(new int[]{x, y, rp[2] + 1 }) ;
             }
         }
