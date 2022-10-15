@@ -36,7 +36,6 @@ public class Q252_Shortest_Distance_in_a_Binary_Maze {
             }
         }
         
-        
            return -1 ;
     }
 }
