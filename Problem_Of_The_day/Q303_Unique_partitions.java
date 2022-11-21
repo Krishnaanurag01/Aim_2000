@@ -6,6 +6,7 @@ public class Q303_Unique_partitions {
     public ArrayList<ArrayList<Integer>> UniquePartitions(int n)
     {
         ArrayList<ArrayList<Integer>> ans = new ArrayList<>() ;
+        
         // adding values in array.
         int[] arr = new int[n+1] ;
         for(int i = 0 ; i <= n ; i++){
@@ -32,6 +33,9 @@ public class Q303_Unique_partitions {
             list.remove(list.size() - 1) ; // and remove last from the list
         }
     }
+
+
+
 
     // now without any extra space.
 
