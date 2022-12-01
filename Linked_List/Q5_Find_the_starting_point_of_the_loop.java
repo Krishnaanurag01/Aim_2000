@@ -5,7 +5,6 @@ public class Q5_Find_the_starting_point_of_the_loop {
     
     node head ;
     public static class node {
-
         int data ;
         node next; 
 
@@ -14,7 +13,6 @@ public class Q5_Find_the_starting_point_of_the_loop {
             next = null ;
         }        
     }
-
 
     public void printLinkedList(node head) {
 
@@ -54,7 +52,6 @@ public class Q5_Find_the_starting_point_of_the_loop {
         node tortoise = head2 ;
         
         while(hare != null && hare.next != null){
-
             hare = hare.next.next;
             tortoise = tortoise.next ;
             if(hare == tortoise){
@@ -77,14 +74,7 @@ public class Q5_Find_the_starting_point_of_the_loop {
 
 
 
-
-
-
-
-
-
-
-
+    
     public static void main(String[] args) {
 
         Q5_Find_the_starting_point_of_the_loop ll = new Q5_Find_the_starting_point_of_the_loop();
