@@ -62,17 +62,12 @@ public class Q2_Reverse_a_Linked_List_in_groups_of_given_size {
     // this will return length .
 
     public static int length(Node head){
-
         int len = 0 ;
-
         Node temp = head ;
-
         while (temp != null) {
             temp = temp.next ;
             len++;
         }
-
-
         return len ;
     }
 
@@ -100,9 +95,7 @@ public class Q2_Reverse_a_Linked_List_in_groups_of_given_size {
         }
 
         Node originalHead = null , originalTail = null ; // this will be our original head pointer which we return in the end.
-
         int length = length(head); // first finding the length of ll. 
-
         Node current = head; // now creating a temp Node and copying the linked list.
 
         while(length >= k){  // while length is greater or equal to k perform it.
@@ -172,9 +165,6 @@ public class Q2_Reverse_a_Linked_List_in_groups_of_given_size {
         ll.insertNode(3);
         ll.insertNode(2);
         ll.insertNode(7);
-
-
-
 
         // ll.printLinkedList(head);
 
