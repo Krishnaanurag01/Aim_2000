@@ -14,8 +14,6 @@ public class Q4_Remove_loop_in_Linked_List {
             next = null ;
         }        
     }
-
-
     public void printLinkedList(node head) {
 
         node printIt = head;
@@ -26,7 +24,6 @@ public class Q4_Remove_loop_in_Linked_List {
 
         System.out.println();
     }
-
     public  void insertNode(int d) {
         node newNode = new node(d);
         if(head == null){
@@ -43,18 +40,11 @@ public class Q4_Remove_loop_in_Linked_List {
         temp.next = newNode;
         
     }
-
-
-
-
-
-
-
     public static void main(String[] args) {
 
         Q4_Remove_loop_in_Linked_List ll = new Q4_Remove_loop_in_Linked_List();
 
-        node first = new node(5);
+    node first = new node(5);
        node second = new node(6);
 
        node third = new node(7);
@@ -90,7 +80,6 @@ public class Q4_Remove_loop_in_Linked_List {
         while (hare != null && hare.next != null) { // here adding hare.next != null condition because in the loop we are trying to access the hare.next.next which gives null pointer exceptions without this condition.
             tortoise = tortoise.next ;
             hare = hare.next.next;
-
             if( hare == tortoise){
                 break;
             }
@@ -106,16 +95,13 @@ public class Q4_Remove_loop_in_Linked_List {
             hare.next = null ;
         }/// o\w do this.
         else if(hare == tortoise){
-            
-        hare = head2 ;
-        while (hare.next != tortoise.next) {
-            hare = hare.next;
-            tortoise = tortoise.next;
+            hare = head2 ;
+            while (hare.next != tortoise.next) {
+                hare = hare.next;
+                tortoise = tortoise.next;
+            }
+            tortoise.next = null ;
         }
-
-
-        tortoise.next = null ;
     }
-}
     
 }
