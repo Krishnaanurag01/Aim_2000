@@ -1,42 +1,33 @@
 package Linked_List;
 
-
-
-
 public class Q1_Reverse_Linked_List {
 
-       Node head ;
-      static class Node{
- 
-         int data ;
-         Node next ;
- 
-       public Node(int d){
- 
-             data = d ;
-             next = null;
- 
-         }
-     }
+    Node head ;
+    static class Node{
+        int data ;
+        Node next ;
+
+        public Node(int d){
+            data = d ;
+            next = null;
+        }
+    }
 
      Node reverse(Node head){
-
         Node current = head;
         Node forward = null ;
         Node previous = null ;
 
         while(current != null){
-
             forward = current.next;
-
             current.next = previous ;
-
             previous = current ;
-
             current = forward ;
         }
+
         return previous ;
     }
+    
 
     // recursivly reverse the Linked List.
 
@@ -51,9 +42,6 @@ public class Q1_Reverse_Linked_List {
         head.next.next = head; // making next node address point to us.
 
         head.next = null; // with this last node will point to the null
-
-
-
 
         return newHead ; // returning new head.
     }
