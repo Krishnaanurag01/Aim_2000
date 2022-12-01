@@ -4,7 +4,6 @@ public class Q3_Detect_Loop_in_linked_list {
 
     node head ;
     public static class node {
-
         int data ;
         node next; 
 
@@ -94,38 +93,6 @@ public class Q3_Detect_Loop_in_linked_list {
         }
 
 
-        return false;
-
-    }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
+        return false ;
+    }    
 }
