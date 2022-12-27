@@ -15,7 +15,7 @@ public class Q319_Wine_Buying_and_Selling {
                 if(Arr[sell_idx] > 0){ // if current house can buy wine then sell it to them.
                     int temp = Arr[sell_idx] ;
                     
-                    if(Math.abs(val) >= temp){ // sell as much as they can buy
+                    if(Math.abs(val) >= temp){ // sell as much as they can buy.
                         Arr[sell_idx] = 0 ;
                         ans = ans + ( temp * Math.abs(Math.abs(sell_idx) - Math.abs(i))) ;
                         val = temp + val ;
