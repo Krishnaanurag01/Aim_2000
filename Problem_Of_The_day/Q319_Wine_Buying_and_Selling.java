@@ -5,7 +5,7 @@ public class Q319_Wine_Buying_and_Selling {
     long wineSelling(int Arr[],int N){
         
         long ans = 0 ;
-        int sell_idx = 0 ; // last index where we have sold wines, helps in not searching from  start instead we cans tart from last sold house
+        int sell_idx = 0 ; // last index where we have sold wines, helps in not searching from  start instead we cans tart from last sold house.
         
         for(int i = 0 ; i < N ; i++){
             int val = Arr[i] ;
