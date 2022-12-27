@@ -9,7 +9,7 @@ public class Q319_Wine_Buying_and_Selling {
         
         for(int i = 0 ; i < N ; i++){
             int val = Arr[i] ;
-            if(val >= 0 ) continue ; // if current house can buy then skip
+            if(val >= 0 ) continue ; // if current house can buy then skip.
             
             while(val < 0 && sell_idx < N){ // while all the wine is not sold
                 if(Arr[sell_idx] > 0){ // if current house can buy wine then sell it to them
