@@ -27,7 +27,7 @@ public class Q319_Wine_Buying_and_Selling {
                         val = 0 ;
                     }
                 }
-                else{ // otherwise move to other house
+                else{ // otherwise move to other house.
                     sell_idx++ ;
                 }
             }
