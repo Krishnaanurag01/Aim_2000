@@ -21,7 +21,7 @@ public class Q319_Wine_Buying_and_Selling {
                         val = temp + val ;
                         sell_idx++ ;
                     }
-                    else{ // if they can more than we have then sell all we have
+                    else{ // if they can more than we have then sell all we have.
                         ans = ans + ( Math.abs(val) * Math.abs(Math.abs(sell_idx) - Math.abs(i))) ;
                         Arr[sell_idx] = temp + val ;
                         val = 0 ;
