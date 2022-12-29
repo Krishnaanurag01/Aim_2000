@@ -35,7 +35,7 @@ public class Q322_Single_Threaded_CPU {
         int idx = 0 ;
         
         ans[idx++] = tsks[0].idx ; // storing the first task in ans.
-        int ansIdx = 1 ; // index of ans arrya
+        int ansIdx = 1 ; // index of ans arrya.
         
         int currTime = tsks[0].time + tsks[0].pt ; // as we took the first task so current time is the time at which first task comes + processing time.
         
