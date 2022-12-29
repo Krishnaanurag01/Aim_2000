@@ -1,9 +1,6 @@
 package Problem_Of_The_day;
 import java.util.*;
 
-/**
- * Q322_Single_Threaded_CPU
- */
 public class Q322_Single_Threaded_CPU {
 
     public int[] getOrder(int[][] tasks) {
