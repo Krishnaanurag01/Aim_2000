@@ -8,7 +8,7 @@ public class Q322_Single_Threaded_CPU {
         Pair[] tsks = new Pair[tasks.length] ;
         
         for(int i = 0 ; i < tasks.length ; i++){
-            tsks[i] = new Pair(tasks[i][0], tasks[i][1],i) ; // enque, processing, idx 
+            tsks[i] = new Pair(tasks[i][0], tasks[i][1],i) ; // enque, processing, idx. 
         }
      
         Arrays.sort(tsks, (a,b) -> {
