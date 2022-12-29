@@ -25,7 +25,7 @@ public class Q322_Single_Threaded_CPU {
         }) ;
             
         PriorityQueue<Pair> pq = new PriorityQueue<>( (a,b) ->{
-            if(a.pt != b.pt){ // sorting on processing time
+            if(a.pt != b.pt){ // sorting on processing time.
                 return a.pt - b.pt ;
             }
             return a.idx - b.idx ; // when pt is same then sort on index.
