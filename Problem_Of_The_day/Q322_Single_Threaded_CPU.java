@@ -15,7 +15,7 @@ public class Q322_Single_Threaded_CPU {
             if(a.time != b.time){ // when enqueu time is different then sort it on this time.
                 return a.time - b.time ;
             }
-            else if(a.pt != b.pt) { // sort on pt when they are different 
+            else if(a.pt != b.pt) { // sort on pt when they are different. 
                 return a.pt - b.pt ;
             }
             else{ // otherwise sort on index.
