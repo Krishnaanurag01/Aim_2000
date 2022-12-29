@@ -52,7 +52,7 @@ public class Q322_Single_Threaded_CPU {
                 currTime += rp.pt ; // and adding its processing time in current time.
             }
             else{
-                if(idx < tsks.length){ // if pq is empty then take current index task
+                if(idx < tsks.length){ // if pq is empty then take current index task.
                     ans[ansIdx++] = tsks[idx].idx ;
                     currTime = tsks[idx].time + tsks[idx++].pt ; // again this current index time + pt time will be curr time.
                 }
