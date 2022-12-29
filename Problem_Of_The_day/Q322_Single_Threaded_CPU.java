@@ -49,7 +49,7 @@ public class Q322_Single_Threaded_CPU {
             if(pq.size() > 0){ // taking the task with shortest pt.
                 Pair rp = pq.poll() ;
                 ans[ansIdx++] = rp.idx ;
-                currTime += rp.pt ; // and adding its processing time in current time
+                currTime += rp.pt ; // and adding its processing time in current time.
             }
             else{
                 if(idx < tsks.length){ // if pq is empty then take current index task
