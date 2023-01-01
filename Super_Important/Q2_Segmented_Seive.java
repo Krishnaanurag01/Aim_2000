@@ -17,7 +17,7 @@ public class Q2_Segmented_Seive {
     static int n = (int) 1e6 + 1; // took the largest size for which we can create the seive array.
     static boolean seive[];
 
-    // this is implementaion of Seive of eratosthenes
+    // this is implementaion of Seive of eratosthenes.
     static void generateSieve() { /// generating this help use in finding the primes from 2 to square root of
                                   /// R(right boundary)
         seive = new boolean[n];
