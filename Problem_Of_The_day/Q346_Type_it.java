@@ -1,5 +1,4 @@
-package problem_of_the_day;
-
+package Problem_Of_The_day;
 public class Q346_Type_it {
 
     int ans ;
