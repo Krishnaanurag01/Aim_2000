@@ -1,4 +1,4 @@
-package problem_of_the_day ;
+package Problem_Of_The_day ;
 import java.util.* ;
 public class Q365_IPO {
 
